@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "670767680986",
+    "firebase_url": "https://visualock-1765a-default-rtdb.firebaseio.com",
+    "project_id": "visualock-1765a",
+    "storage_bucket": "visualock-1765a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:670767680986:android:2f6896cccdf131047d84e3",
+        "android_client_info": {
+          "package_name": "com.example.visualock"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCdQzoVJAh1Ny4M7pNS-QechXOZe2OsQW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

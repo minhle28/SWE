@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://visualock-1765a-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">670767680986</string>
+    <string name="google_api_key" translatable="false">AIzaSyCdQzoVJAh1Ny4M7pNS-QechXOZe2OsQW4</string>
+    <string name="google_app_id" translatable="false">1:670767680986:android:2f6896cccdf131047d84e3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyCdQzoVJAh1Ny4M7pNS-QechXOZe2OsQW4</string>
+    <string name="google_storage_bucket" translatable="false">visualock-1765a.appspot.com</string>
+    <string name="project_id" translatable="false">visualock-1765a</string>
+</resources>
