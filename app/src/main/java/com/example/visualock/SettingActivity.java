@@ -13,6 +13,8 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import androidx.annotation.NonNull;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 
 import android.widget.CompoundButton;
 
@@ -63,27 +65,44 @@ public class SettingActivity extends AppCompatActivity {
     private void deleteAccount() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            // Delete the user's account
-            System.out.println("User UID: " + user.getUid());
-            user.delete()
+            String uid = user.getUid();
+            FirebaseFirestore.getInstance().collection("users").document(uid)
+                    .delete()
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
                         public void onSuccess(Void aVoid) {
-                            Toast.makeText(SettingActivity.this, "Account deleted successfully", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(SettingActivity.this, GraphLoginActivity.class));
-                            finish();
+                            deleteAuthCredentials(user);
                         }
                     })
                     .addOnFailureListener(new OnFailureListener() {
                         @Override
                         public void onFailure(@NonNull Exception e) {
                             Toast.makeText(SettingActivity.this, "Failed to delete account: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                            e.printStackTrace(); // Log the exception for debugging
+                            e.printStackTrace();
                         }
                     });
         } else {
             Toast.makeText(SettingActivity.this, "User is not authenticated", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private void deleteAuthCredentials(FirebaseUser user) {
+        user.delete()
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Toast.makeText(SettingActivity.this, "Account deleted successfully", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(SettingActivity.this, GraphLoginActivity.class));
+                        finish();
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(SettingActivity.this, "Failed to delete account: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                        e.printStackTrace();
+                    }
+                });
     }
 
 
