@@ -6,6 +6,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ImageView;
+import android.content.Intent;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -40,6 +42,15 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         saveButton = findViewById(R.id.saveButton);
         etNewName = findViewById(R.id.et_new_name);
 
+        ImageView backButton = findViewById(R.id.backButton);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToMenuFragment();
+            }
+        });
+
         retrieveUserDetails();
 
         editButton.setOnClickListener(v -> {
@@ -54,6 +65,13 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
                 Toast.makeText(ProfileActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void navigateToMenuFragment() {
+        Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
+        intent.putExtra("menuFragment", true);
+        startActivity(intent);
+        finish();
     }
 
     private void retrieveUserDetails() {

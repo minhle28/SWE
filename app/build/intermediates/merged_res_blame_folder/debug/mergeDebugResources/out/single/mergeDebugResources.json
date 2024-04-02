@@ -16,12 +16,12 @@
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/machupicchu.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_bear.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/bear.webp"
-    },
-    {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_mouse.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/mouse.webp"
+    },
+    {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_bear.webp.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/bear.webp"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_tiger.webp.flat",
