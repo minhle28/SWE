@@ -3484,6 +3484,7 @@ int id easeInOut 0x7f0800bd
 int id easeOut 0x7f0800be
 int id east 0x7f0800bf
 int id edge 0x7f0800c0
+int id editButton 0x7f080231
 int id edit_query 0x7f0800c1
 int id elastic 0x7f0800c2
 int id embed 0x7f0800c3
@@ -3491,6 +3492,7 @@ int id end 0x7f0800c4
 int id endToStart 0x7f0800c5
 int id enterAlways 0x7f0800c6
 int id enterAlwaysCollapsed 0x7f0800c7
+int id et_new_name 0x7f080232
 int id exitUntilCollapsed 0x7f0800c8
 int id expand_activities_button 0x7f0800c9
 int id expanded_menu 0x7f0800ca
@@ -3710,6 +3712,7 @@ int id right_side 0x7f08019f
 int id rounded 0x7f0801a0
 int id row_index_key 0x7f0801a1
 int id rtl 0x7f0801a2
+int id saveButton 0x7f080233
 int id save_non_transition_alpha 0x7f0801a3
 int id save_overlay_view 0x7f0801a4
 int id sawtooth 0x7f0801a5
@@ -3825,7 +3828,9 @@ int id transition_position 0x7f080212
 int id transition_scene_layoutid_cache 0x7f080213
 int id transition_transform 0x7f080214
 int id triangle 0x7f080215
+int id tv_email 0x7f08022f
 int id tv_name 0x7f080216
+int id tv_user_name 0x7f080230
 int id unchecked 0x7f080217
 int id uniform 0x7f080218
 int id unlabeled 0x7f080219
@@ -3993,6 +3998,7 @@ int layout design_navigation_menu 0x7f0b0033
 int layout design_navigation_menu_item 0x7f0b0034
 int layout design_text_input_end_icon 0x7f0b0035
 int layout design_text_input_start_icon 0x7f0b0036
+int layout dialog_edit_name 0x7f0b0079
 int layout fragment_dashboard 0x7f0b0037
 int layout fragment_home 0x7f0b0038
 int layout fragment_menu 0x7f0b0039

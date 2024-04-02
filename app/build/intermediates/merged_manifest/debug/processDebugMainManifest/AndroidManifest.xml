@@ -31,6 +31,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.VisuaLock" >
         <activity
+            android:name="com.example.visualock.EditNameDialogFragment"
+            android:exported="false" />
+        <activity
             android:name="com.example.visualock.AboutActivity"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar" />

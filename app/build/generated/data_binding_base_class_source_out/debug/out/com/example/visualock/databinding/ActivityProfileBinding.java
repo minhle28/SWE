@@ -4,6 +4,8 @@ package com.example.visualock.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -25,6 +27,12 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final ImageView backButton;
 
   @NonNull
+  public final Button editButton;
+
+  @NonNull
+  public final EditText etNewName;
+
+  @NonNull
   public final RelativeLayout imgUser;
 
   @NonNull
@@ -34,17 +42,32 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final RelativeLayout rellay1;
 
   @NonNull
+  public final Button saveButton;
+
+  @NonNull
+  public final TextView tvEmail;
+
+  @NonNull
   public final TextView tvName;
 
+  @NonNull
+  public final TextView tvUserName;
+
   private ActivityProfileBinding(@NonNull RelativeLayout rootView, @NonNull ImageView backButton,
-      @NonNull RelativeLayout imgUser, @NonNull LinearLayout linlay1,
-      @NonNull RelativeLayout rellay1, @NonNull TextView tvName) {
+      @NonNull Button editButton, @NonNull EditText etNewName, @NonNull RelativeLayout imgUser,
+      @NonNull LinearLayout linlay1, @NonNull RelativeLayout rellay1, @NonNull Button saveButton,
+      @NonNull TextView tvEmail, @NonNull TextView tvName, @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.backButton = backButton;
+    this.editButton = editButton;
+    this.etNewName = etNewName;
     this.imgUser = imgUser;
     this.linlay1 = linlay1;
     this.rellay1 = rellay1;
+    this.saveButton = saveButton;
+    this.tvEmail = tvEmail;
     this.tvName = tvName;
+    this.tvUserName = tvUserName;
   }
 
   @Override
@@ -80,6 +103,18 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.editButton;
+      Button editButton = ViewBindings.findChildViewById(rootView, id);
+      if (editButton == null) {
+        break missingId;
+      }
+
+      id = R.id.et_new_name;
+      EditText etNewName = ViewBindings.findChildViewById(rootView, id);
+      if (etNewName == null) {
+        break missingId;
+      }
+
       id = R.id.imgUser;
       RelativeLayout imgUser = ViewBindings.findChildViewById(rootView, id);
       if (imgUser == null) {
@@ -98,14 +133,32 @@ public final class ActivityProfileBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.saveButton;
+      Button saveButton = ViewBindings.findChildViewById(rootView, id);
+      if (saveButton == null) {
+        break missingId;
+      }
+
+      id = R.id.tv_email;
+      TextView tvEmail = ViewBindings.findChildViewById(rootView, id);
+      if (tvEmail == null) {
+        break missingId;
+      }
+
       id = R.id.tv_name;
       TextView tvName = ViewBindings.findChildViewById(rootView, id);
       if (tvName == null) {
         break missingId;
       }
 
-      return new ActivityProfileBinding((RelativeLayout) rootView, backButton, imgUser, linlay1,
-          rellay1, tvName);
+      id = R.id.tv_user_name;
+      TextView tvUserName = ViewBindings.findChildViewById(rootView, id);
+      if (tvUserName == null) {
+        break missingId;
+      }
+
+      return new ActivityProfileBinding((RelativeLayout) rootView, backButton, editButton,
+          etNewName, imgUser, linlay1, rellay1, saveButton, tvEmail, tvName, tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

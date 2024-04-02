@@ -3485,6 +3485,7 @@ id easeInOut
 id easeOut
 id east
 id edge
+id editButton
 id edit_query
 id elastic
 id embed
@@ -3492,6 +3493,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id et_new_name
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
@@ -3711,6 +3713,7 @@ id right_side
 id rounded
 id row_index_key
 id rtl
+id saveButton
 id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
@@ -3826,7 +3829,9 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_email
 id tv_name
+id tv_user_name
 id unchecked
 id uniform
 id unlabeled
@@ -3994,6 +3999,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_edit_name
 layout fragment_dashboard
 layout fragment_home
 layout fragment_menu

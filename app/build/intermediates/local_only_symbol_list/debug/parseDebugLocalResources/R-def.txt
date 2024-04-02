@@ -151,6 +151,8 @@ id cat_tree
 id cat_vehicles
 id checkBoxAgree
 id container
+id editButton
+id et_new_name
 id forgot_passRedirectText
 id icon_menu
 id imgUser
@@ -177,6 +179,7 @@ id register_name
 id register_password
 id rellay1
 id reset_email
+id saveButton
 id send_reset_button
 id text
 id textViewMessage
@@ -184,7 +187,9 @@ id text_dashboard
 id text_home
 id text_menu
 id text_notifications
+id tv_email
 id tv_name
+id tv_user_name
 layout activity_about
 layout activity_forgot_password
 layout activity_graph_login
@@ -194,6 +199,7 @@ layout activity_main
 layout activity_profile
 layout activity_register
 layout activity_setting
+layout dialog_edit_name
 layout fragment_dashboard
 layout fragment_home
 layout fragment_menu
