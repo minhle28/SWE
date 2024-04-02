@@ -5,8 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.ListView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -29,30 +29,30 @@ public final class ActivityGraphPasswordBinding implements ViewBinding {
   public final ImageView backButton;
 
   @NonNull
-  public final GridView catAnimals;
+  public final ListView catAnimals;
 
   @NonNull
-  public final GridView catColor;
+  public final ListView catColor;
 
   @NonNull
-  public final GridView catDailyObjects;
+  public final ListView catDailyObjects;
 
   @NonNull
-  public final GridView catPlaces;
+  public final ListView catPlaces;
 
   @NonNull
-  public final GridView catTree;
+  public final ListView catTree;
 
   @NonNull
-  public final GridView catVehicles;
+  public final ListView catVehicles;
 
   @NonNull
   public final Button loginButton;
 
   private ActivityGraphPasswordBinding(@NonNull ConstraintLayout rootView,
       @NonNull CardView PasswordCardView, @NonNull ImageView backButton,
-      @NonNull GridView catAnimals, @NonNull GridView catColor, @NonNull GridView catDailyObjects,
-      @NonNull GridView catPlaces, @NonNull GridView catTree, @NonNull GridView catVehicles,
+      @NonNull ListView catAnimals, @NonNull ListView catColor, @NonNull ListView catDailyObjects,
+      @NonNull ListView catPlaces, @NonNull ListView catTree, @NonNull ListView catVehicles,
       @NonNull Button loginButton) {
     this.rootView = rootView;
     this.PasswordCardView = PasswordCardView;
@@ -106,37 +106,37 @@ public final class ActivityGraphPasswordBinding implements ViewBinding {
       }
 
       id = R.id.cat_animals;
-      GridView catAnimals = ViewBindings.findChildViewById(rootView, id);
+      ListView catAnimals = ViewBindings.findChildViewById(rootView, id);
       if (catAnimals == null) {
         break missingId;
       }
 
       id = R.id.cat_color;
-      GridView catColor = ViewBindings.findChildViewById(rootView, id);
+      ListView catColor = ViewBindings.findChildViewById(rootView, id);
       if (catColor == null) {
         break missingId;
       }
 
       id = R.id.cat_dailyObjects;
-      GridView catDailyObjects = ViewBindings.findChildViewById(rootView, id);
+      ListView catDailyObjects = ViewBindings.findChildViewById(rootView, id);
       if (catDailyObjects == null) {
         break missingId;
       }
 
       id = R.id.cat_places;
-      GridView catPlaces = ViewBindings.findChildViewById(rootView, id);
+      ListView catPlaces = ViewBindings.findChildViewById(rootView, id);
       if (catPlaces == null) {
         break missingId;
       }
 
       id = R.id.cat_tree;
-      GridView catTree = ViewBindings.findChildViewById(rootView, id);
+      ListView catTree = ViewBindings.findChildViewById(rootView, id);
       if (catTree == null) {
         break missingId;
       }
 
       id = R.id.cat_vehicles;
-      GridView catVehicles = ViewBindings.findChildViewById(rootView, id);
+      ListView catVehicles = ViewBindings.findChildViewById(rootView, id);
       if (catVehicles == null) {
         break missingId;
       }

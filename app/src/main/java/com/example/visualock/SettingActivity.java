@@ -7,6 +7,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.Toast;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import androidx.annotation.NonNull;
+import com.google.firebase.auth.FirebaseAuth;
 
 import android.widget.CompoundButton;
 
@@ -45,7 +51,41 @@ public class SettingActivity extends AppCompatActivity {
                 }
             }
         });
+
+        buttonDeleteAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteAccount();
+            }
+        });
     }
+
+    private void deleteAccount() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            // Delete the user's account
+            System.out.println("User UID: " + user.getUid());
+            user.delete()
+                    .addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(SettingActivity.this, "Account deleted successfully", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(SettingActivity.this, GraphLoginActivity.class));
+                            finish();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(SettingActivity.this, "Failed to delete account: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                            e.printStackTrace(); // Log the exception for debugging
+                        }
+                    });
+        } else {
+            Toast.makeText(SettingActivity.this, "User is not authenticated", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
     private void navigateToMenuFragment() {
         Intent intent = new Intent(SettingActivity.this, MainActivity.class);
