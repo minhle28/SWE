@@ -146,6 +146,8 @@ id PasswordCardView
 id RegisterCardView
 id add_image
 id backButton
+id btn_cancel
+id btn_save
 id buttonDeleteAccount
 id cat_animals
 id cat_color
@@ -154,9 +156,13 @@ id cat_places
 id cat_tree
 id cat_vehicles
 id checkBoxAgree
+id confirm_new_email
 id container
 id deleteButton
+id dialogTitle
 id editButton
+id editEmailButton
+id et_new_email
 id et_new_name
 id forgot_passRedirectText
 id icon_menu
@@ -212,6 +218,7 @@ layout activity_profile
 layout activity_register
 layout activity_setting
 layout activity_storage
+layout dialog_edit_email
 layout dialog_edit_name
 layout fragment_dashboard
 layout fragment_home

@@ -30,6 +30,9 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final Button editButton;
 
   @NonNull
+  public final Button editEmailButton;
+
+  @NonNull
   public final EditText etNewName;
 
   @NonNull
@@ -54,12 +57,14 @@ public final class ActivityProfileBinding implements ViewBinding {
   public final TextView tvUserName;
 
   private ActivityProfileBinding(@NonNull RelativeLayout rootView, @NonNull ImageView backButton,
-      @NonNull Button editButton, @NonNull EditText etNewName, @NonNull RelativeLayout imgUser,
-      @NonNull LinearLayout linlay1, @NonNull RelativeLayout rellay1, @NonNull Button saveButton,
-      @NonNull TextView tvEmail, @NonNull TextView tvName, @NonNull TextView tvUserName) {
+      @NonNull Button editButton, @NonNull Button editEmailButton, @NonNull EditText etNewName,
+      @NonNull RelativeLayout imgUser, @NonNull LinearLayout linlay1,
+      @NonNull RelativeLayout rellay1, @NonNull Button saveButton, @NonNull TextView tvEmail,
+      @NonNull TextView tvName, @NonNull TextView tvUserName) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.editButton = editButton;
+    this.editEmailButton = editEmailButton;
     this.etNewName = etNewName;
     this.imgUser = imgUser;
     this.linlay1 = linlay1;
@@ -106,6 +111,12 @@ public final class ActivityProfileBinding implements ViewBinding {
       id = R.id.editButton;
       Button editButton = ViewBindings.findChildViewById(rootView, id);
       if (editButton == null) {
+        break missingId;
+      }
+
+      id = R.id.editEmailButton;
+      Button editEmailButton = ViewBindings.findChildViewById(rootView, id);
+      if (editEmailButton == null) {
         break missingId;
       }
 
@@ -158,7 +169,8 @@ public final class ActivityProfileBinding implements ViewBinding {
       }
 
       return new ActivityProfileBinding((RelativeLayout) rootView, backButton, editButton,
-          etNewName, imgUser, linlay1, rellay1, saveButton, tvEmail, tvName, tvUserName);
+          editEmailButton, etNewName, imgUser, linlay1, rellay1, saveButton, tvEmail, tvName,
+          tvUserName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

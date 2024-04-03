@@ -162,14 +162,30 @@
                     android:textColor="@color/headings"
                     android:textSize="13sp" />
 
-                <TextView
-                    android:id="@+id/tv_email"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:text="name@gmail.com"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical">
+
+                    <TextView
+                        android:id="@+id/tv_email"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="sans-serif-light"
+                        android:text="name@gmail.com"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/editEmailButton"
+                        android:layout_width="65dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:text="Edit" />
+
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"

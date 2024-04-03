@@ -28,20 +28,20 @@
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/layout/activity_add_image.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_bear.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/bear.webp"
-    },
-    {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_mouse.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/mouse.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_willow.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/willow.webp"
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_bear.webp.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/bear.webp"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_tiger.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/tiger.webp"
+    },
+    {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_willow.webp.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/willow.webp"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_hawamahal.webp.flat",
@@ -168,6 +168,10 @@
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/table.webp"
     },
     {
+        "merged": "com.example.visualock.app-debug-50:/layout_dialog_edit_name.xml.flat",
+        "source": "com.example.visualock.app-main-52:/layout/dialog_edit_name.xml"
+    },
+    {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_burjkhalifa.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/burjkhalifa.webp"
     },
@@ -190,6 +194,10 @@
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_plant.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/plant.webp"
+    },
+    {
+        "merged": "com.example.visualock.app-debug-50:/layout_dialog_edit_email.xml.flat",
+        "source": "com.example.visualock.app-main-52:/layout/dialog_edit_email.xml"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/mipmap-mdpi_ic_launcher.webp.flat",
@@ -242,10 +250,6 @@
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_ic_home_black_24dp.xml.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/ic_home_black_24dp.xml"
-    },
-    {
-        "merged": "com.example.visualock.app-debug-50:/layout_item_image.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/item_image.xml"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_white.webp.flat",
@@ -522,6 +526,10 @@
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_ic_dashboard_black_24dp.xml.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/ic_dashboard_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.visualock.app-debug-50:/layout_activity_profile.xml.flat",
+        "source": "com.example.visualock.app-main-52:/layout/activity_profile.xml"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_car.webp.flat",

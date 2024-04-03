@@ -3407,6 +3407,8 @@ id browser_actions_menu_item_icon
 id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
+id btn_cancel
+id btn_save
 id buttonDeleteAccount
 id buttonPanel
 id cache_measures
@@ -3440,6 +3442,7 @@ id closest
 id collapseActionView
 id compress
 id confirm_button
+id confirm_new_email
 id constraint
 id container
 id content
@@ -3468,6 +3471,7 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id dialogTitle
 id dialog_button
 id dimensions
 id direct
@@ -3491,6 +3495,7 @@ id easeOut
 id east
 id edge
 id editButton
+id editEmailButton
 id edit_query
 id elastic
 id embed
@@ -3498,6 +3503,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id et_new_email
 id et_new_name
 id exitUntilCollapsed
 id expand_activities_button
@@ -4012,6 +4018,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_edit_email
 layout dialog_edit_name
 layout fragment_dashboard
 layout fragment_home
