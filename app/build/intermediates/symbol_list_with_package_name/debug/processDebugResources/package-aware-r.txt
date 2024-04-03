@@ -3053,6 +3053,7 @@ drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable acropolisofathens
+drawable add_image_icon
 drawable ambullance
 drawable ape
 drawable apple
@@ -3259,6 +3260,7 @@ drawable phone
 drawable pickuptruck
 drawable pine
 drawable pink
+drawable placeholder_image
 drawable plane
 drawable plant
 drawable polar_bear
@@ -3276,6 +3278,7 @@ drawable sportscar
 drawable squirrel
 drawable statueofliberty
 drawable stonehenge
+drawable storage_icon
 drawable sun
 drawable table
 drawable tajmahal
@@ -3367,6 +3370,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id add_image
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3456,6 +3460,7 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id deleteButton
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3537,6 +3542,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id imgUser
 id immediateStop
 id included
@@ -3697,6 +3703,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id registerRedirectText
 id register_button
 id register_email
@@ -3734,6 +3741,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id selectImageButton
 id select_dialog_listview
 id selected
 id selection_type
@@ -3774,6 +3782,7 @@ id startVertical
 id staticLayout
 id staticPostLayout
 id stop
+id storage
 id stretch
 id submenuarrow
 id submit_area
@@ -3800,6 +3809,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textViewMessage
+id textViewName
 id text_dashboard
 id text_home
 id text_input_end_icon
@@ -3836,6 +3846,7 @@ id unchecked
 id uniform
 id unlabeled
 id up
+id uploadImageButton
 id useLogo
 id vertical_only
 id view_offset_helper
@@ -3973,6 +3984,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_about
+layout activity_add_image
 layout activity_forgot_password
 layout activity_graph_login
 layout activity_graph_password
@@ -3981,6 +3993,7 @@ layout activity_main
 layout activity_profile
 layout activity_register
 layout activity_setting
+layout activity_storage
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout custom_dialog
@@ -4004,6 +4017,7 @@ layout fragment_dashboard
 layout fragment_home
 layout fragment_menu
 layout fragment_notifications
+layout item_image
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

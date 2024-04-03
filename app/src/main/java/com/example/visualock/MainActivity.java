@@ -36,11 +36,18 @@ public class MainActivity extends AppCompatActivity {
         // Check if the intent has the flag to navigate to the menu fragment
         if (getIntent().getBooleanExtra("menuFragment", false)) {
             navigateToMenuFragment();
+        } else if (getIntent().getBooleanExtra("dashboardFragment", false)) {
+            navigateToDashboardFragment();
         }
     }
     private void navigateToMenuFragment() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         navController.navigate(R.id.navigation_menu);
+        finish();
+    }
+    private void navigateToDashboardFragment() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
+        navController.navigate(R.id.navigation_dashboard);
         finish();
     }
 }

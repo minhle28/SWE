@@ -13,6 +13,12 @@
         android:theme="@style/Theme.VisuaLock"
         tools:targetApi="31">
         <activity
+            android:name=".StorageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddImageActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditNameDialogFragment"
             android:exported="false" />
         <activity

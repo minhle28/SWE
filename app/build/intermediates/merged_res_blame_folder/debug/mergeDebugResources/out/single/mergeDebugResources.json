@@ -4,6 +4,14 @@
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/layout/fragment_home.xml"
     },
     {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/layout_item_image.xml.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/layout/item_image.xml"
+    },
+    {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/layout_activity_storage.xml.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/layout/activity_storage.xml"
+    },
+    {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_apple.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/apple.webp"
     },
@@ -16,20 +24,24 @@
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/machupicchu.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_mouse.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/mouse.webp"
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/layout_activity_add_image.xml.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/layout/activity_add_image.xml"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_bear.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/bear.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_tiger.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/tiger.webp"
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_mouse.webp.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/mouse.webp"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_willow.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/willow.webp"
+    },
+    {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_tiger.webp.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/tiger.webp"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_hawamahal.webp.flat",
@@ -98,6 +110,10 @@
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_zebra.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/zebra.webp"
+    },
+    {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_storage_icon.png.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/storage_icon.png"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_firetruck.webp.flat",
@@ -226,6 +242,10 @@
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_ic_home_black_24dp.xml.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/ic_home_black_24dp.xml"
+    },
+    {
+        "merged": "com.example.visualock.app-debug-50:/layout_item_image.xml.flat",
+        "source": "com.example.visualock.app-main-52:/layout/item_image.xml"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_white.webp.flat",
@@ -504,10 +524,6 @@
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_profile.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_profile.xml"
-    },
-    {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_car.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/car.webp"
     },
@@ -556,6 +572,10 @@
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_add_image_icon.png.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/add_image_icon.png"
+    },
+    {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_shoe.webp.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/shoe.webp"
     },
@@ -590,6 +610,10 @@
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/layout_activity_graph_password.xml.flat",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/layout/activity_graph_password.xml"
+    },
+    {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_placeholder_image.png.flat",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-52:/drawable/placeholder_image.png"
     },
     {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-50:/drawable_monkey.webp.flat",

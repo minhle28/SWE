@@ -20,6 +20,7 @@ color white
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 drawable acropolisofathens
+drawable add_image_icon
 drawable ambullance
 drawable ape
 drawable apple
@@ -107,6 +108,7 @@ drawable phone
 drawable pickuptruck
 drawable pine
 drawable pink
+drawable placeholder_image
 drawable plane
 drawable plant
 drawable polar_bear
@@ -124,6 +126,7 @@ drawable sportscar
 drawable squirrel
 drawable statueofliberty
 drawable stonehenge
+drawable storage_icon
 drawable sun
 drawable table
 drawable tajmahal
@@ -141,6 +144,7 @@ id ForgotPasswordCardView
 id LoginCardView
 id PasswordCardView
 id RegisterCardView
+id add_image
 id backButton
 id buttonDeleteAccount
 id cat_animals
@@ -151,10 +155,12 @@ id cat_tree
 id cat_vehicles
 id checkBoxAgree
 id container
+id deleteButton
 id editButton
 id et_new_name
 id forgot_passRedirectText
 id icon_menu
+id imageView
 id imgUser
 id linlay1
 id list_menu
@@ -172,6 +178,7 @@ id navigation_home
 id navigation_menu
 id navigation_notifications
 id password_button
+id recyclerView
 id registerRedirectText
 id register_button
 id register_email
@@ -180,9 +187,12 @@ id register_password
 id rellay1
 id reset_email
 id saveButton
+id selectImageButton
 id send_reset_button
+id storage
 id text
 id textViewMessage
+id textViewName
 id text_dashboard
 id text_home
 id text_menu
@@ -190,7 +200,9 @@ id text_notifications
 id tv_email
 id tv_name
 id tv_user_name
+id uploadImageButton
 layout activity_about
+layout activity_add_image
 layout activity_forgot_password
 layout activity_graph_login
 layout activity_graph_password
@@ -199,11 +211,13 @@ layout activity_main
 layout activity_profile
 layout activity_register
 layout activity_setting
+layout activity_storage
 layout dialog_edit_name
 layout fragment_dashboard
 layout fragment_home
 layout fragment_menu
 layout fragment_notifications
+layout item_image
 layout menu_item
 menu bottom_nav_menu
 mipmap ic_launcher

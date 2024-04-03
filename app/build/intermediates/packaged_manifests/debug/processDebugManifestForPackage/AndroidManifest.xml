@@ -31,6 +31,12 @@
         android:testOnly="true"
         android:theme="@style/Theme.VisuaLock" >
         <activity
+            android:name="com.example.visualock.StorageActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.visualock.AddImageActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.visualock.EditNameDialogFragment"
             android:exported="false" />
         <activity

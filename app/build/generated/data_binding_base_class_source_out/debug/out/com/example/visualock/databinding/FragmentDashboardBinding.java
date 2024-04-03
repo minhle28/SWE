@@ -4,10 +4,11 @@ package com.example.visualock.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.visualock.R;
@@ -17,20 +18,28 @@ import java.lang.String;
 
 public final class FragmentDashboardBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
-  public final TextView textDashboard;
+  public final CardView addImage;
 
-  private FragmentDashboardBinding(@NonNull ConstraintLayout rootView,
-      @NonNull TextView textDashboard) {
+  @NonNull
+  public final CardView storage;
+
+  @NonNull
+  public final LinearLayout textDashboard;
+
+  private FragmentDashboardBinding(@NonNull ScrollView rootView, @NonNull CardView addImage,
+      @NonNull CardView storage, @NonNull LinearLayout textDashboard) {
     this.rootView = rootView;
+    this.addImage = addImage;
+    this.storage = storage;
     this.textDashboard = textDashboard;
   }
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -55,13 +64,25 @@ public final class FragmentDashboardBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.add_image;
+      CardView addImage = ViewBindings.findChildViewById(rootView, id);
+      if (addImage == null) {
+        break missingId;
+      }
+
+      id = R.id.storage;
+      CardView storage = ViewBindings.findChildViewById(rootView, id);
+      if (storage == null) {
+        break missingId;
+      }
+
       id = R.id.text_dashboard;
-      TextView textDashboard = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout textDashboard = ViewBindings.findChildViewById(rootView, id);
       if (textDashboard == null) {
         break missingId;
       }
 
-      return new FragmentDashboardBinding((ConstraintLayout) rootView, textDashboard);
+      return new FragmentDashboardBinding((ScrollView) rootView, addImage, storage, textDashboard);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
