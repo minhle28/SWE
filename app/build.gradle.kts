@@ -51,5 +51,9 @@ dependencies {
     implementation("com.google.firebase:firebase-firestore:24.10.3")
     implementation ("com.google.android.gms:play-services-auth:20.2.0")
     implementation("com.google.firebase:firebase-auth:22.0.0")
+    implementation ("com.google.firebase:firebase-storage:19.1.1")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 
 }

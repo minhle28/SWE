@@ -7,18 +7,21 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.squareup.picasso.Picasso;
+import java.util.List;
 
 public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
 
     private Context context;
-    private int[] imageIds;
+    private List<String> imageNames;
+    private List<String> imageUrls;
 
-    public ImageAdapter(Context context, int[] imageIds) {
+    public ImageAdapter(Context context, List<String> imageNames, List<String> imageUrls) {
         this.context = context;
-        this.imageIds = imageIds;
+        this.imageNames = imageNames;
+        this.imageUrls = imageUrls;
     }
 
     @NonNull
@@ -30,12 +33,11 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        // Load image into ImageView
-        holder.imageView.setImageResource(imageIds[position]);
+        // Load image into ImageView using Picasso
+        Picasso.get().load(imageUrls.get(position)).into(holder.imageView);
 
         // Set image name
-        String imageName = "Image " + (position + 1);
-        holder.textViewName.setText(imageName);
+        holder.textViewName.setText(imageNames.get(position));
 
         // Delete button click listener
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
@@ -47,14 +49,14 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
                 // You can implement your actual deletion logic here
                 // For example, if you store image IDs in a database, you would delete
                 // the corresponding record from the database
-                removeItem(position);
+                removeItem(holder.getAdapterPosition());
             }
         });
     }
 
     @Override
     public int getItemCount() {
-        return imageIds.length;
+        return imageNames.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -71,11 +73,9 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     }
 
     private void removeItem(int position) {
-        // Remove the image from the array
-        int[] newArray = new int[imageIds.length - 1];
-        System.arraycopy(imageIds, 0, newArray, 0, position);
-        System.arraycopy(imageIds, position + 1, newArray, position, imageIds.length - position - 1);
-        imageIds = newArray;
+        // Remove the image name and URL from the lists
+        imageNames.remove(position);
+        imageUrls.remove(position);
 
         // Notify adapter about the removal
         notifyDataSetChanged();

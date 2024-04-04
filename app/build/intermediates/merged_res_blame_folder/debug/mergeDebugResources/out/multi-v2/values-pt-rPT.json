@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.visualock.app-mergeDebugResources-48:/values-pt-rPT/values-pt-rPT.xml",
+            "outputFile": "com.example.visualock.app-mergeDebugResources-49:/values-pt-rPT/values-pt-rPT.xml",
             "map": [
                 {
                     "source": "/Users/minhle28/.gradle/caches/transforms-3/9fdaa66228b640b290fbb7b9c8097c4e/transformed/play-services-basement-18.1.0/res/values-pt-rPT/values.xml",
