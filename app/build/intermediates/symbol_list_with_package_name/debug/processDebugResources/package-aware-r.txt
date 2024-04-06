@@ -3293,6 +3293,8 @@ drawable truck
 drawable turtle
 drawable umbrella
 drawable user_24
+drawable visualock_app_logo
+drawable visualock_logo
 drawable white
 drawable willow
 drawable yellow
@@ -4002,6 +4004,7 @@ layout activity_main
 layout activity_profile
 layout activity_register
 layout activity_setting
+layout activity_splash
 layout activity_storage
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
@@ -4918,6 +4921,7 @@ style Theme_MaterialComponents_Light_NoActionBar
 style Theme_MaterialComponents_Light_NoActionBar_Bridge
 style Theme_MaterialComponents_NoActionBar
 style Theme_MaterialComponents_NoActionBar_Bridge
+style Theme_NoSplashScreen
 style Theme_VisuaLock
 style ThemeOverlay_AppCompat
 style ThemeOverlay_AppCompat_ActionBar
