@@ -35,10 +35,12 @@ public class RegisterActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         database = FirebaseFirestore.getInstance();
         registerEmail = findViewById(R.id.register_email);
-        registerPassword = findViewById(R.id.register_password);
         registerName = findViewById(R.id.register_name);
-        registerButton = findViewById(R.id.register_button);
         loginRedirectText = findViewById(R.id.loginRedirectText);
+
+        /*
+        registerPassword = findViewById(R.id.register_password);
+        registerButton = findViewById(R.id.register_button);
 
         registerButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,6 +121,11 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });
 
+    public boolean isValidEmail(String email) {
+        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
+        return email.matches(emailRegex);
+    }
+        */
         loginRedirectText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,9 +134,4 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
-    // Method to validate email format
-    public boolean isValidEmail(String email) {
-        String emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$";
-        return email.matches(emailRegex);
-    }
 }

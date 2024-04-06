@@ -37,20 +37,16 @@ public final class ActivityRegisterBinding implements ViewBinding {
   @NonNull
   public final EditText registerName;
 
-  @NonNull
-  public final EditText registerPassword;
-
   private ActivityRegisterBinding(@NonNull ConstraintLayout rootView,
       @NonNull CardView RegisterCardView, @NonNull TextView loginRedirectText,
       @NonNull Button registerButton, @NonNull EditText registerEmail,
-      @NonNull EditText registerName, @NonNull EditText registerPassword) {
+      @NonNull EditText registerName) {
     this.rootView = rootView;
     this.RegisterCardView = RegisterCardView;
     this.loginRedirectText = loginRedirectText;
     this.registerButton = registerButton;
     this.registerEmail = registerEmail;
     this.registerName = registerName;
-    this.registerPassword = registerPassword;
   }
 
   @Override
@@ -110,14 +106,8 @@ public final class ActivityRegisterBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.register_password;
-      EditText registerPassword = ViewBindings.findChildViewById(rootView, id);
-      if (registerPassword == null) {
-        break missingId;
-      }
-
       return new ActivityRegisterBinding((ConstraintLayout) rootView, RegisterCardView,
-          loginRedirectText, registerButton, registerEmail, registerName, registerPassword);
+          loginRedirectText, registerButton, registerEmail, registerName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,6 +1,5 @@
 package com.example.visualock;
-import java.util.*;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.GridView;
 import android.content.Context;
@@ -12,33 +11,28 @@ import android.widget.AdapterView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Patterns;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-
+import android.graphics.Color;
 
 public class GraphPasswordActivity extends AppCompatActivity {
-    public static class ImageAdapter extends BaseAdapter {
+    private static int lastClickedPosition = -1;
+    private static final int MAX_CLICKS = 5; // Maximum allowed clicks
+    private static int totalClicks = 0;
+
+    public class PasswordImageAdapter extends BaseAdapter {
+        // Other methods and fields
+
         private Context mContext;
         private int[] mImageIds;
 
-        public ImageAdapter(Context context, int[] imageIds) {
+        private boolean[] clickedStates;
+        private int numberOfClickedImages = 0;
+
+        public PasswordImageAdapter(Context context, int[] imageIds) {
             mContext = context;
             mImageIds = imageIds;
+            clickedStates = new boolean[mImageIds.length];
         }
 
         @Override
@@ -57,24 +51,52 @@ public class GraphPasswordActivity extends AppCompatActivity {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             ImageView imageView;
             if (convertView == null) {
-                // If convertView is null, inflate a new ImageView
                 imageView = new ImageView(mContext);
                 imageView.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 200));
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
             } else {
-                // If convertView is not null, reuse it
                 imageView = (ImageView) convertView;
             }
 
-            // Set the image resource for the ImageView
             imageView.setImageResource(mImageIds[position]);
+
+            // Apply transparent grey overlay if the image is clicked
+            if (clickedStates[position]) {
+                imageView.setColorFilter(Color.parseColor("#80000000"));
+            } else {
+                imageView.setColorFilter(null);
+            }
+
+            // Toggle clicked state on click
+            imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // Check if the maximum number of clicks is reached
+                    if (totalClicks >= MAX_CLICKS && !clickedStates[position]) {
+                        Toast.makeText(mContext, "You can only select up to 5 images.", Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+
+                    // Toggle the clicked state
+                    if (clickedStates[position]) {
+                        clickedStates[position] = false;
+                        totalClicks--;
+                    } else {
+                        clickedStates[position] = true;
+                        totalClicks++;
+                    }
+
+                    notifyDataSetChanged(); // Refresh the adapter to update the UI
+                }
+            });
+
             return imageView;
         }
-
     }
+
 
     int[] colorImages = {
             R.drawable.grey, R.drawable.pink, R.drawable.green, R.drawable.orange, R.drawable.yellow,
@@ -118,24 +140,24 @@ public class GraphPasswordActivity extends AppCompatActivity {
         setContentView(R.layout.activity_graph_password);
 
         ListView Tree = findViewById(R.id.cat_tree);
-        Tree.setAdapter(new ImageAdapter(this, treeImages));
+        Tree.setAdapter(new PasswordImageAdapter(this, treeImages));
         ListView Color = findViewById(R.id.cat_color);
-        Color.setAdapter(new ImageAdapter(this, colorImages));
+        Color.setAdapter(new PasswordImageAdapter(this, colorImages));
         ListView dailyObjects = findViewById(R.id.cat_dailyObjects);
-        dailyObjects.setAdapter(new ImageAdapter(this,dailyObjectsImages));
+        dailyObjects.setAdapter(new PasswordImageAdapter(this,dailyObjectsImages));
         ListView Animals = findViewById(R.id.cat_animals);
-        Animals.setAdapter(new ImageAdapter(this, animalImages));
+        Animals.setAdapter(new PasswordImageAdapter(this, animalImages));
         ListView Places = findViewById(R.id.cat_places);
-        Places.setAdapter(new ImageAdapter(this, placesImages));
+        Places.setAdapter(new PasswordImageAdapter(this, placesImages));
         ListView Vehicle = findViewById(R.id.cat_vehicles);
-        Vehicle.setAdapter(new ImageAdapter(this,vehicleImages));
+        Vehicle.setAdapter(new PasswordImageAdapter(this,vehicleImages));
 
         Tree.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(GraphPasswordActivity.this, "Tree image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-
-
+                lastClickedPosition = position;
+                ((BaseAdapter) parent.getAdapter()).notifyDataSetChanged(); // Refresh ListView
             }
         });
 
@@ -143,8 +165,6 @@ public class GraphPasswordActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(GraphPasswordActivity.this, "Color image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-
-
             }
         });
 
@@ -152,8 +172,6 @@ public class GraphPasswordActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(GraphPasswordActivity.this, "Daiily Object image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-
-
             }
         });
 
@@ -161,8 +179,6 @@ public class GraphPasswordActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(GraphPasswordActivity.this, "Animals image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-
-
             }
         });
 
@@ -170,8 +186,6 @@ public class GraphPasswordActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(GraphPasswordActivity.this, "Places image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-
-
             }
         });
 
@@ -179,8 +193,6 @@ public class GraphPasswordActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(GraphPasswordActivity.this, "Vehicle image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-
-
             }
         });
 
@@ -192,5 +204,4 @@ public class GraphPasswordActivity extends AppCompatActivity {
             }
         });
     }
-
 }

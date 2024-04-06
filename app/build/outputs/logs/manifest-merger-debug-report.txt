@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:1-71:12
-INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:1-71:12
-INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:1-71:12
-INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:1-71:12
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:1-75:12
+INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:1-75:12
 MERGED from [androidx.databinding:viewbinding:8.3.1] /Users/minhle28/.gradle/caches/transforms-3/100e72101fd25fae317160be2c26934d/transformed/viewbinding-8.3.1/AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.navigation:navigation-common:2.7.6] /Users/minhle28/.gradle/caches/transforms-3/6b01df219bab8ce44da6a87ba066fd31/transformed/navigation-common-2.7.6/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-runtime:2.7.6] /Users/minhle28/.gradle/caches/transforms-3/91e63d5e6e55b52ac825f5759a5f79e6/transformed/navigation-runtime-2.7.6/AndroidManifest.xml:17:1-22:12
@@ -94,9 +94,21 @@ MERGED from [com.android.support:exifinterface:27.1.0] /Users/minhle28/.gradle/c
 		INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:5:5-67
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/minhle28/.gradle/caches/transforms-3/c01917efd430b44e158b28693a58f901/transformed/firebase-auth-22.0.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/minhle28/.gradle/caches/transforms-3/c01917efd430b44e158b28693a58f901/transformed/firebase-auth-22.0.0/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] /Users/minhle28/.gradle/caches/transforms-3/39f6d6c37ee8b94ce7cf3c20ec213e16/transformed/firebase-firestore-24.10.3/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-firestore:24.10.3] /Users/minhle28/.gradle/caches/transforms-3/39f6d6c37ee8b94ce7cf3c20ec213e16/transformed/firebase-firestore-24.10.3/AndroidManifest.xml:11:5-67
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/minhle28/.gradle/caches/transforms-3/76576cb7b425753c69ee2a59bbe2121f/transformed/firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/minhle28/.gradle/caches/transforms-3/76576cb7b425753c69ee2a59bbe2121f/transformed/firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/minhle28/.gradle/caches/transforms-3/4976b251cd76e191b8e43c4e10c970dc/transformed/recaptcha-18.1.2/AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/minhle28/.gradle/caches/transforms-3/4976b251cd76e191b8e43c4e10c970dc/transformed/recaptcha-18.1.2/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:5:22-64
 application
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:5:5-68:19
-INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:5:5-68:19
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:7:5-73:19
+INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:7:5-73:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/minhle28/.gradle/caches/transforms-3/f4878b10edb9f42cc02fe97b7b1da47a/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/minhle28/.gradle/caches/transforms-3/f4878b10edb9f42cc02fe97b7b1da47a/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/minhle28/.gradle/caches/transforms-3/f503f3ae3f6f40a6e2197b040b94aa06/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -150,135 +162,129 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/minh
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.9.0] /Users/minhle28/.gradle/caches/transforms-3/d0363efd101a4c346e6aa94a4fe20ed5/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:12:9-35
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:14:9-35
 	android:label
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:10:9-41
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:12:9-41
 	android:fullBackupContent
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:8:9-54
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:10:9-54
 	android:roundIcon
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:13:9-54
 	tools:targetApi
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:14:9-29
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:16:9-29
 	android:icon
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:9:9-43
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:11:9-43
 	android:allowBackup
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:6:9-35
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:8:9-35
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:13:9-47
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:15:9-47
 	android:dataExtractionRules
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:7:9-65
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:9:9-65
+activity#com.example.visualock.FolderListActivity
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:17:9-19:40
+	android:exported
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:19:13-37
+	android:name
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:18:13-47
 activity#com.example.visualock.StorageActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:15:9-17:40
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:20:9-22:40
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:17:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:22:13-37
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:16:13-44
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:21:13-44
 activity#com.example.visualock.AddImageActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:18:9-20:40
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:23:9-25:40
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:20:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:25:13-37
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:19:13-45
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:24:13-45
 activity#com.example.visualock.EditNameDialogFragment
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:21:9-23:40
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:26:9-28:40
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:23:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:22:13-51
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:27:13-51
 activity#com.example.visualock.AboutActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:24:9-27:59
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:29:9-32:59
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:26:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:31:13-37
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:27:13-56
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:32:13-56
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:25:13-42
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:30:13-42
 activity#com.example.visualock.SettingActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:28:9-31:59
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:33:9-36:59
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:30:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:35:13-37
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:31:13-56
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:36:13-56
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:29:13-44
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:34:13-44
 activity#com.example.visualock.ProfileActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:32:9-35:59
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:37:9-40:59
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:34:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:39:13-37
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:35:13-56
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:40:13-56
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:33:13-44
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:38:13-44
 activity#com.example.visualock.ForgotPasswordActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:36:9-39:59
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:41:9-44:59
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:38:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:43:13-37
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:39:13-56
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:44:13-56
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:37:13-51
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:42:13-51
 activity#com.example.visualock.RegisterActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:40:9-43:59
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:45:9-48:59
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:42:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:47:13-37
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:43:13-56
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:48:13-56
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:41:13-45
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:46:13-45
 activity#com.example.visualock.LoginActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:44:9-47:59
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:49:9-52:59
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:46:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:51:13-37
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:47:13-56
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:52:13-56
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:45:13-42
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:50:13-42
 activity#com.example.visualock.GraphPasswordActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:48:9-51:59
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:53:9-56:59
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:50:13-37
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:55:13-37
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:51:13-56
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:56:13-56
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:49:13-50
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:54:13-50
 activity#com.example.visualock.GraphLoginActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:52:9-63:20
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:57:9-68:20
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:54:13-36
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:59:13-36
 	android:theme
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:55:13-56
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:60:13-56
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:53:13-47
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:58:13-47
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:58:13-62:29
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:63:13-67:29
 action#android.intent.action.MAIN
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:59:17-69
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:64:17-69
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:59:25-66
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:64:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:61:17-77
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:66:17-77
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:61:27-74
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:66:27-74
 activity#com.example.visualock.MainActivity
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:64:9-67:48
+ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:69:9-72:48
 	android:label
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:67:13-45
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:72:13-45
 	android:exported
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:66:13-36
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:71:13-36
 	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:65:13-41
-uses-permission#android.permission.INTERNET
-ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:70:5-67
-MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/minhle28/.gradle/caches/transforms-3/c01917efd430b44e158b28693a58f901/transformed/firebase-auth-22.0.0/AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-auth:22.0.0] /Users/minhle28/.gradle/caches/transforms-3/c01917efd430b44e158b28693a58f901/transformed/firebase-auth-22.0.0/AndroidManifest.xml:25:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.10.3] /Users/minhle28/.gradle/caches/transforms-3/39f6d6c37ee8b94ce7cf3c20ec213e16/transformed/firebase-firestore-24.10.3/AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-firestore:24.10.3] /Users/minhle28/.gradle/caches/transforms-3/39f6d6c37ee8b94ce7cf3c20ec213e16/transformed/firebase-firestore-24.10.3/AndroidManifest.xml:11:5-67
-MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/minhle28/.gradle/caches/transforms-3/76576cb7b425753c69ee2a59bbe2121f/transformed/firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:19.1.1] /Users/minhle28/.gradle/caches/transforms-3/76576cb7b425753c69ee2a59bbe2121f/transformed/firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/minhle28/.gradle/caches/transforms-3/4976b251cd76e191b8e43c4e10c970dc/transformed/recaptcha-18.1.2/AndroidManifest.xml:7:5-67
-MERGED from [com.google.android.recaptcha:recaptcha:18.1.2] /Users/minhle28/.gradle/caches/transforms-3/4976b251cd76e191b8e43c4e10c970dc/transformed/recaptcha-18.1.2/AndroidManifest.xml:7:5-67
-	android:name
-		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:70:22-64
+		ADDED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml:70:13-41
 uses-sdk
 INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/minhle28/Documents/Projects/VisuaLock/VisuaLock/app/src/main/AndroidManifest.xml

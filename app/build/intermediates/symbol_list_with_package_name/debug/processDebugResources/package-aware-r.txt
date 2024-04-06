@@ -3255,6 +3255,7 @@ drawable notify_panel_notification_icon_bg
 drawable oak
 drawable operahouse
 drawable orange
+drawable password_icon
 drawable petronastowers
 drawable phone
 drawable pickuptruck
@@ -3287,6 +3288,7 @@ drawable tiger
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable train
+drawable trash_icon
 drawable truck
 drawable turtle
 drawable umbrella
@@ -3600,6 +3602,7 @@ id material_hour_tv
 id material_label
 id material_minute_text_input
 id material_minute_tv
+id material_switch
 id material_textinput_timepicker
 id material_timepicker_cancel_button
 id material_timepicker_container
@@ -3715,7 +3718,6 @@ id registerRedirectText
 id register_button
 id register_email
 id register_name
-id register_password
 id rellay1
 id report_drawn
 id reset_email

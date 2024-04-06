@@ -18,12 +18,20 @@
         android:textSize="16sp"
         android:layout_centerVertical="true" />
 
-    <Button
-        android:id="@+id/deleteButton"
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/material_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/deleteButton"
+        android:layout_marginEnd="20dp"
+        android:layout_centerVertical="true" />
+
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
         android:layout_alignParentEnd="true"
-        android:text="Delete"
+        android:src="@drawable/trash_icon"
         android:layout_centerVertical="true"/>
 
 </RelativeLayout>

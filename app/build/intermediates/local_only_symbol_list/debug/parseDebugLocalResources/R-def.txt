@@ -103,6 +103,7 @@ drawable neuschwansteincastle
 drawable oak
 drawable operahouse
 drawable orange
+drawable password_icon
 drawable petronastowers
 drawable phone
 drawable pickuptruck
@@ -132,6 +133,7 @@ drawable table
 drawable tajmahal
 drawable tiger
 drawable train
+drawable trash_icon
 drawable truck
 drawable turtle
 drawable umbrella
@@ -176,6 +178,7 @@ id loginRedirectText
 id login_button
 id login_email
 id login_password
+id material_switch
 id mobile_navigation
 id nav_host_fragment_activity_main
 id nav_view
@@ -189,7 +192,6 @@ id registerRedirectText
 id register_button
 id register_email
 id register_name
-id register_password
 id rellay1
 id reset_email
 id saveButton

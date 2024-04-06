@@ -1,14 +1,16 @@
 package com.example.visualock;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.squareup.picasso.Picasso;
 import java.util.List;
 
@@ -37,19 +39,24 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
         Picasso.get().load(imageUrls.get(position)).into(holder.imageView);
 
         // Set image name
-        holder.textViewName.setText(imageNames.get(position));
+        String imageName = imageNames.get(position);
+        if (imageName.length() > 16) {
+            // If the name is longer than 16 characters, truncate it
+            imageName = imageName.substring(0, 13) + "...";
+        }
+        holder.textViewName.setText(imageName);
 
         // Delete button click listener
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Delete image logic here
-                // For demonstration, you can remove the image from the list
-                // and notify the adapter
-                // You can implement your actual deletion logic here
-                // For example, if you store image IDs in a database, you would delete
-                // the corresponding record from the database
-                removeItem(holder.getAdapterPosition());
+                if (holder.materialSwitch.isChecked()) {
+                    // If toggle is on, show a dialog
+                    showToggleAlertDialog();
+                } else {
+                    // If toggle is off, proceed with deletion
+                    removeItem(holder.getAdapterPosition());
+                }
             }
         });
     }
@@ -62,13 +69,15 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView imageView;
         TextView textViewName;
-        Button deleteButton;
+        ImageView deleteButton;
+        SwitchMaterial materialSwitch;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);
             textViewName = itemView.findViewById(R.id.textViewName);
             deleteButton = itemView.findViewById(R.id.deleteButton);
+            materialSwitch = itemView.findViewById(R.id.material_switch);
         }
     }
 
@@ -79,5 +88,19 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
 
         // Notify adapter about the removal
         notifyDataSetChanged();
+    }
+
+    private void showToggleAlertDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Turn Off Toggle");
+        builder.setMessage("Please turn off the toggle switch before deleting.");
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 }

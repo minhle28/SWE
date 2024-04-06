@@ -3254,6 +3254,7 @@ int drawable notify_panel_notification_icon_bg 0x7f07013f
 int drawable oak 0x7f070140
 int drawable operahouse 0x7f070141
 int drawable orange 0x7f070142
+int drawable password_icon 0x7f07016b
 int drawable petronastowers 0x7f070143
 int drawable phone 0x7f070144
 int drawable pickuptruck 0x7f070145
@@ -3286,6 +3287,7 @@ int drawable tiger 0x7f07015e
 int drawable tooltip_frame_dark 0x7f07015f
 int drawable tooltip_frame_light 0x7f070160
 int drawable train 0x7f070161
+int drawable trash_icon 0x7f07016c
 int drawable truck 0x7f070162
 int drawable turtle 0x7f070163
 int drawable umbrella 0x7f070164
@@ -3599,6 +3601,7 @@ int id material_hour_tv 0x7f080123
 int id material_label 0x7f080124
 int id material_minute_text_input 0x7f080125
 int id material_minute_tv 0x7f080126
+int id material_switch 0x7f08024a
 int id material_textinput_timepicker 0x7f080127
 int id material_timepicker_cancel_button 0x7f080128
 int id material_timepicker_container 0x7f080129
@@ -3714,7 +3717,6 @@ int id registerRedirectText 0x7f080195
 int id register_button 0x7f080196
 int id register_email 0x7f080197
 int id register_name 0x7f080198
-int id register_password 0x7f080199
 int id rellay1 0x7f08019a
 int id report_drawn 0x7f08019b
 int id reset_email 0x7f08019c

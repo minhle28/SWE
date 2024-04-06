@@ -4,7 +4,6 @@ package com.example.visualock.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -13,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.visualock.R;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -22,19 +22,24 @@ public final class ItemImageBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final Button deleteButton;
+  public final ImageView deleteButton;
 
   @NonNull
   public final ImageView imageView;
 
   @NonNull
+  public final SwitchMaterial materialSwitch;
+
+  @NonNull
   public final TextView textViewName;
 
-  private ItemImageBinding(@NonNull RelativeLayout rootView, @NonNull Button deleteButton,
-      @NonNull ImageView imageView, @NonNull TextView textViewName) {
+  private ItemImageBinding(@NonNull RelativeLayout rootView, @NonNull ImageView deleteButton,
+      @NonNull ImageView imageView, @NonNull SwitchMaterial materialSwitch,
+      @NonNull TextView textViewName) {
     this.rootView = rootView;
     this.deleteButton = deleteButton;
     this.imageView = imageView;
+    this.materialSwitch = materialSwitch;
     this.textViewName = textViewName;
   }
 
@@ -66,7 +71,7 @@ public final class ItemImageBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.deleteButton;
-      Button deleteButton = ViewBindings.findChildViewById(rootView, id);
+      ImageView deleteButton = ViewBindings.findChildViewById(rootView, id);
       if (deleteButton == null) {
         break missingId;
       }
@@ -77,13 +82,20 @@ public final class ItemImageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.material_switch;
+      SwitchMaterial materialSwitch = ViewBindings.findChildViewById(rootView, id);
+      if (materialSwitch == null) {
+        break missingId;
+      }
+
       id = R.id.textViewName;
       TextView textViewName = ViewBindings.findChildViewById(rootView, id);
       if (textViewName == null) {
         break missingId;
       }
 
-      return new ItemImageBinding((RelativeLayout) rootView, deleteButton, imageView, textViewName);
+      return new ItemImageBinding((RelativeLayout) rootView, deleteButton, imageView,
+          materialSwitch, textViewName);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
