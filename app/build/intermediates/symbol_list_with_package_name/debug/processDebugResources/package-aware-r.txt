@@ -3466,6 +3466,8 @@ id date_picker_actions
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
+id defaultButton
+id defaultImageView
 id default_activity_button
 id deleteButton
 id deltaRelative
@@ -3648,6 +3650,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id my_password
 id nav_controller_view_tag
 id nav_host_fragment_activity_main
 id nav_host_fragment_container
@@ -3700,6 +3703,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passwordView
 id password_button
 id password_toggle
 id path
@@ -3715,6 +3719,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerDefaultView
 id recyclerView
 id registerRedirectText
 id register_button
@@ -3859,6 +3864,8 @@ id unlabeled
 id up
 id uploadImageButton
 id useLogo
+id userButton
+id userImageView
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -4295,6 +4302,7 @@ string title_dashboard
 string title_home
 string title_menu
 string title_notifications
+string welcome_message
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog

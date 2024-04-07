@@ -4,7 +4,7 @@
             "outputFile": "com.example.visualock.test.app-mergeDebugAndroidTestResources-3:/values-v18/values-v18.xml",
             "map": [
                 {
-                    "source": "/Users/minhle28/.gradle/caches/transforms-3/87f753e87459b2bc3a14fc727a23e4f1/transformed/core-1.5.0/res/values-v18/values.xml",
+                    "source": "/Users/minhle28/.gradle/caches/transforms-3/92e256ab5826097ac2fee3cce2b74a98/transformed/core-1.5.0/res/values-v18/values.xml",
                     "from": {
                         "startLines": "4,12",
                         "startColumns": "0,0",

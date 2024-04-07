@@ -93,7 +93,7 @@ public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> 
     private void showToggleAlertDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Warning");
-        builder.setMessage("Toggle is ON which is your current password. \nPlease turn it OFF before deleting.");
+        builder.setMessage("Toggle is ON which is your current password \nPlease turn off the toggle switch before deleting.");
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

@@ -3,8 +3,9 @@ package com.example.visualock;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
-
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -47,6 +48,14 @@ public class StorageActivity extends AppCompatActivity {
         adapter = new ImageAdapter(this, imageNames, imageUrls);
         recyclerView.setAdapter(adapter);
 
+        Button defaultButton = findViewById(R.id.defaultButton);
+        defaultButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleDefaultImageView();
+            }
+        });
+
         fetchImagesFromFirebaseStorage();
     }
 
@@ -85,6 +94,26 @@ public class StorageActivity extends AppCompatActivity {
                 // Handle any errors
             }
         });
+    }
+
+    private void toggleDefaultImageView() {
+        TextView defaultImageView = findViewById(R.id.defaultImageView);
+        RecyclerView recyclerDefaultView = findViewById(R.id.recyclerDefaultView);
+        TextView userImageView = findViewById(R.id.userImageView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+
+        // Check if defaultImageView is currently visible
+        if (defaultImageView.getVisibility() == View.VISIBLE) {
+            // Hide defaultImageView and recyclerDefaultView
+            defaultImageView.setVisibility(View.GONE);
+            recyclerDefaultView.setVisibility(View.GONE);
+        } else {
+            // Show defaultImageView and recyclerDefaultView
+            defaultImageView.setVisibility(View.VISIBLE);
+            recyclerDefaultView.setVisibility(View.VISIBLE);
+            userImageView.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.GONE);
+        }
     }
 
     private void navigateToDashboardFragment() {
