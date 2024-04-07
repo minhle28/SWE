@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -48,11 +49,25 @@ public class StorageActivity extends AppCompatActivity {
         adapter = new ImageAdapter(this, imageNames, imageUrls);
         recyclerView.setAdapter(adapter);
 
+        //Hide default image view
+        TextView defaultImageView = findViewById(R.id.defaultImageView);
+        RecyclerView recyclerDefaultView = findViewById(R.id.recyclerDefaultView);
+        defaultImageView.setVisibility(View.GONE);
+        recyclerDefaultView.setVisibility(View.GONE);
+
         Button defaultButton = findViewById(R.id.defaultButton);
         defaultButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 toggleDefaultImageView();
+            }
+        });
+
+        Button userButton = findViewById(R.id.userButton);
+        userButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleUserImageView();
             }
         });
 
@@ -102,18 +117,25 @@ public class StorageActivity extends AppCompatActivity {
         TextView userImageView = findViewById(R.id.userImageView);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
-        // Check if defaultImageView is currently visible
-        if (defaultImageView.getVisibility() == View.VISIBLE) {
-            // Hide defaultImageView and recyclerDefaultView
-            defaultImageView.setVisibility(View.GONE);
-            recyclerDefaultView.setVisibility(View.GONE);
-        } else {
-            // Show defaultImageView and recyclerDefaultView
-            defaultImageView.setVisibility(View.VISIBLE);
-            recyclerDefaultView.setVisibility(View.VISIBLE);
-            userImageView.setVisibility(View.GONE);
-            recyclerView.setVisibility(View.GONE);
-        }
+        defaultImageView.setVisibility(View.VISIBLE);
+        recyclerDefaultView.setVisibility(View.VISIBLE);
+        userImageView.setVisibility(View.GONE);
+        recyclerView.setVisibility(View.GONE);
+
+    }
+
+    private void toggleUserImageView() {
+        TextView defaultImageView = findViewById(R.id.defaultImageView);
+        RecyclerView recyclerDefaultView = findViewById(R.id.recyclerDefaultView);
+        TextView userImageView = findViewById(R.id.userImageView);
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+
+
+        defaultImageView.setVisibility(View.GONE);
+        recyclerDefaultView.setVisibility(View.GONE);
+        userImageView.setVisibility(View.VISIBLE);
+        recyclerView.setVisibility(View.VISIBLE);
+
     }
 
     private void navigateToDashboardFragment() {
