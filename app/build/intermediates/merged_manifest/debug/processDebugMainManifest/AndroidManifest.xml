@@ -10,6 +10,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
 
     <permission
         android:name="com.example.visualock.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
@@ -24,15 +25,23 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/visualock_app_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/visualock_app_logo"
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.VisuaLock" >
         <activity
-            android:name="com.example.visualock.FolderListActivity"
-            android:exported="false" />
+            android:name="com.example.visualock.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.NoSplashScreen" >
+>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name="com.example.visualock.StorageActivity"
             android:exported="false" />
@@ -73,15 +82,7 @@
         <activity
             android:name="com.example.visualock.GraphLoginActivity"
             android:exported="true"
-            android:theme="@style/AppTheme.NoActionBar" >
-
-            <!-- Set LoginActivity as the launcher activity -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name="com.example.visualock.MainActivity"
             android:exported="true"

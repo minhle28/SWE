@@ -138,6 +138,8 @@ drawable truck
 drawable turtle
 drawable umbrella
 drawable user_24
+drawable visualock_app_logo
+drawable visualock_logo
 drawable white
 drawable willow
 drawable yellow
@@ -219,6 +221,7 @@ layout activity_main
 layout activity_profile
 layout activity_register
 layout activity_setting
+layout activity_splash
 layout activity_storage
 layout dialog_edit_email
 layout dialog_edit_name
@@ -245,6 +248,7 @@ string title_home
 string title_menu
 string title_notifications
 style AppTheme.NoActionBar
+style Theme.NoSplashScreen
 style Theme.VisuaLock
 xml backup_rules
 xml data_extraction_rules

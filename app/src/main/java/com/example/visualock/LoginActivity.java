@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -37,9 +38,8 @@ public class LoginActivity extends AppCompatActivity {
         // Check if the user is already authenticated
         FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
         if (currentUser != null) {
-            // User is already signed in, redirect to MainActivity
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
-            finish(); // Finish LoginActivity so that the user cannot navigate back to it
+            finish();
         }
 
         auth = FirebaseAuth.getInstance();

@@ -16,6 +16,10 @@
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_login.xml"
     },
     {
+        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-mergeDebugResources-50:/layout/activity_splash.xml",
+        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_splash.xml"
+    },
+    {
         "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-mergeDebugResources-50:/layout/dialog_edit_email.xml",
         "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/dialog_edit_email.xml"
     },

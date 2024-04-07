@@ -158,7 +158,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         View view = LayoutInflater.from(this).inflate(R.layout.dialog_edit_email, null);
         EditText etNewEmail = view.findViewById(R.id.et_new_email);
-        EditText confirmNewEmail = view.findViewById(R.id.confirm_new_email);
+        EditText etConfirmEmail = view.findViewById(R.id.confirm_new_email); // Add reference to confirm email EditText
         Button btnCancel = view.findViewById(R.id.btn_cancel);
         Button btnSave = view.findViewById(R.id.btn_save);
 
@@ -169,18 +169,23 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
 
         btnSave.setOnClickListener(v -> {
             String newEmail = etNewEmail.getText().toString().trim();
-            String confirmEmail = confirmNewEmail.getText().toString().trim();
+            String confirmEmail = etConfirmEmail.getText().toString().trim();
 
-            if (!TextUtils.isEmpty(newEmail) && newEmail.equals(confirmEmail)) {
-                // Update email in Firebase Authentication
-                updateEmail(newEmail, dialog);
+            if (!TextUtils.isEmpty(newEmail) && !TextUtils.isEmpty(confirmEmail)) {
+                if (newEmail.equals(confirmEmail)) {
+                    // Update email in Firebase Authentication
+                    updateEmail(newEmail, dialog);
+                } else {
+                    Toast.makeText(ProfileActivity.this, "Emails do not match", Toast.LENGTH_SHORT).show();
+                }
             } else {
-                Toast.makeText(ProfileActivity.this, "Emails do not match", Toast.LENGTH_SHORT).show();
+                Toast.makeText(ProfileActivity.this, "Please enter both email fields", Toast.LENGTH_SHORT).show();
             }
         });
 
         dialog.show();
     }
+
 
     private void updateEmail(String newEmail, AlertDialog dialog) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
