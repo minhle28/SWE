@@ -3,7 +3,6 @@ package com.example.visualock;
 import androidx.annotation.NonNull;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -11,7 +10,6 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import java.lang.String;
@@ -42,17 +40,8 @@ public class MyBackend {
         if(user !=null) {
             DocumentReference userRef = firestore.collection("users").document(user.getEmail());
             // update Database base on currentUser data.
-            userRef.set(userData).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    future.complete(true);
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    future.complete(false);
-                }
-            });
+            userRef.set(userData).addOnCompleteListener(task -> future.complete(true))
+                    .addOnFailureListener(e -> future.complete(false));
         }
         else{
             future.complete(false);
@@ -63,9 +52,7 @@ public class MyBackend {
     private CompletableFuture<Boolean> setDatabase(User newUserData){
         CompletableFuture<Boolean> future = new CompletableFuture<>();
         userData=newUserData;
-        updateDatabase().thenAccept(result ->{
-            future.complete(result);
-        });
+        updateDatabase().thenAccept(result -> future.complete(result));
         return future;
     }
     // THIS IS GET DATA BY EMAIL
@@ -77,28 +64,25 @@ public class MyBackend {
         }
         DocumentReference userRef = firestore.collection("users").document(email);
         // get database
-        userRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                if (task.isSuccessful()) {
-                    DocumentSnapshot document = task.getResult();
-                    if (document.exists()) {
-                        // DocumentSnapshot exists, map it to your class
-                        User user = document.toObject(User.class);
-                        if (user != null) {
-                            userData = user;
-                            future.complete(true);
-                        }
-                    } else {
-                        // DocumentSnapshot doesn't exist
-                        userData = null;
+        userRef.get().addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                DocumentSnapshot document = task.getResult();
+                if (document.exists()) {
+                    // DocumentSnapshot exists, map it to your class
+                    User user1 = document.toObject(User.class);
+                    if (user1 != null) {
+                        userData = user1;
                         future.complete(true);
                     }
                 } else {
-                    // An error occurred while retrieving the document
-                    //Log.d(TAG, "Error getting document", task.getException());
-                    future.complete(false);
+                    // DocumentSnapshot doesn't exist
+                    userData = null;
+                    future.complete(true);
                 }
+            } else {
+                // An error occurred while retrieving the document
+                //Log.d(TAG, "Error getting document", task.getException());
+                future.complete(false);
             }
         });
 
@@ -110,12 +94,13 @@ public class MyBackend {
         getDatabase(email).thenAccept(results ->{
             if(isSucess(results.toString())){
                 // get data OK
-                if(userData != null)
-                // Check pass choiced
-                for (String image:image64) {
-                    if(!userData.getImages_pass().contains(image)){
-                        future.complete("false:Wrong Password");
-                        return;
+                if(userData != null) {
+                    // Check pass choiced
+                    for (String image : image64) {
+                        if (!userData.getImages_pass().contains(image)) {
+                            future.complete("false:Wrong Password");
+                            return;
+                        }
                     }
                 }
                 // logOut all
@@ -130,8 +115,7 @@ public class MyBackend {
                             if (user != null) {
                                 if (userData == null) {
                                     // database error, let recovery it
-                                    User newUser = new User(email.split("@")[0]);
-                                    userData=newUser;
+                                    userData=new User(email.split("@")[0]);
                                     updateDatabase();
                                  }
                                 future.complete("true:Sign success");
@@ -141,7 +125,7 @@ public class MyBackend {
                                 future.complete("false:Wrong Email or Password");
                             }
                         })
-                        .addOnFailureListener(e -> future.complete("false:Log in Exception "+e.getMessage().replace(":","_")));
+                        .addOnFailureListener(e -> future.complete("false:Log in Exception "+e.getMessage()));
             }
         });
         return future;
@@ -161,7 +145,7 @@ public class MyBackend {
                             if(isSucess(results.toString())) {
                                 // get data OK
                                 if (userData != null){
-                                    if(userData.getImages_pass().size() > 0 ){
+                                    if(userData.getImages_pass().isEmpty()){
                                         String oldPassword = generation_Pass();
                                         auth.getCurrentUser().updatePassword(oldPassword);
                                     }
@@ -169,8 +153,7 @@ public class MyBackend {
                                 // user get in
                                 if (userData == null) {
                                     // database error, let recovery it
-                                    User newUser = new User(email.split("@")[0]);
-                                    userData=newUser;
+                                    userData= new User(email.split("@")[0]);
                                     updateDatabase();
                                 }
                                 future.complete("true:Sign success");
@@ -182,35 +165,73 @@ public class MyBackend {
                         future.complete("false:Wrong Email or Password");
                     }
                 })
-                .addOnFailureListener(e -> future.complete("false:Log in Exception "+e.getMessage().replace(":","_")));
+                .addOnFailureListener(e -> future.complete("false:Log in Exception "+e.getMessage()));
         return future;
     }
+
+    //THIS REGISTER FOR THE FIRST TIME
+    public CompletableFuture<String> signUp(String email, String password){
+        CompletableFuture<String> future = new CompletableFuture<>();
+
+        // logOut all
+        logOut();
+        auth.createUserWithEmailAndPassword(email, password)
+                .addOnSuccessListener(authResult -> {
+                    // Login success
+                    FirebaseUser user = auth.getCurrentUser();
+                    if (user != null) {
+                        getDatabase(email).thenAccept(results ->{
+                            if(isSucess(results.toString())) {
+                                // get data OK
+                                if (userData != null){
+                                    if(userData.getImages_pass().isEmpty()){
+                                        String oldPassword = generation_Pass();
+                                        auth.getCurrentUser().updatePassword(oldPassword);
+                                    }
+                                }
+                                // user get in
+                                if (userData == null) {
+                                    // database error, let recovery it
+                                    userData= new User(email.split("@")[0]);
+                                    updateDatabase();
+                                }
+                                future.complete("true:Register Successful");
+                            }
+                        });
+                    }
+                    else {
+                        root_Login();
+                        future.complete("false:Register Fail");
+                    }
+                })
+                .addOnFailureListener(e -> future.complete("false:Log in Exception "+e.getMessage()));
+        return future;
+    }
+
+
     // THIS IS CHANGE PASSWORD WITH TEXT INPUT, NO IMAGE
     public CompletableFuture<String> changePassword(String newPassword){
         CompletableFuture<String> future = new CompletableFuture<>();
         FirebaseUser user = auth.getCurrentUser();
         if (user != null && !isRoot()) {
             // new password to Authentication
-            user.updatePassword(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    // Move img pass to normal if avaible
-                    for(String image: userData.getImages_pass()) {
-                        if(!userData.getImages().contains(image)) {
-                            userData.insertImages(image);
-                            userData.removeImages_pass(image);
-                        }
+            user.updatePassword(newPassword).addOnCompleteListener(task -> {
+                // Move img pass to normal if avaible
+                for(String image: userData.getImages_pass()) {
+                    if(!userData.getImages().contains(image)) {
+                        userData.insertImages(image);
+                        userData.removeImages_pass(image);
                     }
-                    // update database
-                    updateDatabase().thenAccept(result ->{
-                        if(result){
-                            future.complete("true:Change Password Successful");
-                        }else{
-                            future.complete("false:Change Password Fail");
-                        }
-
-                    });
                 }
+                // update database
+                updateDatabase().thenAccept(result ->{
+                    if(result){
+                        future.complete("true:Change Password Successful");
+                    }else{
+                        future.complete("false:Change Password Fail");
+                    }
+
+                });
             });
         }
         return future;
@@ -224,18 +245,15 @@ public class MyBackend {
             //generation pass
             String newPassword = generation_Pass();
             // new password to Authentication
-            user.updatePassword(newPassword).addOnCompleteListener(new OnCompleteListener<Void>() {
-                @Override
-                public void onComplete(@NonNull Task<Void> task) {
-                    // update database
-                    updateDatabase().thenAccept(result ->{
-                        if(result){
-                            future.complete("true:Change Password Successful");
-                        }else{
-                            future.complete("false:Change Password Fail");
-                        }
-                    });
-                }
+            user.updatePassword(newPassword).addOnCompleteListener(task -> {
+                // update database
+                updateDatabase().thenAccept(result ->{
+                    if(result){
+                        future.complete("true:Change Password Successful");
+                    }else{
+                        future.complete("false:Change Password Fail");
+                    }
+                });
             });
         }
         return future;
@@ -246,14 +264,14 @@ public class MyBackend {
     }
     private String generation_Pass() {
         String[] parameters = userData.getParameter().split(":");
-        String pass ="";
+        StringBuilder pass = new StringBuilder();
         int i =0;
         for (String image: userData.getImages_pass()
              ) {
-            pass += image.substring(image.length()/2,image.length()/2+ Integer.parseInt(parameters[i]));
+            pass.append(image.substring(image.length() / 2, image.length() / 2 + Integer.parseInt(parameters[i])));
             i++;
         }
-        return pass;
+        return pass.toString();
     }
 
     public List<String> get_25picture() {
@@ -264,10 +282,14 @@ public class MyBackend {
 
     private boolean isRoot(){
         if(auth.getCurrentUser() == null ) return false;
-        return auth.getCurrentUser().getEmail().compareTo(root_email)==0;
+        return auth.getCurrentUser().getEmail().equals(root_email);
+    }
+    public boolean isUserLogin(){
+        if(auth.getCurrentUser() == null ) return false;
+        return !auth.getCurrentUser().getEmail().equals(root_email);
     }
     public boolean isSucess(String result){
-        return result.toString().split(":")[0] =="true";
+        return result.split(":")[0].equals("true");
     }
 
 }

@@ -152,50 +152,6 @@ public class GraphPasswordActivity extends AppCompatActivity {
         ListView Vehicle = findViewById(R.id.cat_vehicles);
         Vehicle.setAdapter(new PasswordImageAdapter(this,vehicleImages));
 
-        Tree.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GraphPasswordActivity.this, "Tree image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-                lastClickedPosition = position;
-                ((BaseAdapter) parent.getAdapter()).notifyDataSetChanged(); // Refresh ListView
-            }
-        });
-
-        Color.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GraphPasswordActivity.this, "Color image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        dailyObjects.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GraphPasswordActivity.this, "Daiily Object image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Animals.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GraphPasswordActivity.this, "Animals image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Places.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GraphPasswordActivity.this, "Places image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        Vehicle.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(GraphPasswordActivity.this, "Vehicle image clicked at position: " + position, Toast.LENGTH_SHORT).show();
-            }
-        });
-
         ImageView backButton = findViewById(R.id.backButton);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
