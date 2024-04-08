@@ -1,8 +1,13 @@
 package com.example.visualock;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -14,9 +19,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,7 +32,8 @@ public class StorageActivity extends AppCompatActivity {
 
     private List<String> imageNames;
     private List<String> imageUrls;
-    private ImageAdapter adapter;
+    private List<Boolean> toggles;
+    private RecyclerView recyclerView, recyclerDefaultView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,11 +51,13 @@ public class StorageActivity extends AppCompatActivity {
 
         imageNames = new ArrayList<>();
         imageUrls = new ArrayList<>();
+        toggles = new ArrayList<>();
 
-        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+        recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new ImageAdapter(this, imageNames, imageUrls);
-        recyclerView.setAdapter(adapter);
+
+        recyclerDefaultView = findViewById(R.id.recyclerDefaultView);
+        recyclerDefaultView.setLayoutManager(new LinearLayoutManager(this));
 
         //Hide default image view
         TextView defaultImageView = findViewById(R.id.defaultImageView);
@@ -92,8 +102,10 @@ public class StorageActivity extends AppCompatActivity {
                             // Add the image name and URL to the lists
                             imageNames.add(imageName);
                             imageUrls.add(imageUrl);
+                            // Add default toggle state
+                            toggles.add(false);
                             // Notify the adapter about the new data
-                            adapter.notifyDataSetChanged();
+                            recyclerDefaultView.setAdapter(new ImageAdapter(StorageActivity.this, imageNames, imageUrls, toggles));
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -130,7 +142,6 @@ public class StorageActivity extends AppCompatActivity {
         TextView userImageView = findViewById(R.id.userImageView);
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
 
-
         defaultImageView.setVisibility(View.GONE);
         recyclerDefaultView.setVisibility(View.GONE);
         userImageView.setVisibility(View.VISIBLE);
@@ -143,5 +154,103 @@ public class StorageActivity extends AppCompatActivity {
         intent.putExtra("dashboardFragment", true);
         startActivity(intent);
         finish();
+    }
+
+    public class ImageAdapter extends RecyclerView.Adapter<ImageAdapter.ViewHolder> {
+
+        private Context context;
+        private List<String> imageNames;
+        private List<String> imageUrls;
+        private List<Boolean> toggles;
+
+        public ImageAdapter(Context context, List<String> imageNames, List<String> imageUrls, List<Boolean> toggles) {
+            this.context = context;
+            this.imageNames = imageNames;
+            this.imageUrls = imageUrls;
+            this.toggles = toggles;
+        }
+
+        @NonNull
+        @Override
+        public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            View view = LayoutInflater.from(context).inflate(R.layout.item_image, parent, false);
+            return new ViewHolder(view);
+        }
+
+        @Override
+        public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+            // Load image into ImageView using Picasso
+            Picasso.get().load(imageUrls.get(position)).into(holder.imageView);
+
+            // Set image name
+            String imageName = imageNames.get(position);
+            if (imageName.length() > 16) {
+                // If the name is longer than 16 characters, truncate it
+                imageName = imageName.substring(0, 13) + "...";
+            }
+            holder.textViewName.setText(imageName);
+
+            // Set toggle state
+            holder.materialSwitch.setChecked(toggles.get(position));
+
+            // Delete button click listener
+            holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (holder.materialSwitch.isChecked()) {
+                        // If toggle is on, show a dialog
+                        showToggleAlertDialog();
+                    } else {
+                        // If toggle is off, proceed with deletion
+                        removeItem(holder.getAdapterPosition());
+                    }
+                }
+            });
+        }
+
+        @Override
+        public int getItemCount() {
+            return imageNames.size();
+        }
+
+        public class ViewHolder extends RecyclerView.ViewHolder {
+            ImageView imageView;
+            TextView textViewName;
+            ImageView deleteButton;
+            SwitchMaterial materialSwitch;
+
+            public ViewHolder(@NonNull View itemView) {
+                super(itemView);
+                imageView = itemView.findViewById(R.id.imageView);
+                textViewName = itemView.findViewById(R.id.textViewName);
+                deleteButton = itemView.findViewById(R.id.deleteButton);
+                materialSwitch = itemView.findViewById(R.id.material_switch);
+            }
+        }
+
+        private void removeItem(int position) {
+            // Remove the image name, URL, and toggle state from the lists
+            imageNames.remove(position);
+            imageUrls.remove(position);
+            toggles.remove(position);
+
+            // Notify adapter about the removal
+            notifyDataSetChanged();
+        }
+
+        private void showToggleAlertDialog() {
+            AlertDialog.Builder builder = new AlertDialog.Builder(context);
+            builder.setTitle("Warning");
+            builder.setMessage("Toggle is ON which is your current password \nPlease turn off the toggle switch before deleting.");
+            builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int
+                        which) {
+                    dialog.dismiss();
+                }
+            });
+            AlertDialog dialog = builder.create();
+            dialog.show();
+        }
     }
 }

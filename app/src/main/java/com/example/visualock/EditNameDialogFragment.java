@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-//This Java is currently NOT USE
 public class EditNameDialogFragment extends DialogFragment {
 
     private EditText etNewName;
