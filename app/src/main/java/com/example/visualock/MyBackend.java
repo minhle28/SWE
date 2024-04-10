@@ -226,11 +226,12 @@ public class MyBackend {
     // THIS IS CHECK EMAIL REGISTED OR NOT
     public CompletableFuture<String> is_Email_Registered(String email){
         CompletableFuture<String> future = new CompletableFuture<>();
-        future.complete("true:Email is registered");
+        //future.complete("true:Email is registered");
         auth.fetchSignInMethodsForEmail(email)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         List<String> signInMethods = task.getResult().getSignInMethods();
+                        System.out.println("Sign method = "+signInMethods.size());
                         if (signInMethods != null && !signInMethods.isEmpty()) {
                             // Email is registered
                             future.complete("true:Email is registered");
