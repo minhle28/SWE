@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.RelativeLayout;
+
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +22,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.switchmaterial.SwitchMaterial;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.ListResult;
 import com.google.firebase.storage.StorageReference;
@@ -82,6 +87,9 @@ public class StorageActivity extends AppCompatActivity {
         });
 
         fetchImagesFromFirebaseStorage();
+
+        // Check if the user is an admin
+        checkAdminStatus();
     }
 
     private void fetchImagesFromFirebaseStorage() {
@@ -105,7 +113,7 @@ public class StorageActivity extends AppCompatActivity {
                             // Add default toggle state
                             toggles.add(false);
                             // Notify the adapter about the new data
-                            recyclerDefaultView.setAdapter(new ImageAdapter(StorageActivity.this, imageNames, imageUrls, toggles));
+                            recyclerDefaultView.setAdapter(new ImageAdapter(StorageActivity.this, imageNames, imageUrls, toggles, false));
                         }
                     }).addOnFailureListener(new OnFailureListener() {
                         @Override
@@ -123,6 +131,30 @@ public class StorageActivity extends AppCompatActivity {
         });
     }
 
+    private void checkAdminStatus() {
+        String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        FirebaseFirestore.getInstance().collection("users").document(uid)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        if (documentSnapshot.exists()) {
+                            Boolean isAdmin = documentSnapshot.getBoolean("isAdmin");
+                            System.out.println("ADMIN "+ isAdmin);
+                            if (isAdmin != null && isAdmin) {
+                                // User is an admin, show the delete button
+                                // Pass isAdmin status to the adapter
+                                recyclerDefaultView.setAdapter(new ImageAdapter(StorageActivity.this, imageNames, imageUrls, toggles, true));
+                            } else {
+                                // User is not an admin, hide the delete button
+                                // Pass isAdmin status to the adapter
+                                recyclerDefaultView.setAdapter(new ImageAdapter(StorageActivity.this, imageNames, imageUrls, toggles, false));
+                            }
+                        }
+                    }
+                });
+    }
+
     private void toggleDefaultImageView() {
         TextView defaultImageView = findViewById(R.id.defaultImageView);
         RecyclerView recyclerDefaultView = findViewById(R.id.recyclerDefaultView);
@@ -133,7 +165,6 @@ public class StorageActivity extends AppCompatActivity {
         recyclerDefaultView.setVisibility(View.VISIBLE);
         userImageView.setVisibility(View.GONE);
         recyclerView.setVisibility(View.GONE);
-
     }
 
     private void toggleUserImageView() {
@@ -146,7 +177,6 @@ public class StorageActivity extends AppCompatActivity {
         recyclerDefaultView.setVisibility(View.GONE);
         userImageView.setVisibility(View.VISIBLE);
         recyclerView.setVisibility(View.VISIBLE);
-
     }
 
     private void navigateToDashboardFragment() {
@@ -162,12 +192,14 @@ public class StorageActivity extends AppCompatActivity {
         private List<String> imageNames;
         private List<String> imageUrls;
         private List<Boolean> toggles;
+        private boolean isAdmin;
 
-        public ImageAdapter(Context context, List<String> imageNames, List<String> imageUrls, List<Boolean> toggles) {
+        public ImageAdapter(Context context, List<String> imageNames, List<String> imageUrls, List<Boolean> toggles, boolean isAdmin) {
             this.context = context;
             this.imageNames = imageNames;
             this.imageUrls = imageUrls;
             this.toggles = toggles;
+            this.isAdmin = isAdmin;
         }
 
         @NonNull
@@ -176,6 +208,7 @@ public class StorageActivity extends AppCompatActivity {
             View view = LayoutInflater.from(context).inflate(R.layout.item_image, parent, false);
             return new ViewHolder(view);
         }
+
 
         @Override
         public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
@@ -193,6 +226,25 @@ public class StorageActivity extends AppCompatActivity {
             // Set toggle state
             holder.materialSwitch.setChecked(toggles.get(position));
 
+            // Show/hide delete button based on admin status
+            if (isAdmin) {
+                holder.deleteButton.setVisibility(View.VISIBLE);
+                // Set toggle button alignment to start
+                holder.materialSwitch.setLayoutParams(new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT
+                ));
+            } else {
+                holder.deleteButton.setVisibility(View.GONE);
+                // Set toggle button alignment to end
+                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                        RelativeLayout.LayoutParams.WRAP_CONTENT,
+                        RelativeLayout.LayoutParams.WRAP_CONTENT
+                );
+                params.addRule(RelativeLayout.ALIGN_PARENT_END, RelativeLayout.TRUE);
+                holder.materialSwitch.setLayoutParams(params);
+            }
+
             // Delete button click listener
             holder.deleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -207,6 +259,7 @@ public class StorageActivity extends AppCompatActivity {
                 }
             });
         }
+
 
         @Override
         public int getItemCount() {

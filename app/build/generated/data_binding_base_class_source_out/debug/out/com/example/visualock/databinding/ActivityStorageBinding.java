@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -20,7 +20,7 @@ import java.lang.String;
 
 public final class ActivityStorageBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final ImageView backButton;
@@ -49,7 +49,7 @@ public final class ActivityStorageBinding implements ViewBinding {
   @NonNull
   public final TextView userImageView;
 
-  private ActivityStorageBinding(@NonNull RelativeLayout rootView, @NonNull ImageView backButton,
+  private ActivityStorageBinding(@NonNull ScrollView rootView, @NonNull ImageView backButton,
       @NonNull Button defaultButton, @NonNull TextView defaultImageView,
       @NonNull TextView myPassword, @NonNull RecyclerView passwordView,
       @NonNull RecyclerView recyclerDefaultView, @NonNull RecyclerView recyclerView,
@@ -68,7 +68,7 @@ public final class ActivityStorageBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -147,7 +147,7 @@ public final class ActivityStorageBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityStorageBinding((RelativeLayout) rootView, backButton, defaultButton,
+      return new ActivityStorageBinding((ScrollView) rootView, backButton, defaultButton,
           defaultImageView, myPassword, passwordView, recyclerDefaultView, recyclerView, userButton,
           userImageView);
     }

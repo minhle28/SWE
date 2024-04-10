@@ -1,104 +1,109 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- Back Button -->
-    <ImageView
-        android:id="@+id/backButton"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:adjustViewBounds="true"
-        android:src="@drawable/baseline_arrow_back_24" />
-
-    <!-- Default Button -->
-    <Button
-        android:id="@+id/defaultButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Default"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"/>
-
-    <!-- User Button -->
-    <Button
-        android:id="@+id/userButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User"
-        android:layout_toStartOf="@id/defaultButton"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp"/>
-
-    <!-- My Password TextView -->
-    <TextView
-        android:id="@+id/my_password"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/backButton"
-        android:layout_marginTop="16dp"
-        android:text="User password:"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
+        android:layout_height="wrap_content">
 
-    <!-- Password RecyclerView -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/passwordView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/my_password"
-        android:layout_marginTop="8dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/baseline_arrow_back_24" />
 
-    <!-- Title TextView for User Images -->
-    <TextView
-        android:id="@+id/userImageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/passwordView"
-        android:layout_marginTop="16dp"
-        android:text="User images:"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
+        <!-- Default Button -->
+        <Button
+            android:id="@+id/defaultButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Default"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"/>
 
-    <!-- User Images RecyclerView for User Images -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/userImageView"
-        android:layout_marginTop="8dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
+        <!-- User Button -->
+        <Button
+            android:id="@+id/userButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:layout_toStartOf="@id/defaultButton"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"/>
 
-    <!-- Title TextView for Default Images -->
-    <TextView
-        android:id="@+id/defaultImageView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/recyclerView"
-        android:layout_marginTop="16dp"
-        android:text="Default images:"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
+        <!-- My Password TextView -->
+        <TextView
+            android:id="@+id/my_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/backButton"
+            android:layout_marginTop="16dp"
+            android:text="User password:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
 
-    <!-- User Images RecyclerView for Default Images -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerDefaultView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/defaultImageView"
-        android:layout_marginTop="8dp"
-        android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
+        <!-- Password RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/passwordView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_password"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
 
-</RelativeLayout>
+        <!-- Title TextView for User Images -->
+        <TextView
+            android:id="@+id/userImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/passwordView"
+            android:layout_marginTop="16dp"
+            android:text="User images:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <!-- User Images RecyclerView for User Images -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/userImageView"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <!-- Title TextView for Default Images -->
+        <TextView
+            android:id="@+id/defaultImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recyclerView"
+            android:layout_marginTop="16dp"
+            android:text="Default images:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+        <!-- User Images RecyclerView for Default Images -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerDefaultView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/defaultImageView"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"/>
+
+    </RelativeLayout>
+</ScrollView>
