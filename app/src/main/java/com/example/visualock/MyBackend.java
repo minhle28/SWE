@@ -64,6 +64,14 @@ public class MyBackend {
         }
         return future;
     }
+    public CompletableFuture<String> getDatabase(){
+        CompletableFuture<String> future = new CompletableFuture<>();
+        if(!isUserLogin()){
+            future.complete("false:Did not login");
+            return future;
+        }
+        return getDatabase(auth.getCurrentUser().getEmail());
+    }
     // THIS IS GET DATA BY EMAIL
     public CompletableFuture<String> getDatabase(String email){
         CompletableFuture<String> future = new CompletableFuture<>();
@@ -121,13 +129,9 @@ public class MyBackend {
                 auth.signInWithEmailAndPassword(email, password)
                         .addOnSuccessListener(authResult -> {
                             // Get the signed-in user
-                            FirebaseUser user = auth.getCurrentUser();
-                            if (user != null) {
-                                if (userData == null) {
-                                    // database error, let recovery it
-                                    userData=new User(email.split("@")[0]);
-                                    pushDatabase();
-                                 }
+                            if (isUserLogin()) {
+                                userData =null;
+                                getDatabase();
                                 future.complete("true:Sign success");
                             }
                             else {
@@ -194,9 +198,8 @@ public class MyBackend {
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnSuccessListener(authResult -> {
                     // Login success
-                    FirebaseUser user = auth.getCurrentUser();
                     //Toast.makeText(context,"Account created...",Toast.LENGTH_SHORT).show();
-                    if (user != null) {
+                    if (isUserLogin()) {
                         // saving parameters as xx:xx:xx:xx
                         String parameter_String= String.join(":", Arrays.stream(parameter_int)
                                 .mapToObj(String::valueOf)
@@ -345,6 +348,11 @@ public class MyBackend {
             }
         });
         return future;
+    }
+
+    public String getCurrentEmail(){
+        if(auth.getCurrentUser()==null) return "";
+        return auth.getCurrentUser().getEmail();
     }
 
     private String generation_Pass() {

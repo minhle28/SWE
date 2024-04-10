@@ -30,16 +30,13 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
     private TextView tvUserName, tvName, tvEmail;
     private Button editButton, editEmailButton, saveButton;
     private EditText etNewName;
-    private FirebaseFirestore database;
-    private FirebaseUser currentUser;
+    private MyBackend myBackend;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
-        database = FirebaseFirestore.getInstance();
-        currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        myBackend = new MyBackend();
 
         tvUserName = findViewById(R.id.tv_user_name);
         tvName = findViewById(R.id.tv_name);
@@ -48,6 +45,17 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         editEmailButton = findViewById(R.id.editEmailButton);
         saveButton = findViewById(R.id.saveButton);
         etNewName = findViewById(R.id.et_new_name);
+
+        myBackend.getDatabase().thenAccept(results ->{
+            if(myBackend.isSucess(results)){
+                tvName.setText(myBackend.userData.getName());
+                tvEmail.setText(myBackend.getCurrentEmail());
+            }
+            else{
+                startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
+                finish();
+            }
+        });
 
         ImageView backButton = findViewById(R.id.backButton);
 
@@ -58,7 +66,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
             }
         });
 
-        retrieveUserDetails();
+
 
         editButton.setOnClickListener(v -> {
             showEditNameDialog();
@@ -71,7 +79,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         saveButton.setOnClickListener(v -> {
             String newName = etNewName.getText().toString().trim();
             if (!TextUtils.isEmpty(newName)) {
-                updateUserName(newName);
+                //updateUserName(newName);
             } else {
                 Toast.makeText(ProfileActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
             }
@@ -84,8 +92,9 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         startActivity(intent);
         finish();
     }
-
+ /*
     private void retrieveUserDetails() {
+
         if (currentUser != null) {
             String uid = currentUser.getUid();
 
@@ -102,8 +111,10 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
                 // Handle failure
             });
         }
-    }
 
+
+    }
+*/
     /*
      private void showEditNameDialog() {
      DialogFragment dialog = new EditNameDialogFragment();
@@ -126,7 +137,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         btnSave.setOnClickListener(v -> {
             String newName = etNewName.getText().toString().trim();
             if (!TextUtils.isEmpty(newName)) {
-                updateUserName(newName);
+               // updateUserName(newName);
                 dialog.dismiss();
             } else {
                 Toast.makeText(ProfileActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
@@ -135,7 +146,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
 
         dialog.show();
     }
-
+    /*
     private void updateUserName(String newName) {
         if (currentUser != null) {
             String uid = currentUser.getUid();
@@ -153,6 +164,8 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
                     });
         }
     }
+
+     */
 
     private void showEditEmailDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -228,7 +241,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
     @Override
     public void onSaveClicked(String newName) {
         if (!TextUtils.isEmpty(newName)) {
-            updateUserName(newName);
+            //updateUserName(newName);
         } else {
             Toast.makeText(ProfileActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
         }
