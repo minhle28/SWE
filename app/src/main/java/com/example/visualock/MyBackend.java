@@ -40,7 +40,7 @@ public class MyBackend {
         firebaseFirestore = FirebaseFirestore.getInstance();
         storage = FirebaseStorage.getInstance();
         defaultImages = new ArrayList<>();
-        root_Login();
+        //root_Login();
     }
     private void root_Login(){
         auth.signInWithEmailAndPassword(root_email , root_pass);
@@ -102,6 +102,8 @@ public class MyBackend {
                 //Log.d(TAG, "Error getting document", task.getException());
                 future.complete("false: Get UserData error");
             }
+            if(!isUserLogin())
+                logOut();
         });
 
         return future;
@@ -135,7 +137,6 @@ public class MyBackend {
                                 future.complete("true:Sign success");
                             }
                             else {
-                                root_Login();
                                 future.complete("false:Wrong Email or Password");
                             }
                         })
@@ -150,12 +151,12 @@ public class MyBackend {
 
         // logOut all
         logOut();
+        userData=null;
         auth.signInWithEmailAndPassword(email, password)
                 .addOnSuccessListener(authResult -> {
                     // Login success
-                    FirebaseUser user = auth.getCurrentUser();
-                    if (user != null) {
-                        getDatabase(email).thenAccept(results ->{
+                    if (isUserLogin()) {
+                        getDatabase().thenAccept(results ->{
                             if(isSucess(results)) {
                                 // get data OK
                                 if (userData != null){
@@ -175,7 +176,6 @@ public class MyBackend {
                         });
                     }
                     else {
-                        root_Login();
                         future.complete("false:Wrong Email or Password");
                     }
                 })
@@ -218,7 +218,6 @@ public class MyBackend {
                         });
                     }
                     else {
-                        root_Login();
                         future.complete("false:Register Fail");
                     }
                 })
@@ -346,6 +345,8 @@ public class MyBackend {
                     }
                 });
             }
+            if(!isUserLogin())
+                logOut();
         });
         return future;
     }

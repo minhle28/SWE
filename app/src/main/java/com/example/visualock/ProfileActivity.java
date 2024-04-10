@@ -52,7 +52,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
                 tvEmail.setText(myBackend.getCurrentEmail());
             }
             else{
-                startActivity(new Intent(ProfileActivity.this, LoginActivity.class));
+                startActivity(new Intent(ProfileActivity.this, GraphLoginActivity.class));
                 finish();
             }
         });
@@ -235,8 +235,6 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
                     });
         }
     }
-
-
 
     @Override
     public void onSaveClicked(String newName) {
