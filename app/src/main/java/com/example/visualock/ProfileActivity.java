@@ -10,14 +10,9 @@ import android.widget.ImageView;
 import android.content.Intent;
 import android.app.AlertDialog;
 import android.view.LayoutInflater;
-import com.google.firebase.auth.AuthCredential;
-import com.google.firebase.auth.EmailAuthProvider;
-import android.util.Log;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -25,21 +20,20 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import android.view.View;
 
+import java.util.concurrent.atomic.AtomicBoolean;
+
 public class ProfileActivity extends AppCompatActivity implements EditNameDialogFragment.EditNameDialogListener {
 
     private TextView tvUserName, tvName, tvEmail;
     private Button editButton, editEmailButton, saveButton;
     private EditText etNewName;
-    private FirebaseFirestore database;
-    private FirebaseUser currentUser;
+    private MyBackend myBackend;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-
-        database = FirebaseFirestore.getInstance();
-        currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        myBackend = new MyBackend();
 
         tvUserName = findViewById(R.id.tv_user_name);
         tvName = findViewById(R.id.tv_name);
@@ -48,6 +42,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         editEmailButton = findViewById(R.id.editEmailButton);
         saveButton = findViewById(R.id.saveButton);
         etNewName = findViewById(R.id.et_new_name);
+        refreshInfor();
 
         ImageView backButton = findViewById(R.id.backButton);
 
@@ -57,8 +52,6 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
                 navigateToMenuFragment();
             }
         });
-
-        retrieveUserDetails();
 
         editButton.setOnClickListener(v -> {
             showEditNameDialog();
@@ -71,45 +64,31 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         saveButton.setOnClickListener(v -> {
             String newName = etNewName.getText().toString().trim();
             if (!TextUtils.isEmpty(newName)) {
-                updateUserName(newName);
+                //updateUserName(newName);
             } else {
                 Toast.makeText(ProfileActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
             }
         });
     }
-
+    private void refreshInfor(){
+        myBackend.getDatabase().thenAccept(results ->{
+            if(myBackend.isSucess(results)){
+                tvUserName.setText(myBackend.userData.getName());
+                tvName.setText(myBackend.userData.getName());
+                tvEmail.setText(myBackend.getCurrentEmail());
+            }
+            else{
+                startActivity(new Intent(ProfileActivity.this, GraphLoginActivity.class));
+                finish();
+            }
+        });
+    }
     private void navigateToMenuFragment() {
         Intent intent = new Intent(ProfileActivity.this, MainActivity.class);
         intent.putExtra("menuFragment", true);
         startActivity(intent);
         finish();
     }
-
-    private void retrieveUserDetails() {
-        if (currentUser != null) {
-            String uid = currentUser.getUid();
-
-            database.collection("users").document(uid).get().addOnSuccessListener(documentSnapshot -> {
-                if (documentSnapshot.exists()) {
-                    String name = documentSnapshot.getString("name");
-                    String email = currentUser.getEmail();
-
-                    tvUserName.setText(name);
-                    tvName.setText(name);
-                    tvEmail.setText(email);
-                }
-            }).addOnFailureListener(e -> {
-                // Handle failure
-            });
-        }
-    }
-
-    /*
-     private void showEditNameDialog() {
-     DialogFragment dialog = new EditNameDialogFragment();
-     dialog.show(getSupportFragmentManager(), "EditNameDialogFragment");
-     }
-     */
 
     private void showEditNameDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -120,38 +99,25 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
 
         builder.setView(view);
         AlertDialog dialog = builder.create();
-
+        AtomicBoolean lock = new AtomicBoolean(false);
         btnCancel.setOnClickListener(v -> dialog.dismiss());
 
         btnSave.setOnClickListener(v -> {
+            if(lock.get()) return;
             String newName = etNewName.getText().toString().trim();
             if (!TextUtils.isEmpty(newName)) {
-                updateUserName(newName);
-                dialog.dismiss();
+                   myBackend.userData.setName(newName);
+                   lock.set(true);
+                   myBackend.pushDatabase().thenAccept(results->{
+                       refreshInfor();
+                       dialog.dismiss();
+                   });
             } else {
                 Toast.makeText(ProfileActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
             }
         });
 
         dialog.show();
-    }
-
-    private void updateUserName(String newName) {
-        if (currentUser != null) {
-            String uid = currentUser.getUid();
-
-            database.collection("users").document(uid).update("name", newName)
-                    .addOnSuccessListener(aVoid -> {
-                        tvUserName.setText(newName);
-                        tvName.setText(newName);
-                        etNewName.setVisibility(View.GONE);
-                        saveButton.setVisibility(View.GONE);
-                        Toast.makeText(ProfileActivity.this, "Name updated successfully", Toast.LENGTH_SHORT).show();
-                    })
-                    .addOnFailureListener(e -> {
-                        Toast.makeText(ProfileActivity.this, "Failed to update name", Toast.LENGTH_SHORT).show();
-                    });
-        }
     }
 
     private void showEditEmailDialog() {
@@ -223,12 +189,10 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         }
     }
 
-
-
     @Override
     public void onSaveClicked(String newName) {
         if (!TextUtils.isEmpty(newName)) {
-            updateUserName(newName);
+            //updateUserName(newName);
         } else {
             Toast.makeText(ProfileActivity.this, "Please enter a name", Toast.LENGTH_SHORT).show();
         }

@@ -4,7 +4,7 @@
             "outputFile": "com.example.visualock.app-mergeDebugResources-48:/values-hdpi-v4/values-hdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/minhle28/.gradle/caches/transforms-3/75afeee403895a72416298d978a71487/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\caches\\transforms-3\\75afeee403895a72416298d978a71487\\transformed\\appcompat-1.6.1\\res\\values-hdpi-v4\\values-hdpi-v4.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

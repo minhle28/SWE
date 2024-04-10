@@ -4,7 +4,7 @@
             "outputFile": "com.example.visualock.app-mergeDebugResources-48:/values-ldrtl-v17/values-ldrtl-v17.xml",
             "map": [
                 {
-                    "source": "/Users/minhle28/.gradle/caches/transforms-3/f4878b10edb9f42cc02fe97b7b1da47a/transformed/material-1.11.0/res/values-ldrtl-v17/values-ldrtl-v17.xml",
+                    "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\caches\\transforms-3\\f4878b10edb9f42cc02fe97b7b1da47a\\transformed\\material-1.11.0\\res\\values-ldrtl-v17\\values-ldrtl-v17.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
@@ -29,41 +30,45 @@ public final class ActivityGraphPasswordBinding implements ViewBinding {
   public final ImageView backButton;
 
   @NonNull
-  public final ListView catAnimals;
-
-  @NonNull
-  public final ListView catColor;
-
-  @NonNull
-  public final ListView catDailyObjects;
-
-  @NonNull
-  public final ListView catPlaces;
-
-  @NonNull
-  public final ListView catTree;
-
-  @NonNull
-  public final ListView catVehicles;
-
-  @NonNull
   public final Button loginButton;
+
+  @NonNull
+  public final ListView row1;
+
+  @NonNull
+  public final ListView row2;
+
+  @NonNull
+  public final ListView row3;
+
+  @NonNull
+  public final ListView row4;
+
+  @NonNull
+  public final ListView row5;
+
+  @NonNull
+  public final ListView row6;
+
+  @NonNull
+  public final TextView topLabel;
 
   private ActivityGraphPasswordBinding(@NonNull ConstraintLayout rootView,
       @NonNull CardView PasswordCardView, @NonNull ImageView backButton,
-      @NonNull ListView catAnimals, @NonNull ListView catColor, @NonNull ListView catDailyObjects,
-      @NonNull ListView catPlaces, @NonNull ListView catTree, @NonNull ListView catVehicles,
-      @NonNull Button loginButton) {
+      @NonNull Button loginButton, @NonNull ListView row1, @NonNull ListView row2,
+      @NonNull ListView row3, @NonNull ListView row4, @NonNull ListView row5,
+      @NonNull ListView row6, @NonNull TextView topLabel) {
     this.rootView = rootView;
     this.PasswordCardView = PasswordCardView;
     this.backButton = backButton;
-    this.catAnimals = catAnimals;
-    this.catColor = catColor;
-    this.catDailyObjects = catDailyObjects;
-    this.catPlaces = catPlaces;
-    this.catTree = catTree;
-    this.catVehicles = catVehicles;
     this.loginButton = loginButton;
+    this.row1 = row1;
+    this.row2 = row2;
+    this.row3 = row3;
+    this.row4 = row4;
+    this.row5 = row5;
+    this.row6 = row6;
+    this.topLabel = topLabel;
   }
 
   @Override
@@ -105,51 +110,56 @@ public final class ActivityGraphPasswordBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.cat_animals;
-      ListView catAnimals = ViewBindings.findChildViewById(rootView, id);
-      if (catAnimals == null) {
-        break missingId;
-      }
-
-      id = R.id.cat_color;
-      ListView catColor = ViewBindings.findChildViewById(rootView, id);
-      if (catColor == null) {
-        break missingId;
-      }
-
-      id = R.id.cat_dailyObjects;
-      ListView catDailyObjects = ViewBindings.findChildViewById(rootView, id);
-      if (catDailyObjects == null) {
-        break missingId;
-      }
-
-      id = R.id.cat_places;
-      ListView catPlaces = ViewBindings.findChildViewById(rootView, id);
-      if (catPlaces == null) {
-        break missingId;
-      }
-
-      id = R.id.cat_tree;
-      ListView catTree = ViewBindings.findChildViewById(rootView, id);
-      if (catTree == null) {
-        break missingId;
-      }
-
-      id = R.id.cat_vehicles;
-      ListView catVehicles = ViewBindings.findChildViewById(rootView, id);
-      if (catVehicles == null) {
-        break missingId;
-      }
-
       id = R.id.login_button;
       Button loginButton = ViewBindings.findChildViewById(rootView, id);
       if (loginButton == null) {
         break missingId;
       }
 
+      id = R.id.row1;
+      ListView row1 = ViewBindings.findChildViewById(rootView, id);
+      if (row1 == null) {
+        break missingId;
+      }
+
+      id = R.id.row2;
+      ListView row2 = ViewBindings.findChildViewById(rootView, id);
+      if (row2 == null) {
+        break missingId;
+      }
+
+      id = R.id.row3;
+      ListView row3 = ViewBindings.findChildViewById(rootView, id);
+      if (row3 == null) {
+        break missingId;
+      }
+
+      id = R.id.row4;
+      ListView row4 = ViewBindings.findChildViewById(rootView, id);
+      if (row4 == null) {
+        break missingId;
+      }
+
+      id = R.id.row5;
+      ListView row5 = ViewBindings.findChildViewById(rootView, id);
+      if (row5 == null) {
+        break missingId;
+      }
+
+      id = R.id.row6;
+      ListView row6 = ViewBindings.findChildViewById(rootView, id);
+      if (row6 == null) {
+        break missingId;
+      }
+
+      id = R.id.topLabel;
+      TextView topLabel = ViewBindings.findChildViewById(rootView, id);
+      if (topLabel == null) {
+        break missingId;
+      }
+
       return new ActivityGraphPasswordBinding((ConstraintLayout) rootView, PasswordCardView,
-          backButton, catAnimals, catColor, catDailyObjects, catPlaces, catTree, catVehicles,
-          loginButton);
+          backButton, loginButton, row1, row2, row3, row4, row5, row6, topLabel);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

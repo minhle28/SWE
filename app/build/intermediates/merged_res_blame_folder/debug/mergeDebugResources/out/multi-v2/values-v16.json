@@ -4,7 +4,7 @@
             "outputFile": "com.example.visualock.app-mergeDebugResources-48:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/minhle28/.gradle/caches/transforms-3/d0363efd101a4c346e6aa94a4fe20ed5/transformed/core-1.9.0/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\caches\\transforms-3\\d0363efd101a4c346e6aa94a4fe20ed5\\transformed\\core-1.9.0\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/Users/minhle28/.gradle/caches/transforms-3/75afeee403895a72416298d978a71487/transformed/appcompat-1.6.1/res/values-v16/values-v16.xml",
+                    "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\caches\\transforms-3\\75afeee403895a72416298d978a71487\\transformed\\appcompat-1.6.1\\res\\values-v16\\values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
