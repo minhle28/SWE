@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,8 +23,8 @@ public class ForgotPasswordActivity extends AppCompatActivity {
     private EditText resetEmailEditText;
     private Button sendResetButton;
     private TextView feedbackTextView;
-    private FirebaseAuth auth;
     private Button backButton;
+    private MyBackend myBackend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +35,10 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         sendResetButton = findViewById(R.id.send_reset_button);
         feedbackTextView = findViewById(R.id.text);
         ImageView backButton = findViewById(R.id.backButton);
-        auth = FirebaseAuth.getInstance();
-
+        myBackend = new MyBackend();
+        if(!myBackend.require.equals("")){
+            resetEmailEditText.setText(myBackend.input_email);
+        }
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,30 +55,28 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                     resetEmailEditText.setError("Email is required");
                     return;
                 }
+                myBackend.resetPassword(email).thenAccept(results ->{
+                    if(myBackend.isSucess(results)){
+                        myBackend.require = "Forget";
+                        myBackend.input_email = email;
+                        Toast.makeText(ForgotPasswordActivity.this, "Sent", Toast.LENGTH_SHORT).show();
+                        feedbackTextView.setVisibility(View.VISIBLE);
+                        feedbackTextView.setText("Please check your email for password reset link");
 
-                auth.sendPasswordResetEmail(email)
-                        .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        // Delayed redirection to login activity after 3 seconds
+                        new Handler().postDelayed(new Runnable() {
                             @Override
-                            public void onComplete(Task<Void> task) {
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(ForgotPasswordActivity.this, "Sent", Toast.LENGTH_SHORT).show();
-
-                                    feedbackTextView.setVisibility(View.VISIBLE);
-                                    feedbackTextView.setText("Please check your email for password reset link");
-
-                                    // Delayed redirection to login activity after 3 seconds
-                                    new Handler().postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            startActivity(new Intent(ForgotPasswordActivity.this, LoginActivity.class));
-                                            finish();
-                                        }
-                                    }, 3000);
-                                } else {
-                                    Toast.makeText(ForgotPasswordActivity.this, "Failed to send reset email. " + task.getException().getMessage(), Toast.LENGTH_SHORT).show();
-                                }
+                            public void run() {
+                                startActivity(new Intent(ForgotPasswordActivity.this, LoginActivity.class));
+                                finish();
                             }
-                        });
+                        }, 3000);
+                    }
+                    else{
+                        Toast.makeText(ForgotPasswordActivity.this, "Failed to send reset email. ", Toast.LENGTH_SHORT).show();
+                    }
+                });
+
             }
         });
     }

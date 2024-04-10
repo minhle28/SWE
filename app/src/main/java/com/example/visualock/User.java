@@ -16,11 +16,10 @@ public class User {
         this.parameter = parameter;
     }
 
-    public User(String name, List<String> images_pass, List<String> images) {
+    public User(String name, String parameter, List<String> images_pass){
         this.name = name;
-        this.images = images;
+        this.parameter = parameter;
         this.images_pass = images_pass;
-        parameter = "8:8:8:8:8";
     }
 
     public User(String name) {

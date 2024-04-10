@@ -43,10 +43,10 @@ public class LoginActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
-        //registerRedirectText = findViewById(R.id.registerRedirectText);
         loginByGraph = findViewById(R.id.loginByGraph);
-        //forgot_passRedirectText = findViewById(R.id.forgot_passRedirectText);
-
+        if(!myBackend.require.equals("")){
+            loginEmail.setText(myBackend.input_email);
+        }
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -85,20 +85,5 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, GraphLoginActivity.class));
             }
         });
-        /*
-        registerRedirectText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, RegisterActivity.class));
-            }
-        });
-
-        forgot_passRedirectText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
-            }
-        });
-        */
     }
 }

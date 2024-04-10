@@ -1,650 +1,650 @@
 [
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_truck.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/truck.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_petronastowers.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/petronastowers.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_leaningtowerofpisa.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\leaningtowerofpisa.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_snake.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\snake.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_turtle.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/turtle.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_logout_24.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\logout_24.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_grey.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/grey.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_setting.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_setting.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_setting_24.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/setting_24.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_pickuptruck.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\pickuptruck.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_monkey.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/monkey.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\baseline_person_24.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_machupicchu.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/machupicchu.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_carrot.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\carrot.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_placeholder_image.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/placeholder_image.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_register.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ic_user.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ic_user.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ash.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ash.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_balloon.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/balloon.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_sailboat.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\sailboat.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_fragment_notifications.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/fragment_notifications.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ape.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ape.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_car.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/car.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_table.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\table.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/menu_bottom_nav_menu.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/menu/bottom_nav_menu.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_password_icon.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\password_icon.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_cycle.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/cycle.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_polar_bear.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\polar_bear.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_custom_edittext.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/custom_edittext.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_user_24.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\user_24.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_neuschwansteincastle.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/neuschwansteincastle.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_bottle.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\bottle.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_cargoship.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\cargoship.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_sportsbike.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/sportsbike.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_baseline_density_medium_24.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\baseline_density_medium_24.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_mug.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/mug.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_bike.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\bike.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_pickuptruck.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/pickuptruck.webp"
+        "merged": "com.example.visualock.app-debug-51:/layout_activity_graph_password.xml.flat",
+        "source": "com.example.visualock.app-main-53:/layout/activity_graph_password.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_polar_bear.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/polar_bear.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_christtheredeemer.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/christtheredeemer.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_christtheredeemer.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\christtheredeemer.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_train.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/train.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_truck.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\truck.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_item_image.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/item_image.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_circle_border.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\circle_border.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ic_notifications_black_24dp.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_grad.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\grad.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_bird.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/bird.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_squirrel.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\squirrel.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_bottle.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/bottle.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_giraffe.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/giraffe.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\baseline_arrow_back_24.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_phone.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/phone.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_mountrushmore.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\mountrushmore.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_menu_item.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/menu_item.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_stonehenge.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\stonehenge.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_fragment_home.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_shoe.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\shoe.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_kremlin.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/kremlin.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_train.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\train.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-51:/layout_fragment_dashboard.xml.flat",
-        "source": "com.example.visualock.app-main-53:/layout/fragment_dashboard.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_kangroo.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\kangroo.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_fir.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/fir.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_machupicchu.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\machupicchu.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_cycle2.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/cycle2.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_orange.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/orange.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_forgot_password.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_forgot_password.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_pine.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/pine.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_greatwallofchina.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\greatwallofchina.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_blue.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/blue.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_add_image_icon.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\add_image_icon.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_stonehenge.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/stonehenge.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_helicopter.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\helicopter.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_dialog_edit_email.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/dialog_edit_email.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_add_image.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_add_image.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_maple.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/maple.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_storage_icon.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\storage_icon.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_key.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/key.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_grey.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\grey.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_pyramidsofgiza.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/pyramidsofgiza.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_red.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\red.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_tajmahal.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/tajmahal.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_apple.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\apple.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_oak.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/oak.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_circle.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\circle.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_carrot.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/carrot.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_visualock_logo.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/visualock_logo.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_plane.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\plane.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_statueofliberty.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\statueofliberty.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_fish.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/fish.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_user_24.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/user_24.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_monkey.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\monkey.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_frog.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/frog.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_red.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/red.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_key.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\key.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/navigation_mobile_navigation.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/navigation/mobile_navigation.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_tiger.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\tiger.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_graph_login.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_graph_login.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_cat.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\cat.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_lion.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/lion.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_black.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\black.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_logout_24.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/logout_24.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_bird.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\bird.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_pink.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/pink.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_neuschwansteincastle.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\neuschwansteincastle.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_hawamahal.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/hawamahal.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_oak.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\oak.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_storage.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_storage.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_umbrella.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\umbrella.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_sportscar.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/sportscar.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_sportsbike.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\sportsbike.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_letter.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/letter.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_firetruck.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\firetruck.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_forgot_password.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_forgot_password.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_green.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\green.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_snake.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/snake.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_hawamahal.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\hawamahal.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_eiffeltower.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\eiffeltower.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_white.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/white.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_info_24.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\info_24.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_helicopter.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/helicopter.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_turtle.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\turtle.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_burjkhalifa.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/burjkhalifa.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_yellow.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\yellow.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_visualock_app_logo.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/visualock_app_logo.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_cloud.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\cloud.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_colosseum.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/colosseum.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_glasses.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\glasses.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_squirrel.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/squirrel.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_computer.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\computer.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_keyboard.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/keyboard.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_storage.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_storage.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_glasses.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/glasses.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_fragment_menu.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\fragment_menu.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_cedar.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/cedar.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_fragment_menu.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/fragment_menu.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_acropolisofathens.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\acropolisofathens.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_baseline_density_medium_24.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/baseline_density_medium_24.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ambullance.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ambullance.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_login.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_leaningtowerofpisa.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/leaningtowerofpisa.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_keyboard.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\keyboard.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_goldengate.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\goldengate.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_firetruck.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/firetruck.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_pink.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\pink.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_fragment_dashboard.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/fragment_dashboard.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_about.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_about.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_bigben.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/bigben.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_elm.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\elm.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_computer.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/computer.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_setting.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_setting.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_plant.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\plant.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_circle_border.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/circle_border.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_beech.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\beech.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ash.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ash.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_custom_edittext.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\custom_edittext.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_trash_icon.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/trash_icon.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_frog.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\frog.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_zebra.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/zebra.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_balloon.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\balloon.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_flower.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/flower.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_fish.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\fish.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ape.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ape.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ic_user.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ic_user.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_shoe.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/shoe.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ambullance.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ambullance.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_add_image_icon.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/add_image_icon.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_leaf.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\leaf.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_baseline_lock_24.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/baseline_lock_24.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_main.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_main.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_main.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_item_image.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\item_image.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_eiffeltower.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/eiffeltower.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ic_home_black_24dp.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ic_home_black_24dp.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_tajmahal.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\tajmahal.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_bike.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/bike.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_bear.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/bear.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_dialog_edit_email.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\dialog_edit_email.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_boat.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/boat.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_visualock_logo.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\visualock_logo.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_mountrushmore.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/mountrushmore.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_bigben.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\bigben.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_mouse.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\mouse.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/xml_backup_rules.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_kremlin.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\kremlin.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_purple.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/purple.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_mug.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\mug.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_splash.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_fir.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\fir.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_yellow.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/yellow.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_book.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\book.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_greatwallofchina.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/greatwallofchina.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_cat.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/cat.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_graph_login.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_graph_login.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_statueofliberty.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/statueofliberty.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_giraffe.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\giraffe.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_zebra.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\zebra.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_leaf.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/leaf.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_fragment_notifications.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_metro.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/metro.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_dog.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\dog.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_about.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_about.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_metro.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\metro.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_phone.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\phone.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_birch.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/birch.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_activity_graph_password.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\activity_graph_password.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_add_image.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_add_image.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_colosseum.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\colosseum.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_mouse.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/mouse.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_car.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\car.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/xml_data_extraction_rules.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_placeholder_image.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\placeholder_image.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_grad.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/grad.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_sportscar.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\sportscar.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_kangroo.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/kangroo.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_bus.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/bus.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_rabbit.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\rabbit.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_cedar.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\cedar.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_info_24.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/info_24.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_jetski.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\jetski.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_table.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/table.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_visualock_app_logo.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\visualock_app_logo.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_scooter.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/scooter.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\navigation\\mobile_navigation.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_cargoship.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/cargoship.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_scooter.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\scooter.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_acropolisofathens.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/acropolisofathens.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_bear.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\bear.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_dog.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/dog.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_purple.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\purple.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_plant.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/plant.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_sun.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\sun.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_operahouse.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/operahouse.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_burjkhalifa.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\burjkhalifa.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_willow.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/willow.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_operahouse.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\operahouse.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_umbrella.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/umbrella.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_menu_item.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\menu_item.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_profile.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_profile.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_birch.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\birch.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_register.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_register.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_login.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_login.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_bus.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\bus.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/ic_dashboard_black_24dp.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_maple.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\maple.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_circle.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/circle.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_cycle2.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\cycle2.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_storage_icon.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/storage_icon.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_black.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/black.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_flower.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\flower.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_sailboat.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/sailboat.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_petronastowers.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\petronastowers.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_baseline_person_24.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/baseline_person_24.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_trash_icon.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\trash_icon.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_plane.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/plane.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_pyramidsofgiza.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\pyramidsofgiza.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_dialog_edit_name.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/dialog_edit_name.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_pine.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\pine.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_cloud.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/cloud.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_lion.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\lion.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_beech.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/beech.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_password_icon.png.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/password_icon.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_willow.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\willow.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_apple.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/apple.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_boat.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\boat.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/layout_activity_graph_password.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/layout/activity_graph_password.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_sun.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/sun.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_baseline_lock_24.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\baseline_lock_24.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_jetski.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/jetski.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_blue.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\blue.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_goldengate.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/goldengate.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\layout_dialog_edit_name.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\layout\\dialog_edit_name.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_tiger.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/tiger.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_green.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/green.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_white.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\white.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_book.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/book.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_rabbit.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/rabbit.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_orange.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\orange.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_koifish.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\koifish.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_elm.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/elm.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_letter.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\letter.png"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_koifish.webp.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/koifish.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_cycle.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\cycle.webp"
     },
     {
-        "merged": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-debug-51:/drawable_baseline_arrow_back_24.xml.flat",
-        "source": "/Users/minhle28/.gradle/daemon/8.4/com.example.visualock.app-main-53:/drawable/baseline_arrow_back_24.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-51:\\drawable_setting_24.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-53:\\drawable\\setting_24.png"
     }
 ]
