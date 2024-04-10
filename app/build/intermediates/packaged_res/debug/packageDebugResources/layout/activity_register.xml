@@ -78,7 +78,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/register_button"
-                android:text="Register"
+                android:text="Create Password"
                 android:background="@drawable/custom_edittext"
                 android:textSize="18sp"
                 android:textColor="@color/white"

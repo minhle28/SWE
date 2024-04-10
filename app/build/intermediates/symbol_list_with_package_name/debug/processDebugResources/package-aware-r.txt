@@ -1412,10 +1412,6 @@ color bright_foreground_inverse_material_dark
 color bright_foreground_inverse_material_light
 color bright_foreground_material_dark
 color bright_foreground_material_light
-color browser_actions_bg_grey
-color browser_actions_divider_color
-color browser_actions_text_color
-color browser_actions_title_color
 color button_material_dark
 color button_material_light
 color cardview_dark_background
@@ -2256,8 +2252,6 @@ dimen abc_text_size_title_material_toolbar
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
 dimen appcompat_dialog_background_inset
-dimen browser_actions_context_menu_max_width
-dimen browser_actions_context_menu_min_padding
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
 dimen cardview_default_radius
@@ -3307,11 +3301,6 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id browser_actions_header_text
-id browser_actions_menu_item_icon
-id browser_actions_menu_item_text
-id browser_actions_menu_items
-id browser_actions_menu_view
 id btn_cancel
 id btn_save
 id buttonDeleteAccount
@@ -3361,6 +3350,8 @@ id date_picker_actions
 id decelerate
 id decelerateAndComplete
 id decor_content_parent
+id defaultButton
+id defaultImageView
 id default_activity_button
 id deleteButton
 id deltaRelative
@@ -3543,6 +3534,7 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id my_password
 id nav_controller_view_tag
 id nav_host_fragment_activity_main
 id nav_host_fragment_container
@@ -3595,6 +3587,7 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id passwordView
 id password_button
 id password_toggle
 id path
@@ -3610,6 +3603,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerDefaultView
 id recyclerView
 id registerRedirectText
 id register_button
@@ -3761,6 +3755,8 @@ id unlabeled
 id up
 id uploadImageButton
 id useLogo
+id userButton
+id userImageView
 id vertical_only
 id view_offset_helper
 id view_transition
@@ -3908,8 +3904,6 @@ layout activity_register
 layout activity_setting
 layout activity_splash
 layout activity_storage
-layout browser_actions_context_menu_page
-layout browser_actions_context_menu_row
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -4059,16 +4053,12 @@ string common_google_play_services_wear_update_text
 string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
-string copy_toast_msg
 string dest_title
 string error_a11y_label
 string error_icon_content_description
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
-string fallback_menu_item_copy_link
-string fallback_menu_item_open_in_browser
-string fallback_menu_item_share_link
 string firebase_database_url
 string gcm_defaultSenderId
 string google_api_key
@@ -4197,6 +4187,7 @@ string title_dashboard
 string title_home
 string title_menu
 string title_notifications
+string welcome_message
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style Animation_AppCompat_Dialog
@@ -5489,4 +5480,3 @@ styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration
 styleable include constraintSet
 xml backup_rules
 xml data_extraction_rules
-xml image_share_filepaths

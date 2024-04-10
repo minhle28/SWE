@@ -57,6 +57,8 @@ id buttonDeleteAccount
 id checkBoxAgree
 id confirm_new_email
 id container
+id defaultButton
+id defaultImageView
 id deleteButton
 id dialogTitle
 id editButton
@@ -77,13 +79,16 @@ id login_email
 id login_password
 id material_switch
 id mobile_navigation
+id my_password
 id nav_host_fragment_activity_main
 id nav_view
 id navigation_dashboard
 id navigation_home
 id navigation_menu
 id navigation_notifications
+id passwordView
 id password_button
+id recyclerDefaultView
 id recyclerView
 id registerRedirectText
 id register_button
@@ -113,6 +118,8 @@ id tv_email
 id tv_name
 id tv_user_name
 id uploadImageButton
+id userButton
+id userImageView
 layout activity_about
 layout activity_add_image
 layout activity_forgot_password
@@ -149,6 +156,7 @@ string title_dashboard
 string title_home
 string title_menu
 string title_notifications
+string welcome_message
 style AppTheme.NoActionBar
 style Theme.NoSplashScreen
 style Theme.VisuaLock

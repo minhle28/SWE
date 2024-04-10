@@ -4,8 +4,10 @@ package com.example.visualock.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -18,24 +20,55 @@ import java.lang.String;
 
 public final class ActivityStorageBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final ScrollView rootView;
 
   @NonNull
   public final ImageView backButton;
 
   @NonNull
+  public final Button defaultButton;
+
+  @NonNull
+  public final TextView defaultImageView;
+
+  @NonNull
+  public final TextView myPassword;
+
+  @NonNull
+  public final RecyclerView passwordView;
+
+  @NonNull
+  public final RecyclerView recyclerDefaultView;
+
+  @NonNull
   public final RecyclerView recyclerView;
 
-  private ActivityStorageBinding(@NonNull RelativeLayout rootView, @NonNull ImageView backButton,
-      @NonNull RecyclerView recyclerView) {
+  @NonNull
+  public final Button userButton;
+
+  @NonNull
+  public final TextView userImageView;
+
+  private ActivityStorageBinding(@NonNull ScrollView rootView, @NonNull ImageView backButton,
+      @NonNull Button defaultButton, @NonNull TextView defaultImageView,
+      @NonNull TextView myPassword, @NonNull RecyclerView passwordView,
+      @NonNull RecyclerView recyclerDefaultView, @NonNull RecyclerView recyclerView,
+      @NonNull Button userButton, @NonNull TextView userImageView) {
     this.rootView = rootView;
     this.backButton = backButton;
+    this.defaultButton = defaultButton;
+    this.defaultImageView = defaultImageView;
+    this.myPassword = myPassword;
+    this.passwordView = passwordView;
+    this.recyclerDefaultView = recyclerDefaultView;
     this.recyclerView = recyclerView;
+    this.userButton = userButton;
+    this.userImageView = userImageView;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public ScrollView getRoot() {
     return rootView;
   }
 
@@ -66,13 +99,57 @@ public final class ActivityStorageBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.defaultButton;
+      Button defaultButton = ViewBindings.findChildViewById(rootView, id);
+      if (defaultButton == null) {
+        break missingId;
+      }
+
+      id = R.id.defaultImageView;
+      TextView defaultImageView = ViewBindings.findChildViewById(rootView, id);
+      if (defaultImageView == null) {
+        break missingId;
+      }
+
+      id = R.id.my_password;
+      TextView myPassword = ViewBindings.findChildViewById(rootView, id);
+      if (myPassword == null) {
+        break missingId;
+      }
+
+      id = R.id.passwordView;
+      RecyclerView passwordView = ViewBindings.findChildViewById(rootView, id);
+      if (passwordView == null) {
+        break missingId;
+      }
+
+      id = R.id.recyclerDefaultView;
+      RecyclerView recyclerDefaultView = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerDefaultView == null) {
+        break missingId;
+      }
+
       id = R.id.recyclerView;
       RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
       if (recyclerView == null) {
         break missingId;
       }
 
-      return new ActivityStorageBinding((RelativeLayout) rootView, backButton, recyclerView);
+      id = R.id.userButton;
+      Button userButton = ViewBindings.findChildViewById(rootView, id);
+      if (userButton == null) {
+        break missingId;
+      }
+
+      id = R.id.userImageView;
+      TextView userImageView = ViewBindings.findChildViewById(rootView, id);
+      if (userImageView == null) {
+        break missingId;
+      }
+
+      return new ActivityStorageBinding((ScrollView) rootView, backButton, defaultButton,
+          defaultImageView, myPassword, passwordView, recyclerDefaultView, recyclerView, userButton,
+          userImageView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
