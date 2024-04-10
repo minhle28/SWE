@@ -7,30 +7,25 @@ public class User {
     private String name;
     private String parameter;
     private List<String> images_pass;
-    private List<String> images;
+    private String uID;
 
-    public User(String name, String parameter, List<String> images_pass, List<String> images) {
+    public User(String uID, String name, String parameter, List<String> images_pass) {
+        this.uID = uID;
         this.name = name;
-        this.images = images;
         this.images_pass = images_pass;
         this.parameter = parameter;
     }
 
-    public User(String name, String parameter, List<String> images_pass){
-        this.name = name;
-        this.parameter = parameter;
-        this.images_pass = images_pass;
-    }
 
-    public User(String name) {
+    public User(String uID, String name) {
+        this.uID = uID;
         this.name = name;
-        images = new ArrayList<>();
         images_pass = new ArrayList<>();
         parameter = "8:8:8:8:8";
     }
     public User() {
+        this.uID = "";
         this.name = "";
-        images = new ArrayList<>();
         images_pass = new ArrayList<>();
         parameter = "8:8:8:8:8";
     }
@@ -53,6 +48,12 @@ public class User {
     public List<String> getImages_pass() {
         return images_pass;
     }
+    public String getuID() {
+        return uID;
+    }
+    public void setuID(String uID) {
+        this.uID = uID;
+    }
 
     public void setImages_pass(List<String> images_pass) {
         this.images_pass = images_pass;
@@ -64,18 +65,7 @@ public class User {
         this.images_pass.remove(image);
     }
 
-    public List<String> getImages() {
-        return images;
-    }
 
-    public void setImages(List<String> images) {
-        this.images = images;
-    }
-    public void insertImages(String image) {
-        this.images.add(image);
-    }
-    public void removeImages(String image) {
-        this.images.remove(image);
-    }
+
 
 }

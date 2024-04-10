@@ -3,8 +3,6 @@ package com.example.visualock;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.widget.Button;
 import android.widget.GridView;
 import android.content.Context;
@@ -22,9 +20,7 @@ import android.graphics.Color;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class GraphPasswordActivity extends AppCompatActivity {
 
@@ -149,59 +145,67 @@ public class GraphPasswordActivity extends AppCompatActivity {
                 break;
             case "Login":
                 // 36 images limit
+                //Query 1
                 myBackend.getDatabase(myBackend.input_email).thenAccept(results1 ->{
-                    myBackend.getDefaultImages().thenAccept(results2 ->{
-                        try {
-                            int n2 = 36;
-                            if (myBackend.isSucess(results1)) {
-                                Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results1), Toast.LENGTH_SHORT).show();
-                                if(myBackend.userData.getImages_pass()!=null)
-                                for (String image : myBackend.userData.getImages_pass()
-                                ) {
-                                    if (!selectedImages.contains(image)) {
-                                        selectedImages.add(image);
-                                        n2--;
-                                    }
-                                }
-                                if(myBackend.userData.getImages()!=null)
-                                for (String image : myBackend.userData.getImages()
-                                ) {
-                                    if (!selectedImages.contains(image)) {
-                                        selectedImages.add(image);
-                                        n2--;
-                                        if (n2 == 0) break;
-                                    }
-                                }
-                            }
-                            if (myBackend.isSucess(results2)) {
-                                if (n2 > 0) {
-                                    if(myBackend.defaultImages!=null)
-                                    for (String image : myBackend.defaultImages
-                                    ) {
-                                        if (!selectedImages.contains(image)) {
-                                            selectedImages.add(image);
-                                            n2--;
-                                            if (n2 <= 0) break;
+                    if(myBackend.isSucess(results1)){
+                        //Query 2
+                        myBackend.getUploadImages(myBackend.userData.getuID()).thenAccept(results2->{
+                            //Query 3
+                            myBackend.getDefaultImages().thenAccept(results3 ->{
+                                try {
+                                    int n2 = 36;
+                                    Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results1), Toast.LENGTH_SHORT).show();
+                                    if(myBackend.userData.getImages_pass()!=null)
+                                        for (String image : myBackend.userData.getImages_pass()
+                                        ) {
+                                            if (!selectedImages.contains(image)) {
+                                                selectedImages.add(image);
+                                                n2--;
+                                            }
+                                        }
+                                    if(myBackend.userUploadImages!=null)
+                                        for (String image : myBackend.userUploadImages
+                                        ) {
+                                            if (!selectedImages.contains(image)) {
+                                                selectedImages.add(image);
+                                                n2--;
+                                                if (n2 == 0) break;
+                                            }
+                                        }
+
+                                    if (myBackend.isSucess(results3)) {
+                                        if (n2 > 0) {
+                                            if(myBackend.defaultImages!=null)
+                                                for (String image : myBackend.defaultImages
+                                                ) {
+                                                    if (!selectedImages.contains(image)) {
+                                                        selectedImages.add(image);
+                                                        n2--;
+                                                        if (n2 <= 0) break;
+                                                    }
+                                                }
                                         }
                                     }
+                                    //Collections.shuffle(selectedImages);
+                                    for(int i=0; i<6; i++){
+                                        System.out.println(i);
+                                        rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(6*i,6*(i+1)-1)));
+
+                                    }
                                 }
-                            }
-
-                            //Collections.shuffle(selectedImages);
-                            for(int i=0; i<6; i++){
-                                System.out.println(i);
-                                rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(6*i,6*(i+1)-1)));
-
-                            }
-                        }
-                        catch (Exception ex){
-                            Toast.makeText(GraphPasswordActivity.this, "Error:"+ex.getMessage(), Toast.LENGTH_SHORT).show();
-                            System.out.println(ex.getMessage());
-                        }
-                        // shufft ?
-                        topLabel.setText("Pick Picture");
-                        isLoading=false;
-                    });
+                                catch (Exception ex){
+                                    Toast.makeText(GraphPasswordActivity.this, "Error:"+ex.getMessage(), Toast.LENGTH_SHORT).show();
+                                    System.out.println(ex.getMessage());
+                                }
+                                // shufft ?
+                                topLabel.setText("Pick Picture");
+                                isLoading=false;
+                            });
+                        });
+                    }
+                    else{
+                        Toast.makeText(GraphPasswordActivity.this, "Error Connect", Toast.LENGTH_SHORT).show();
+                    }
                 });
                 break;
         }
