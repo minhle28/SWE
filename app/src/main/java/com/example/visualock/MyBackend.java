@@ -189,7 +189,7 @@ public class MyBackend {
     }
 
     //THIS REGISTER FOR THE FIRST TIME
-    public CompletableFuture<String> signUp(String email,List<String> clickedImage){
+    public CompletableFuture<String> signUp(String email, String input_name,List<String> clickedImage){
         CompletableFuture<String> future = new CompletableFuture<>();
         // Generation parameters to make password unpredictable
 
@@ -202,7 +202,7 @@ public class MyBackend {
                     //Toast.makeText(context,"Account created...",Toast.LENGTH_SHORT).show();
                     if (isUserLogin()) {
                         // put user
-                        userData= new User(auth.getCurrentUser().getUid(),email.split("@")[0],password.split(";")[0],clickedImage);
+                        userData= new User(auth.getCurrentUser().getUid(),input_name,password.split(";")[0],clickedImage);
                        // Toast.makeText(context,"Saving passcode...",Toast.LENGTH_SHORT).show();
                         pushDatabase().thenAccept(result->{
                             Toast.makeText(context,"Saving done...",Toast.LENGTH_SHORT).show();
@@ -342,19 +342,25 @@ public class MyBackend {
         return future;
     }
     // THIS for UPLOAD PICTURE
-    public CompletableFuture<String> pushUploadImage(Uri uri){
+    public CompletableFuture<String> pushUploadImage(Uri uri,String name){
         CompletableFuture<String> future = new CompletableFuture<>();
-        FirebaseUser user = auth.getCurrentUser();
         if (!isUserLogin()) {
            future.complete("false:Did not login");
            return future;
         }
-        StorageReference folderRef = storage.getReference().child(auth.getUid());
+
+        StorageReference folderRef = storage.getReference().child(auth.getUid()).child(name);
         folderRef.putFile(uri).addOnCompleteListener(task -> {
             if(task.isSuccessful()) {
+                System.out.println("I am here 1");
                 getUploadImages(auth.getUid()).thenAccept(results -> {
-                    future.complete("true:Uploaded image "+userUploadImages.size());
-                    //Toast.makeText(context,"Loaded User Upload image"+userUploadImages.size(),Toast.LENGTH_SHORT).show();
+                    if(userUploadImages!=null) {
+                        future.complete("true:User Uploaded Image =  " + userUploadImages.size());
+                        //Toast.makeText(context,"Loaded User Upload image"+userUploadImages.size(),Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        future.complete("false:Uploaded Image Fail");
+                    }
                 });
             }
             else{
@@ -373,14 +379,11 @@ public class MyBackend {
         }
         StorageReference folderRef = storage.getReference().child(uID);
         folderRef.listAll().addOnSuccessListener(listResult -> {
-
-
             List<String> listURL = new ArrayList<>();
             int totalItems = listResult.getItems().size();
             if(totalItems==0){
                 future.complete("true:Loaded User Upload image (Empty)");
-                Toast.makeText(context,"Loaded User Upload image (Empty)",Toast.LENGTH_SHORT).show();
-
+                //Toast.makeText(context,"Loaded User Upload image (Empty)",Toast.LENGTH_SHORT).show();
             }
             AtomicInteger count = new AtomicInteger(0);
 

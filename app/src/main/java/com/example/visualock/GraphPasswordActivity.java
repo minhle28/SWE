@@ -230,7 +230,7 @@ public class GraphPasswordActivity extends AppCompatActivity {
                 isLoading=true;
                 switch (myBackend.require) {
                     case "Register":
-                        myBackend.signUp(myBackend.input_email,clickedImage).thenAccept(results ->{
+                        myBackend.signUp(myBackend.input_email,myBackend.input_name,clickedImage).thenAccept(results ->{
                             Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results), Toast.LENGTH_SHORT).show();
                             if (myBackend.isSucess(results)) {
                                 startActivity(new Intent(GraphPasswordActivity.this, MainActivity.class));
