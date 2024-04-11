@@ -142,7 +142,7 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
                     // Update email in Firebase Authentication
                     updateEmail(newEmail, dialog);
                 } else {
-                    Toast.makeText(ProfileActivity.this, "Emails do not match", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ProfileActivity.this, "Email do not match", Toast.LENGTH_SHORT).show();
                 }
             } else {
                 Toast.makeText(ProfileActivity.this, "Please enter both email fields", Toast.LENGTH_SHORT).show();
@@ -151,7 +151,6 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
 
         dialog.show();
     }
-
 
     private void updateEmail(String newEmail, AlertDialog dialog) {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();

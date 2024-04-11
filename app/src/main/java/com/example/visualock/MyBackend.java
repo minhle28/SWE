@@ -34,6 +34,7 @@ public class MyBackend {
     public List<String> userUploadImages;
     private FirebaseFirestore firebaseFirestore;
     private FirebaseStorage storage;
+
     public Context context;
     public MyBackend()
     {
@@ -103,8 +104,11 @@ public class MyBackend {
                 //Log.d(TAG, "Error getting document", task.getException());
                 future.complete("false: Get UserData error");
             }
+            /*
             if(!isUserLogin())
                 logOut();
+                */
+
         });
 
         return future;
@@ -189,7 +193,7 @@ public class MyBackend {
         CompletableFuture<String> future = new CompletableFuture<>();
         // Generation parameters to make password unpredictable
 
-        String password =generation_Pass(clickedImage);
+        String password =generation_Pass(clickedImage,null);
         // logOut all
         logOut();
         auth.createUserWithEmailAndPassword(email, password.split(";")[1])
@@ -214,7 +218,7 @@ public class MyBackend {
                         future.complete("false:Register Fail");
                     }
                 })
-                .addOnFailureListener(e -> future.complete("false:Log in Exception "+e.getMessage()));
+                .addOnFailureListener(e -> future.complete("false:"+e.getMessage()));
         return future;
     }
 
@@ -326,8 +330,10 @@ public class MyBackend {
                     }
                 });
             }
+            /*
             if(!isUserLogin())
                 logOut();
+                */
         });
         return future;
     }
@@ -363,8 +369,15 @@ public class MyBackend {
         }
         StorageReference folderRef = storage.getReference().child(uID);
         folderRef.listAll().addOnSuccessListener(listResult -> {
+
+
             List<String> listURL = new ArrayList<>();
             int totalItems = listResult.getItems().size();
+            if(totalItems==0){
+                future.complete("true:Loaded User Upload image (Empty)");
+                Toast.makeText(context,"Loaded User Upload image (Empty)",Toast.LENGTH_SHORT).show();
+
+            }
             AtomicInteger count = new AtomicInteger(0);
 
             for (StorageReference item : listResult.getItems()) {
@@ -381,8 +394,15 @@ public class MyBackend {
                     }
                 });
             }
+            /*
             if(!isUserLogin())
                 logOut();
+
+             */
+        }).addOnFailureListener(task ->{
+            future.complete("false:Get User Upload image "+task.getMessage());
+            Toast.makeText(context,"Get User Upload image error: "+task.getMessage(),Toast.LENGTH_SHORT).show();
+
         });
         return future;
     }
@@ -416,19 +436,26 @@ public class MyBackend {
         return auth.getCurrentUser().getEmail();
     }
     private String generation_Pass() {
-        return generation_Pass(userData.getImages_pass());
+        return generation_Pass(userData.getImages_pass(), userData.getParameter());
     }
-    private String generation_Pass(List<String> images) {
+    private String generation_Pass(List<String> images, String paramters) {
         StringBuilder pass = new StringBuilder();
         Random random = new Random();
         int[] parameter_int = new int[6];
         for(int i =0 ;i<5; i++){
-            parameter_int[i] = random.nextInt(3)+8;
+            if(paramters==null)
+                parameter_int[i] = random.nextInt(3)+8;
+            else
+                parameter_int[i] = Integer.parseInt(paramters.split(":")[i]);
         }
-        // saving parameters as xx:xx:xx:xx
-        String parameter_String= String.join(":", Arrays.stream(parameter_int)
-                .mapToObj(String::valueOf)
-                .toArray(String[]::new));
+        String parameter_String = "";
+        if(paramters==null) {
+            // saving parameters as xx:xx:xx:xx
+            parameter_String= String.join(":", Arrays.stream(parameter_int)
+                    .mapToObj(String::valueOf)
+                    .toArray(String[]::new));
+            parameter_String+=";";
+        }
         int j =0;
         for (String image: images
         ) {
@@ -436,7 +463,7 @@ public class MyBackend {
             pass.append(target.substring(target.length() / 2, target.length() / 2 + parameter_int[j]));
             j++;
         }
-        return parameter_String+";"+pass;
+        return parameter_String+pass;
     }
 
     private boolean isRoot(){

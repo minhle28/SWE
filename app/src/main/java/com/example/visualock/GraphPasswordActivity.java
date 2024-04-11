@@ -149,12 +149,14 @@ public class GraphPasswordActivity extends AppCompatActivity {
                 myBackend.getDatabase(myBackend.input_email).thenAccept(results1 ->{
                     if(myBackend.isSucess(results1)){
                         //Query 2
+                        Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results1), Toast.LENGTH_SHORT).show();
                         myBackend.getUploadImages(myBackend.userData.getuID()).thenAccept(results2->{
                             //Query 3
+                            Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results2), Toast.LENGTH_SHORT).show();
                             myBackend.getDefaultImages().thenAccept(results3 ->{
                                 try {
                                     int n2 = 36;
-                                    Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results1), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results3), Toast.LENGTH_SHORT).show();
                                     if(myBackend.userData.getImages_pass()!=null)
                                         for (String image : myBackend.userData.getImages_pass()
                                         ) {
