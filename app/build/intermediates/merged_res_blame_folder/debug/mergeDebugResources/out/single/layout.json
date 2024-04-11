@@ -1,82 +1,86 @@
 [
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/fragment_menu.xml",
-        "source": "com.example.visualock.app-main-52:/layout/fragment_menu.xml"
-    },
-    {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_storage.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_storage.xml"
-    },
-    {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_register.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_register.xml"
-    },
-    {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_graph_password.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_graph_password.xml"
-    },
-    {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/item_image.xml",
-        "source": "com.example.visualock.app-main-52:/layout/item_image.xml"
-    },
-    {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/dialog_edit_name.xml",
-        "source": "com.example.visualock.app-main-52:/layout/dialog_edit_name.xml"
-    },
-    {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_profile.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_profile.xml"
-    },
-    {
         "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_graph_login.xml",
         "source": "com.example.visualock.app-main-52:/layout/activity_graph_login.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_about.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_about.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_about.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_about.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/fragment_dashboard.xml",
-        "source": "com.example.visualock.app-main-52:/layout/fragment_dashboard.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\fragment_dashboard.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/menu_item.xml",
-        "source": "com.example.visualock.app-main-52:/layout/menu_item.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\item_image.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\item_image.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_setting.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_setting.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_setting.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_setting.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_add_image.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_add_image.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_register.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_register.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_forgot_password.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_forgot_password.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_storage.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_storage.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_splash.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_splash.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_add_image.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_add_image.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_login.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_login.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_graph_password.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_graph_password.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_main.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_main.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_splash.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/dialog_edit_email.xml",
-        "source": "com.example.visualock.app-main-52:/layout/dialog_edit_email.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/fragment_notifications.xml",
-        "source": "com.example.visualock.app-main-52:/layout/fragment_notifications.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\menu_item.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\menu_item.xml"
     },
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/fragment_home.xml",
-        "source": "com.example.visualock.app-main-52:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\fragment_menu.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\fragment_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_forgot_password.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_forgot_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\dialog_edit_email.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\dialog_edit_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_graph_login.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_graph_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\fragment_notifications.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\fragment_notifications.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\dialog_edit_name.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\dialog_edit_name.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_profile.xml"
     }
 ]

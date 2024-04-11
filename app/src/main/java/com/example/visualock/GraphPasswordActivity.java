@@ -132,7 +132,6 @@ public class GraphPasswordActivity extends AppCompatActivity {
                         // shufft
                         //Collections.shuffle(selectedImages);
                         int n1 = selectedImages.size()/6;
-                        System.out.println("Data" +myBackend.defaultImages.size());
                         Toast.makeText(GraphPasswordActivity.this,myBackend.getMessenge(results), Toast.LENGTH_SHORT).show();
                         // div images into 6 row
                         for(int i=0; i<6; i++){
@@ -190,7 +189,6 @@ public class GraphPasswordActivity extends AppCompatActivity {
                                     }
                                     //Collections.shuffle(selectedImages);
                                     for(int i=0; i<6; i++){
-                                        System.out.println(i);
                                         rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(6*i,6*(i+1)-1)));
 
                                     }

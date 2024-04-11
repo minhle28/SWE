@@ -253,27 +253,31 @@ public class MyBackend {
             String oldEmail = auth.getCurrentUser().getEmail();
             // Querry 1
             is_Email_Registered(newEmail).thenAccept(result1->{
-                if(isSucess(result1)) {
+                if(!isSucess(result1)) {
                     // Querry 2
                     getDatabase().thenAccept(result2->{
                         if(isSucess(result2)) {
                             auth.getCurrentUser().updateEmail(newEmail).addOnCompleteListener(task -> {
-                                // Querry 3
-                                // change database
-                                pushDatabase().thenAccept(result3 -> {
-                                    if(result3) {
-                                        firebaseFirestore.collection("users").document(oldEmail).delete();
-                                        // change storage (not need, file upload by uID)
-                                        future.complete("true:Change Email Successful");
-                                    }
-                                    else{
-                                        future.complete("false:Change Email Fail(3)");
-                                    }
-                                });
+                                if(task.isSuccessful()) {
+                                    // Querry 3
+                                    // change database
+                                    pushDatabase().thenAccept(result3 -> {
+                                        if (result3) {
+                                            firebaseFirestore.collection("users").document(oldEmail).delete();
+                                            // change storage (not need, file upload by uID)
+                                            future.complete("true:Change Email Successful");
+                                        } else {
+                                            future.complete("false:Change Email Fail(1)");
+                                        }
+                                    });
+                                }
+                                else{
+                                    future.complete("false:Change Email Fail(2)");
+                                }
                             });
                         }
                         else{
-                            future.complete("false:Change Email Fail(2)");
+                            future.complete("false:Change Email Fail(3)");
                         }
                     });
                 }
@@ -415,7 +419,7 @@ public class MyBackend {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
                         List<String> signInMethods = task.getResult().getSignInMethods();
-                        System.out.println("Sign method = "+signInMethods.size());
+                        System.out.println("signInMethods="+signInMethods.size());
                         if (signInMethods != null && !signInMethods.isEmpty()) {
                             // Email is registered
                             future.complete("true:Email is registered");

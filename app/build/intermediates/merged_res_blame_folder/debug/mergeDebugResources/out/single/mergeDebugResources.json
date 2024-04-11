@@ -1,250 +1,254 @@
 [
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_baseline_person_24.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/baseline_person_24.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_visualock_logo.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\visualock_logo.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_fragment_menu.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/fragment_menu.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_password_icon.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\password_icon.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/menu_bottom_nav_menu.xml.flat",
-        "source": "com.example.visualock.app-main-52:/menu/bottom_nav_menu.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_baseline_arrow_back_24.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/baseline_arrow_back_24.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_add_image_icon.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/add_image_icon.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_about.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_about.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_add_image.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_add_image.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_custom_edittext.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/custom_edittext.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_visualock_app_logo.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\visualock_app_logo.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_login.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_login.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_baseline_lock_24.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\baseline_lock_24.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_password_icon.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/password_icon.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_letter.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\letter.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_item_image.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\item_image.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/xml_backup_rules.xml.flat",
-        "source": "com.example.visualock.app-main-52:/xml/backup_rules.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-xxxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_add_image.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_add_image.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_fragment_dashboard.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/fragment_dashboard.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_storage.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_storage.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_logout_24.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/logout_24.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_profile.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_profile.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_main.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_main.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\ic_launcher_background.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_circle_border.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/circle_border.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_ic_user.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\ic_user.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_logout_24.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\logout_24.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_menu_item.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\menu_item.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_about.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_about.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_grad.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\grad.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_ic_notifications_black_24dp.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\ic_notifications_black_24dp.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_graph_password.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_graph_password.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-xhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_circle.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/circle.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_setting.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_setting.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_menu_item.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/menu_item.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_graph_login.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_graph_login.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_fragment_notifications.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\fragment_notifications.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_fragment_notifications.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/fragment_notifications.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_storage.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_storage.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_graph_password.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_graph_password.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_letter.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/letter.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_circle.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\circle.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-hdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_ic_dashboard_black_24dp.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/ic_dashboard_black_24dp.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_custom_edittext.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\custom_edittext.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_ic_notifications_black_24dp.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/ic_notifications_black_24dp.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_dialog_edit_name.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/dialog_edit_name.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_info_24.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/info_24.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_info_24.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\info_24.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_ic_home_black_24dp.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/ic_home_black_24dp.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_fragment_menu.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\fragment_menu.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_fragment_home.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/fragment_home.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_storage_icon.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\storage_icon.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_setting_24.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/setting_24.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_trash_icon.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\trash_icon.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_ic_user.webp.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/ic_user.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_user_24.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\user_24.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_dialog_edit_email.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/dialog_edit_email.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\xml\\data_extraction_rules.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_profile.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_profile.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_circle_border.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\circle_border.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/navigation_mobile_navigation.xml.flat",
-        "source": "com.example.visualock.app-main-52:/navigation/mobile_navigation.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_setting_24.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\setting_24.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_trash_icon.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/trash_icon.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\navigation_mobile_navigation.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\navigation\\mobile_navigation.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_user_24.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/user_24.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_splash.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/xml_data_extraction_rules.xml.flat",
-        "source": "com.example.visualock.app-main-52:/xml/data_extraction_rules.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_dialog_edit_name.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\dialog_edit_name.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_forgot_password.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_forgot_password.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\menu\\bottom_nav_menu.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_grad.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/grad.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_visualock_app_logo.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/visualock_app_logo.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-xhdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_register.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_register.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_add_image_icon.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\add_image_icon.png"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_item_image.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/item_image.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_forgot_password.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_forgot_password.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_visualock_logo.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/visualock_logo.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_ic_dashboard_black_24dp.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\ic_dashboard_black_24dp.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_placeholder_image.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/placeholder_image.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_storage_icon.png.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/storage_icon.png"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_baseline_density_medium_24.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\baseline_density_medium_24.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_ic_launcher_background.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/ic_launcher_background.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_ic_home_black_24dp.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\ic_home_black_24dp.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-mdpi\\ic_launcher.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\fragment_home.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_baseline_lock_24.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/baseline_lock_24.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_baseline_person_24.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\baseline_person_24.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-xxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_fragment_dashboard.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\fragment_dashboard.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "com.example.visualock.app-main-52:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_baseline_arrow_back_24.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\baseline_arrow_back_24.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/drawable_baseline_density_medium_24.xml.flat",
-        "source": "com.example.visualock.app-main-52:/drawable/baseline_density_medium_24.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_setting.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_setting.xml"
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_dialog_edit_email.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\dialog_edit_email.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\layout\\activity_register.xml"
+    },
+    {
+        "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-debug-50:\\drawable_placeholder_image.png.flat",
+        "source": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-main-52:\\drawable\\placeholder_image.png"
     },
     {
         "merged": "com.example.visualock.app-debug-50:/layout_activity_graph_login.xml.flat",
         "source": "com.example.visualock.app-main-52:/layout/activity_graph_login.xml"
-    },
-    {
-        "merged": "com.example.visualock.app-debug-50:/layout_activity_splash.xml.flat",
-        "source": "com.example.visualock.app-main-52:/layout/activity_splash.xml"
     }
 ]
