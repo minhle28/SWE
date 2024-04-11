@@ -329,8 +329,7 @@ public class MyBackend {
                     if (count.get() == totalItems) {
                         // All URLs retrieved, do something with listURL
                         defaultImages = listURL;
-                        future.complete("true:Loaded default image "+defaultImages.size());
-                        Toast.makeText(context,"Loaded default image"+defaultImages.size(),Toast.LENGTH_SHORT).show();
+                        future.complete("true:Default image = "+defaultImages.size());
                     }
                 });
             }
@@ -352,7 +351,6 @@ public class MyBackend {
         StorageReference folderRef = storage.getReference().child(auth.getUid()).child(name);
         folderRef.putFile(uri).addOnCompleteListener(task -> {
             if(task.isSuccessful()) {
-                System.out.println("I am here 1");
                 getUploadImages(auth.getUid()).thenAccept(results -> {
                     if(userUploadImages!=null) {
                         future.complete("true:User Uploaded Image =  " + userUploadImages.size());
@@ -382,7 +380,7 @@ public class MyBackend {
             List<String> listURL = new ArrayList<>();
             int totalItems = listResult.getItems().size();
             if(totalItems==0){
-                future.complete("true:Loaded User Upload image (Empty)");
+                future.complete("true:User Upload image (Empty)");
                 //Toast.makeText(context,"Loaded User Upload image (Empty)",Toast.LENGTH_SHORT).show();
             }
             AtomicInteger count = new AtomicInteger(0);
@@ -396,8 +394,7 @@ public class MyBackend {
                     if (count.get() == totalItems) {
                         // All URLs retrieved, do something with listURL
                         userUploadImages = listURL;
-                        future.complete("true:Loaded User Upload image "+userUploadImages.size());
-                        Toast.makeText(context,"Loaded User Upload image"+userUploadImages.size(),Toast.LENGTH_SHORT).show();
+                        future.complete("true:User Upload image = "+userUploadImages.size());
                     }
                 });
             }
@@ -407,9 +404,7 @@ public class MyBackend {
 
              */
         }).addOnFailureListener(task ->{
-            future.complete("false:Get User Upload image "+task.getMessage());
-            Toast.makeText(context,"Get User Upload image error: "+task.getMessage(),Toast.LENGTH_SHORT).show();
-
+            future.complete("false:Get Fail = "+task.getMessage());
         });
         return future;
     }
