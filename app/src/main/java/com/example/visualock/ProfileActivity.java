@@ -127,66 +127,45 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         EditText etConfirmEmail = view.findViewById(R.id.confirm_new_email); // Add reference to confirm email EditText
         Button btnCancel = view.findViewById(R.id.btn_cancel);
         Button btnSave = view.findViewById(R.id.btn_save);
+        AtomicBoolean lock = new AtomicBoolean(false);
 
         builder.setView(view);
         AlertDialog dialog = builder.create();
 
-        btnCancel.setOnClickListener(v -> dialog.dismiss());
+        btnCancel.setOnClickListener(v ->{ if(lock.get()) return; dialog.dismiss();});
 
         btnSave.setOnClickListener(v -> {
+            if(lock.get()) return;
+            lock.set(true);
             String newEmail = etNewEmail.getText().toString().trim();
             String confirmEmail = etConfirmEmail.getText().toString().trim();
-
             if (!TextUtils.isEmpty(newEmail) && !TextUtils.isEmpty(confirmEmail)) {
                 if (newEmail.equals(confirmEmail)) {
+
                     // Update email in Firebase Authentication
-                    updateEmail(newEmail, dialog);
+                    myBackend.changeEmail(newEmail).thenAccept(results->{
+                        if(myBackend.isSucess(results)){
+                            Toast.makeText(ProfileActivity.this,"Email changed to "+myBackend.getCurrentEmail(), Toast.LENGTH_SHORT).show();
+                            refreshInfor();
+                            dialog.dismiss();
+                        }
+                        else{
+                            Toast.makeText(ProfileActivity.this, myBackend.getMessenge(results), Toast.LENGTH_SHORT).show();
+                            lock.set(false);
+                        }
+                    });
+
                 } else {
-                    Toast.makeText(ProfileActivity.this, "Emails do not match", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ProfileActivity.this, "Email do not match", Toast.LENGTH_SHORT).show();
+                    lock.set(false);
                 }
             } else {
                 Toast.makeText(ProfileActivity.this, "Please enter both email fields", Toast.LENGTH_SHORT).show();
+                lock.set(false);
             }
         });
 
         dialog.show();
-    }
-
-
-    private void updateEmail(String newEmail, AlertDialog dialog) {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-        if (user != null) {
-            user.updateEmail(newEmail)
-                    .addOnSuccessListener(aVoid -> {
-                        // Update email in Firestore
-                        updateEmailInFirestore(newEmail);
-                        dialog.dismiss();
-                    })
-                    .addOnFailureListener(e -> {
-                        Toast.makeText(ProfileActivity.this, "Failed to update email: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                        System.out.println("Failed to update email: " + e.getMessage());
-                    });
-        }
-    }
-
-    private void updateEmailInFirestore(String newEmail) {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-
-        if (user != null) {
-            String uid = user.getUid();
-
-            FirebaseFirestore.getInstance().collection("users").document(uid)
-                    .update("email", newEmail)
-                    .addOnSuccessListener(aVoid -> {
-                        // Update UI or any other action after updating email in Firestore
-                        tvEmail.setText(newEmail);
-                        Toast.makeText(ProfileActivity.this, "Email updated successfully", Toast.LENGTH_SHORT).show();
-                    })
-                    .addOnFailureListener(e -> {
-                        Toast.makeText(ProfileActivity.this, "Failed to update email in Firestore: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                    });
-        }
     }
 
     @Override

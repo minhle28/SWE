@@ -65,8 +65,8 @@ public class SettingActivity extends AppCompatActivity {
     private void deleteAccount() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            String uid = user.getUid();
-            FirebaseFirestore.getInstance().collection("users").document(uid)
+            final String userEmail = user.getEmail();
+            FirebaseFirestore.getInstance().collection("users").document(userEmail)
                     .delete()
                     .addOnSuccessListener(new OnSuccessListener<Void>() {
                         @Override
@@ -85,6 +85,7 @@ public class SettingActivity extends AppCompatActivity {
             Toast.makeText(SettingActivity.this, "User is not authenticated", Toast.LENGTH_SHORT).show();
         }
     }
+
 
     private void deleteAuthCredentials(FirebaseUser user) {
         user.delete()

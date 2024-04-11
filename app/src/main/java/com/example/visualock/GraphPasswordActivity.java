@@ -132,11 +132,10 @@ public class GraphPasswordActivity extends AppCompatActivity {
                         // shufft
                         //Collections.shuffle(selectedImages);
                         int n1 = selectedImages.size()/6;
-                        System.out.println("Data" +myBackend.defaultImages.size());
                         Toast.makeText(GraphPasswordActivity.this,myBackend.getMessenge(results), Toast.LENGTH_SHORT).show();
                         // div images into 6 row
                         for(int i=0; i<6; i++){
-                            rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(n1*i,n1*(i+1)-1)));
+                            rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(n1*i,n1*(i+1))));
                         }
                         topLabel.setText("Pick Picture");
                         isLoading=false;
@@ -149,12 +148,14 @@ public class GraphPasswordActivity extends AppCompatActivity {
                 myBackend.getDatabase(myBackend.input_email).thenAccept(results1 ->{
                     if(myBackend.isSucess(results1)){
                         //Query 2
+                        Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results1), Toast.LENGTH_SHORT).show();
                         myBackend.getUploadImages(myBackend.userData.getuID()).thenAccept(results2->{
                             //Query 3
+                            Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results2), Toast.LENGTH_SHORT).show();
                             myBackend.getDefaultImages().thenAccept(results3 ->{
                                 try {
                                     int n2 = 36;
-                                    Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results1), Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results3), Toast.LENGTH_SHORT).show();
                                     if(myBackend.userData.getImages_pass()!=null)
                                         for (String image : myBackend.userData.getImages_pass()
                                         ) {
@@ -163,16 +164,17 @@ public class GraphPasswordActivity extends AppCompatActivity {
                                                 n2--;
                                             }
                                         }
-                                    if(myBackend.userUploadImages!=null)
-                                        for (String image : myBackend.userUploadImages
-                                        ) {
-                                            if (!selectedImages.contains(image)) {
-                                                selectedImages.add(image);
-                                                n2--;
-                                                if (n2 == 0) break;
+                                    if (myBackend.isSucess(results2)) {
+                                        if (myBackend.userUploadImages != null)
+                                            for (String image : myBackend.userUploadImages
+                                            ) {
+                                                if (!selectedImages.contains(image)) {
+                                                    selectedImages.add(image);
+                                                    n2--;
+                                                    if (n2 <= 0) break;
+                                                }
                                             }
-                                        }
-
+                                    }
                                     if (myBackend.isSucess(results3)) {
                                         if (n2 > 0) {
                                             if(myBackend.defaultImages!=null)
@@ -186,11 +188,10 @@ public class GraphPasswordActivity extends AppCompatActivity {
                                                 }
                                         }
                                     }
+                                    System.out.println(selectedImages.get(5));
                                     //Collections.shuffle(selectedImages);
                                     for(int i=0; i<6; i++){
-                                        System.out.println(i);
-                                        rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(6*i,6*(i+1)-1)));
-
+                                        rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(6*i,6*(i+1))));
                                     }
                                 }
                                 catch (Exception ex){
@@ -230,7 +231,7 @@ public class GraphPasswordActivity extends AppCompatActivity {
                 isLoading=true;
                 switch (myBackend.require) {
                     case "Register":
-                        myBackend.signUp(myBackend.input_email,clickedImage).thenAccept(results ->{
+                        myBackend.signUp(myBackend.input_email,myBackend.input_name,clickedImage).thenAccept(results ->{
                             Toast.makeText(GraphPasswordActivity.this, myBackend.getMessenge(results), Toast.LENGTH_SHORT).show();
                             if (myBackend.isSucess(results)) {
                                 startActivity(new Intent(GraphPasswordActivity.this, MainActivity.class));
