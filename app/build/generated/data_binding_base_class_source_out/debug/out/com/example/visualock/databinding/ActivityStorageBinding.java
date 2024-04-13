@@ -35,13 +35,13 @@ public final class ActivityStorageBinding implements ViewBinding {
   public final TextView myPassword;
 
   @NonNull
-  public final RecyclerView passwordView;
+  public final RecyclerView recyclerViewDefault;
 
   @NonNull
-  public final RecyclerView recyclerDefaultView;
+  public final RecyclerView recyclerViewPass;
 
   @NonNull
-  public final RecyclerView recyclerView;
+  public final RecyclerView recyclerViewUpload;
 
   @NonNull
   public final Button userButton;
@@ -51,17 +51,17 @@ public final class ActivityStorageBinding implements ViewBinding {
 
   private ActivityStorageBinding(@NonNull ScrollView rootView, @NonNull ImageView backButton,
       @NonNull Button defaultButton, @NonNull TextView defaultImageView,
-      @NonNull TextView myPassword, @NonNull RecyclerView passwordView,
-      @NonNull RecyclerView recyclerDefaultView, @NonNull RecyclerView recyclerView,
+      @NonNull TextView myPassword, @NonNull RecyclerView recyclerViewDefault,
+      @NonNull RecyclerView recyclerViewPass, @NonNull RecyclerView recyclerViewUpload,
       @NonNull Button userButton, @NonNull TextView userImageView) {
     this.rootView = rootView;
     this.backButton = backButton;
     this.defaultButton = defaultButton;
     this.defaultImageView = defaultImageView;
     this.myPassword = myPassword;
-    this.passwordView = passwordView;
-    this.recyclerDefaultView = recyclerDefaultView;
-    this.recyclerView = recyclerView;
+    this.recyclerViewDefault = recyclerViewDefault;
+    this.recyclerViewPass = recyclerViewPass;
+    this.recyclerViewUpload = recyclerViewUpload;
     this.userButton = userButton;
     this.userImageView = userImageView;
   }
@@ -117,21 +117,21 @@ public final class ActivityStorageBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.passwordView;
-      RecyclerView passwordView = ViewBindings.findChildViewById(rootView, id);
-      if (passwordView == null) {
+      id = R.id.recyclerViewDefault;
+      RecyclerView recyclerViewDefault = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerViewDefault == null) {
         break missingId;
       }
 
-      id = R.id.recyclerDefaultView;
-      RecyclerView recyclerDefaultView = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerDefaultView == null) {
+      id = R.id.recyclerViewPass;
+      RecyclerView recyclerViewPass = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerViewPass == null) {
         break missingId;
       }
 
-      id = R.id.recyclerView;
-      RecyclerView recyclerView = ViewBindings.findChildViewById(rootView, id);
-      if (recyclerView == null) {
+      id = R.id.recyclerViewUpload;
+      RecyclerView recyclerViewUpload = ViewBindings.findChildViewById(rootView, id);
+      if (recyclerViewUpload == null) {
         break missingId;
       }
 
@@ -148,8 +148,8 @@ public final class ActivityStorageBinding implements ViewBinding {
       }
 
       return new ActivityStorageBinding((ScrollView) rootView, backButton, defaultButton,
-          defaultImageView, myPassword, passwordView, recyclerDefaultView, recyclerView, userButton,
-          userImageView);
+          defaultImageView, myPassword, recyclerViewDefault, recyclerViewPass, recyclerViewUpload,
+          userButton, userImageView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

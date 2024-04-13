@@ -31,9 +31,7 @@ public class GraphLoginActivity extends AppCompatActivity {
             startActivity(new Intent(GraphLoginActivity.this, MainActivity.class));
             finish();
         }
-
         loginEmail = findViewById(R.id.login_email);
-
         registerRedirectText = findViewById(R.id.registerRedirectText);
         loginByTextual = findViewById(R.id.loginByTextual);
         forgot_passRedirectText = findViewById(R.id.forgot_passRedirectText);

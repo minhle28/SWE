@@ -1,7 +1,7 @@
 [
     {
-        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_graph_login.xml",
-        "source": "com.example.visualock.app-main-52:/layout/activity_graph_login.xml"
+        "merged": "com.example.visualock.app-mergeDebugResources-49:/layout/activity_storage.xml",
+        "source": "com.example.visualock.app-main-52:/layout/activity_storage.xml"
     },
     {
         "merged": "C:\\Users\\laphunhon\\AndroidStudioProjects\\SystemCare\\daemon\\8.4\\com.example.visualock.app-mergeDebugResources-49:\\layout\\activity_about.xml",

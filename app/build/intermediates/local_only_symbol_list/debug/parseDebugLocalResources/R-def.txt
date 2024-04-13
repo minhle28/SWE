@@ -86,10 +86,10 @@ id navigation_dashboard
 id navigation_home
 id navigation_menu
 id navigation_notifications
-id passwordView
 id password_button
-id recyclerDefaultView
-id recyclerView
+id recyclerViewDefault
+id recyclerViewPass
+id recyclerViewUpload
 id registerRedirectText
 id register_button
 id register_email

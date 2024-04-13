@@ -3587,7 +3587,6 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
-id passwordView
 id password_button
 id password_toggle
 id path
@@ -3603,8 +3602,9 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id recyclerDefaultView
-id recyclerView
+id recyclerViewDefault
+id recyclerViewPass
+id recyclerViewUpload
 id registerRedirectText
 id register_button
 id register_email

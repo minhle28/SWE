@@ -22,11 +22,15 @@ public class SettingActivity extends AppCompatActivity {
 
     private CheckBox checkBoxAgree;
     private Button buttonDeleteAccount;
+    private MyBackend myBackend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_setting);
+
+        myBackend = new MyBackend();
+        myBackend.context = SettingActivity.this;
 
         ImageView backButton = findViewById(R.id.backButton);
         checkBoxAgree = findViewById(R.id.checkBoxAgree);
@@ -57,56 +61,16 @@ public class SettingActivity extends AppCompatActivity {
         buttonDeleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                deleteAccount();
+                myBackend.deleteAccount().thenAccept(results ->{
+                    Toast.makeText(SettingActivity.this,myBackend.getMessenge(results),Toast.LENGTH_SHORT).show();
+                   if(myBackend.isSucess(results)){
+                       startActivity(new Intent(SettingActivity.this, GraphLoginActivity.class));
+                       finish();
+                   }
+                });
             }
         });
     }
-
-    private void deleteAccount() {
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            final String userEmail = user.getEmail();
-            FirebaseFirestore.getInstance().collection("users").document(userEmail)
-                    .delete()
-                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                        @Override
-                        public void onSuccess(Void aVoid) {
-                            deleteAuthCredentials(user);
-                        }
-                    })
-                    .addOnFailureListener(new OnFailureListener() {
-                        @Override
-                        public void onFailure(@NonNull Exception e) {
-                            Toast.makeText(SettingActivity.this, "Failed to delete account: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                            e.printStackTrace();
-                        }
-                    });
-        } else {
-            Toast.makeText(SettingActivity.this, "User is not authenticated", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-
-    private void deleteAuthCredentials(FirebaseUser user) {
-        user.delete()
-                .addOnSuccessListener(new OnSuccessListener<Void>() {
-                    @Override
-                    public void onSuccess(Void aVoid) {
-                        Toast.makeText(SettingActivity.this, "Account deleted successfully", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(SettingActivity.this, GraphLoginActivity.class));
-                        finish();
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(SettingActivity.this, "Failed to delete account: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-                        e.printStackTrace();
-                    }
-                });
-    }
-
-
     private void navigateToMenuFragment() {
         Intent intent = new Intent(SettingActivity.this, MainActivity.class);
         intent.putExtra("menuFragment", true);
