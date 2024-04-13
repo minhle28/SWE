@@ -3586,7 +3586,6 @@ int id parent 0x7f080185
 int id parentPanel 0x7f080186
 int id parentRelative 0x7f080187
 int id parent_matrix 0x7f080188
-int id passwordView 0x7f080189
 int id password_button 0x7f08018a
 int id password_toggle 0x7f08018b
 int id path 0x7f08018c
@@ -3602,8 +3601,9 @@ int id progress_horizontal 0x7f080195
 int id radio 0x7f080196
 int id ratio 0x7f080197
 int id rectangles 0x7f080198
-int id recyclerDefaultView 0x7f080199
-int id recyclerView 0x7f08019a
+int id recyclerViewDefault 0x7f080246
+int id recyclerViewPass 0x7f080247
+int id recyclerViewUpload 0x7f080248
 int id registerRedirectText 0x7f08019b
 int id register_button 0x7f08019c
 int id register_email 0x7f08019d

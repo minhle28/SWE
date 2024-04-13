@@ -15,6 +15,7 @@ import com.example.visualock.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
+    private MyBackend myBackend;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         } else if (getIntent().getBooleanExtra("dashboardFragment", false)) {
             navigateToDashboardFragment();
         }
+        myBackend = new MyBackend();
+        myBackend.context = MainActivity.this;
     }
     private void navigateToMenuFragment() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);

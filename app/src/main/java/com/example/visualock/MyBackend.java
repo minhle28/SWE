@@ -1,23 +1,36 @@
 package com.example.visualock;
 
 import android.content.Context;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.ListenerRegistration;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.CompletableFuture;
 import java.lang.String;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -30,8 +43,9 @@ public class MyBackend {
     public static String require="";
     public static String input_email="";
     public static String input_name="";
-    public List<String> defaultImages;
-    public List<String> userUploadImages;
+    public static List<String> defaultImages;
+    public static List<String> userUploadImages;
+    public static HashMap<String, Bitmap> mapBitmap;
     private FirebaseFirestore firebaseFirestore;
     private FirebaseStorage storage;
 
@@ -41,14 +55,62 @@ public class MyBackend {
         auth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
         storage = FirebaseStorage.getInstance();
-        defaultImages = new ArrayList<>();
-        //root_Login();
+        // Auto update DB
+
+        if(mapBitmap ==null){
+            mapBitmap = new HashMap<>();
+        }
+        if(defaultImages ==null){
+            defaultImages = new ArrayList<>();
+        }
+        if(userUploadImages ==null){
+            userUploadImages = new ArrayList<>();
+        }
     }
+
     private void root_Login(){
         auth.signInWithEmailAndPassword(root_email , root_pass);
     }
     private void logOut(){
+        if(isUserLogin()){
+            // clean-up
+            for (String imageURL:userUploadImages
+            ) {
+                mapBitmap.remove(imageURL);
+            }
+            for (String imageURL:userData.getImages_pass()
+            ) {
+                mapBitmap.remove(imageURL);
+            }
+            userUploadImages.clear();
+            userData =null;
+        }
         auth.signOut();
+
+    }
+
+    public CompletableFuture<String> getAllDatabase(){
+        CompletableFuture<String> future = new CompletableFuture<>();
+        if(!isUserLogin()){
+            future.complete("false:Did not login");
+            return future;
+        }
+        try {
+            String uID= auth.getUid();
+            getDatabase().thenAccept(result1 -> {
+                getUploadImages(uID).thenAccept(result2 -> {
+                    getDefaultImages().thenAccept(result3 -> {
+                        future.complete("true:All Get");
+                    });
+                });
+            });
+            return future;
+        }
+        catch (Exception exception){
+            future.complete("false:Error");
+            System.out.println(exception.getMessage());
+            return future;
+        }
     }
 
     // THIS IS UPDATE DB AS CURRENT USER DATA
@@ -82,7 +144,7 @@ public class MyBackend {
             root_Login();
         }
         DocumentReference userRef = firebaseFirestore.collection("users").document(email);
-        userData = null; //empty it
+
         // get database
         userRef.get().addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
@@ -104,11 +166,6 @@ public class MyBackend {
                 //Log.d(TAG, "Error getting document", task.getException());
                 future.complete("false: Get UserData error");
             }
-            /*
-            if(!isUserLogin())
-                logOut();
-                */
-
         });
 
         return future;
@@ -133,11 +190,10 @@ public class MyBackend {
                 // get password
                 String password = generation_Pass();
                 // user get in
-                auth.signInWithEmailAndPassword(email, password)
+                auth.signInWithEmailAndPassword(email, password.split(";")[1])
                         .addOnSuccessListener(authResult -> {
                             // Get the signed-in user
                             if (isUserLogin()) {
-                                userData =null;
                                 getDatabase();
                                 future.complete("true:Sign success");
                             }
@@ -153,10 +209,7 @@ public class MyBackend {
     // THIS IS USER LOGIN BY PASSWORD (For FORGET PASSWORD)
     public CompletableFuture<String> logIn(String email, String password){
         CompletableFuture<String> future = new CompletableFuture<>();
-
-        // logOut all
         logOut();
-        userData=null;
         auth.signInWithEmailAndPassword(email, password)
                 .addOnSuccessListener(authResult -> {
                     // Login success
@@ -167,7 +220,7 @@ public class MyBackend {
                                 if (userData != null){
                                     if(userData.getImages_pass().isEmpty()){
                                         String oldPassword = generation_Pass();
-                                        auth.getCurrentUser().updatePassword(oldPassword);
+                                        auth.getCurrentUser().updatePassword(oldPassword.split(";")[1]);
                                     }
                                 }
                                 // user get in
@@ -192,7 +245,6 @@ public class MyBackend {
     public CompletableFuture<String> signUp(String email, String input_name,List<String> clickedImage){
         CompletableFuture<String> future = new CompletableFuture<>();
         // Generation parameters to make password unpredictable
-
         String password =generation_Pass(clickedImage,null);
         // logOut all
         logOut();
@@ -203,7 +255,7 @@ public class MyBackend {
                     if (isUserLogin()) {
                         // put user
                         userData= new User(auth.getCurrentUser().getUid(),input_name,password.split(";")[0],clickedImage);
-                       // Toast.makeText(context,"Saving passcode...",Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(context,"Saving passcode...",Toast.LENGTH_SHORT).show();
                         pushDatabase().thenAccept(result->{
                             Toast.makeText(context,"Saving done...",Toast.LENGTH_SHORT).show();
                             if(result){
@@ -219,28 +271,47 @@ public class MyBackend {
                     }
                 })
                 .addOnFailureListener(e -> future.complete("false:"+e.getMessage()));
+
         return future;
     }
 
     // THIS IS CHANGE PASSWORD BASE ON IMAGE IN CURRENT USER DATA
-    public CompletableFuture<String> changePassword(){
-        return changePassword(generation_Pass());
+    public CompletableFuture<String> changePassword(String uRI){
+        String oldPassword = generation_Pass();
+        if(userData.getImages_pass().contains(uRI)){
+            // remove it
+            userData.getImages_pass().remove(uRI);
+        }else{
+            //add it
+            userData.getImages_pass().add(uRI);
+        }
+        String newPassword =generation_Pass(userData.getImages_pass(),null);
+        return changePassword(oldPassword, newPassword);
+
     }
     // THIS IS CHANGE PASSWORD WITH TEXT INPUT, NO IMAGE
-    public CompletableFuture<String> changePassword(String newPassword){
+    public CompletableFuture<String> changePassword(String oldPassword, String newPassword){
         CompletableFuture<String> future = new CompletableFuture<>();
         FirebaseUser user = auth.getCurrentUser();
         if (user != null && !isRoot()) {
             // new password to Authentication
-            user.updatePassword(newPassword).addOnCompleteListener(task -> {
-                // update database
-                pushDatabase().thenAccept(result ->{
-                    if(result){
-                        future.complete("true:Change Password Successful");
-                    }else{
-                        future.complete("false:Change Password Fail");
-                    }
-                });
+            user.updatePassword(newPassword.split(";")[1]).addOnCompleteListener(task1 -> {
+                if(task1.isSuccessful()){
+                    // Update DB
+                    userData.setParameter(newPassword.split(";")[0]);
+                    pushDatabase().thenAccept(result ->{
+                        if(result){
+                            future.complete("true:Change Password Successful");
+                        }else{
+                            //recovery
+                            user.updatePassword(oldPassword.split(";")[1]);
+                            future.complete("false:Change Password Fail");
+                            }
+                        });
+                }
+                else{
+                    future.complete("false:Can not Change Password. Relogin need");
+                }
             });
         }
         return future;
@@ -325,44 +396,31 @@ public class MyBackend {
                 item.getDownloadUrl().addOnSuccessListener(uri -> {
                     // Handle the download URL
                     listURL.add(uri.toString());
+                    if(!mapBitmap.containsKey(uri.toString())){
+                        try {
+                            //download new
+                            mapBitmap.put(uri.toString(), Picasso.get().load(uri.toString()).get());
+                        }
+                        catch (Exception error){
+
+                        }
+                    }
                     count.incrementAndGet();
                     if (count.get() == totalItems) {
                         // All URLs retrieved, do something with listURL
-                        defaultImages = listURL;
+                        if(defaultImages ==null){
+                            defaultImages = new ArrayList<>();
+                        }
+                        //removing
+                        defaultImages.clear();
+                        for(String t:listURL){
+                            defaultImages.add(t);
+                        }
                         future.complete("true:Default image = "+defaultImages.size());
                     }
+                }).addOnFailureListener(error ->{
+                    count.incrementAndGet();
                 });
-            }
-            /*
-            if(!isUserLogin())
-                logOut();
-                */
-        });
-        return future;
-    }
-    // THIS for UPLOAD PICTURE
-    public CompletableFuture<String> pushUploadImage(Uri uri,String name){
-        CompletableFuture<String> future = new CompletableFuture<>();
-        if (!isUserLogin()) {
-           future.complete("false:Did not login");
-           return future;
-        }
-
-        StorageReference folderRef = storage.getReference().child(auth.getUid()).child(name);
-        folderRef.putFile(uri).addOnCompleteListener(task -> {
-            if(task.isSuccessful()) {
-                getUploadImages(auth.getUid()).thenAccept(results -> {
-                    if(userUploadImages!=null) {
-                        future.complete("true:User Uploaded Image =  " + userUploadImages.size());
-                        //Toast.makeText(context,"Loaded User Upload image"+userUploadImages.size(),Toast.LENGTH_SHORT).show();
-                    }
-                    else{
-                        future.complete("false:Uploaded Image Fail");
-                    }
-                });
-            }
-            else{
-                future.complete("false:Upload Fail");
             }
         });
         return future;
@@ -390,12 +448,30 @@ public class MyBackend {
                 item.getDownloadUrl().addOnSuccessListener(uri -> {
                     // Handle the download URL
                     listURL.add(uri.toString());
+                    if(!mapBitmap.containsKey(uri.toString())){
+                        try {
+                            //downnload new
+                            mapBitmap.put(uri.toString(), Picasso.get().load(uri.toString()).get());
+                        }
+                        catch (Exception error){
+
+                        }
+                    }
                     count.incrementAndGet();
                     if (count.get() == totalItems) {
                         // All URLs retrieved, do something with listURL
-                        userUploadImages = listURL;
+                        if(userUploadImages ==null){
+                            userUploadImages = new ArrayList<>();
+                        }
+                        userUploadImages.clear();
+                        for (String t:listURL
+                             ) {
+                            userUploadImages.add(t);
+                        }
                         future.complete("true:User Upload image = "+userUploadImages.size());
                     }
+                }).addOnFailureListener(error ->{
+                    count.incrementAndGet();
                 });
             }
             /*
@@ -408,6 +484,93 @@ public class MyBackend {
         });
         return future;
     }
+
+    // THIS for UPLOAD PICTURE
+    public CompletableFuture<String> pushUploadImage(Uri uri,String name){
+        CompletableFuture<String> future = new CompletableFuture<>();
+        if (!isUserLogin()) {
+            future.complete("false:Did not login");
+            return future;
+        }
+        StorageReference folderRef = storage.getReference().child(auth.getUid()).child(name);
+        folderRef.putFile(uri).addOnCompleteListener(task -> {
+            if(task.isSuccessful()) {
+                getUploadImages(auth.getUid()).thenAccept(results -> {
+                    if(userUploadImages!=null) {
+                        future.complete("true:User Uploaded Image =  " + userUploadImages.size());
+                    }
+                    else{
+                        future.complete("false:Uploaded Image Fail");
+                    }
+                });
+            }
+            else{
+                future.complete("false:Upload Fail");
+            }
+        });
+        return future;
+    }
+    // THIS IS DELETE USER
+    public CompletableFuture<String> deleteAccount(){
+        CompletableFuture<String> future = new CompletableFuture<>();
+        if(!isUserLogin()){
+            future.complete("false:Did not login");
+            return future;
+        }
+        String uID = auth.getUid();
+        String email = auth.getCurrentUser().getEmail();
+        // Query 1
+        auth.getCurrentUser().delete().addOnCompleteListener(task1 -> {
+            if(task1.isSuccessful()){
+                logOut();
+                root_Login();
+                // Query 2
+                firebaseFirestore.collection("users").document(email).delete().addOnCompleteListener(task2->{
+                    if(task2.isSuccessful()) {
+                        StorageReference folderRef = storage.getReference().child(uID);
+                        // Query 3
+                        folderRef.listAll().addOnSuccessListener(listResult -> {
+                            List<String> listURL = new ArrayList<>();
+                            int totalItems = listResult.getItems().size();
+                            if (totalItems > 0) {
+                                AtomicInteger countS = new AtomicInteger(0);
+                                AtomicInteger countF = new AtomicInteger(0);
+                                for (StorageReference item : listResult.getItems()) {
+                                    // Query 4
+                                    item.delete().addOnCompleteListener(task3->{
+                                        if(task3.isSuccessful()){
+                                            countS.incrementAndGet();
+                                        }else {
+                                            countF.incrementAndGet();
+                                        }
+                                        if (countS.get() +countF.get() == totalItems) {
+                                            if (countF.get()==0) {
+                                                future.complete("true:Account Deleted");
+                                            } else {
+                                                future.complete("false:Data Storage can not Delete "+countF+" files");
+                                            }
+                                        }
+                                    });
+                                }
+                            }
+                        }).addOnFailureListener(error->{
+                            future.complete("false:Data did not Delete "+error.getMessage());
+                        });
+                    }
+                    else{
+                        future.complete("false:Data did not Delete (Fail)");
+                    }
+                });
+
+            }
+            else{
+                future.complete("false:Delete Account Fail");
+            }
+        });
+
+        return future;
+    }
+
 
     // THIS IS CHECK EMAIL REGISTED OR NOT
     public CompletableFuture<String> is_Email_Registered(String email){
@@ -457,6 +620,8 @@ public class MyBackend {
                     .mapToObj(String::valueOf)
                     .toArray(String[]::new));
             parameter_String+=";";
+        }else{
+            parameter_String=paramters+";";
         }
         int j =0;
         for (String image: images
@@ -486,6 +651,14 @@ public class MyBackend {
             output+=tmp[i];
         }
         return output;
+    }
+
+    public String getUrlName (String url){
+        int start = url.indexOf("%2F")+3;
+        int end = url.indexOf("?");
+        System.out.println("range"+start+"-"+end+" over "+ url.length());
+       return url.substring(start,end).replaceAll("%2F","_");
+
     }
 
 }

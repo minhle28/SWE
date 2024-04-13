@@ -62,7 +62,18 @@ public class GraphPasswordActivity extends AppCompatActivity {
                 imageView = new ImageView(mContext);
                 imageView.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 200));
                 imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                Picasso.get().load(chosenURL).into(imageView);
+                if(myBackend.mapBitmap.containsKey(chosenURL)){
+                    imageView.setImageBitmap(myBackend.mapBitmap.get(chosenURL));
+                }
+                else{
+                    try{
+                        myBackend.mapBitmap.put(chosenURL,Picasso.get().load(chosenURL).get());
+                        imageView.setImageBitmap(myBackend.mapBitmap.get(chosenURL));
+                    }
+                    catch (Exception exception){
+                        Picasso.get().load(chosenURL).into(imageView);
+                    }
+                }
             } else {
                 imageView = (ImageView) convertView;
             }
@@ -111,6 +122,12 @@ public class GraphPasswordActivity extends AppCompatActivity {
         clickedImage = new ArrayList<>();
         myBackend = new MyBackend();
         myBackend.context= GraphPasswordActivity.this;
+        if(myBackend.input_email.equals("")){
+            myBackend.require = "";
+            myBackend.input_email ="";
+            startActivity(new Intent(GraphPasswordActivity.this, GraphLoginActivity.class));
+            finish();
+        }
 
         List<String> selectedImages = new ArrayList<>();
         ListView[] rowListView = new ListView[6];
@@ -216,7 +233,10 @@ public class GraphPasswordActivity extends AppCompatActivity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                myBackend.require = "";
+                myBackend.input_email ="";
                 startActivity(new Intent(GraphPasswordActivity.this, GraphLoginActivity.class));
+                finish();
             }
         });
 

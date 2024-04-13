@@ -51,7 +51,7 @@
 
         <!-- Password RecyclerView -->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/passwordView"
+            android:id="@+id/recyclerViewPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/my_password"
@@ -64,7 +64,7 @@
             android:id="@+id/userImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/passwordView"
+            android:layout_below="@id/recyclerViewPass"
             android:layout_marginTop="16dp"
             android:text="User images:"
             android:textSize="18sp"
@@ -74,7 +74,7 @@
 
         <!-- User Images RecyclerView for User Images -->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView"
+            android:id="@+id/recyclerViewUpload"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/userImageView"
@@ -87,7 +87,7 @@
             android:id="@+id/defaultImageView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/recyclerView"
+            android:layout_below="@id/recyclerViewUpload"
             android:layout_marginTop="16dp"
             android:text="Default images:"
             android:textSize="18sp"
@@ -97,7 +97,7 @@
 
         <!-- User Images RecyclerView for Default Images -->
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerDefaultView"
+            android:id="@+id/recyclerViewDefault"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/defaultImageView"
