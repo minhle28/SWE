@@ -190,7 +190,7 @@ public class MyBackend {
                 // get password
                 String password = generation_Pass();
                 // user get in
-                auth.signInWithEmailAndPassword(email, password)
+                auth.signInWithEmailAndPassword(email, password.split(";")[1])
                         .addOnSuccessListener(authResult -> {
                             // Get the signed-in user
                             if (isUserLogin()) {
@@ -220,7 +220,7 @@ public class MyBackend {
                                 if (userData != null){
                                     if(userData.getImages_pass().isEmpty()){
                                         String oldPassword = generation_Pass();
-                                        auth.getCurrentUser().updatePassword(oldPassword);
+                                        auth.getCurrentUser().updatePassword(oldPassword.split(";")[1]);
                                     }
                                 }
                                 // user get in
