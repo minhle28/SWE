@@ -14,6 +14,7 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 
+import androidx.activity.result.ActivityResult;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -28,14 +29,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class StorageActivity extends AppCompatActivity {
-
-    private List<String> imageNames;
-    private List<String> imageUrls;
-    private List<Boolean> toggles;
     private RecyclerView recyclerViewPass, recyclerViewDefault,recyclerViewUpload;
     private ImageAdapter imageAdapterPass,imageAdapterDefault,imageAdapterPassUpload;
     private MyBackend myBackend;
-    private Timer timer;
+    private boolean mutexLock = true;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,10 +47,6 @@ public class StorageActivity extends AppCompatActivity {
                 navigateToDashboardFragment();
             }
         });
-
-        imageNames = new ArrayList<>();
-        imageUrls = new ArrayList<>();
-        toggles = new ArrayList<>();
 
         if(!myBackend.isUserLogin())
         {
@@ -74,10 +67,11 @@ public class StorageActivity extends AppCompatActivity {
         myBackend.getAllDatabase().thenAccept(resuult1 ->{
             imageAdapterPass = new ImageAdapter(StorageActivity.this,myBackend.userData.getImages_pass(),false);;
             imageAdapterDefault = new ImageAdapter(StorageActivity.this,myBackend.defaultImages,false);;
-            imageAdapterPassUpload = new ImageAdapter(StorageActivity.this,myBackend.userUploadImages,false);
+            imageAdapterPassUpload = new ImageAdapter(StorageActivity.this,myBackend.userUploadImages,true);
             recyclerViewPass.setAdapter(imageAdapterPass);
             recyclerViewDefault.setAdapter(imageAdapterDefault);
             recyclerViewUpload.setAdapter(imageAdapterPassUpload);
+            mutexLock=false;
         });
         //Hide default image view
         TextView defaultImageView = findViewById(R.id.defaultImageView);
@@ -89,7 +83,7 @@ public class StorageActivity extends AppCompatActivity {
         findViewById(R.id.userButton).setOnClickListener(v -> toggleUserImageView());
         //refreshData();
     }
-    private boolean mutexLock = false;
+
     private void refreshData(){
         if(mutexLock) return;
         mutexLock = true;
@@ -115,6 +109,7 @@ public class StorageActivity extends AppCompatActivity {
     }
 
     private void toggleDefaultImageView() {
+        if(mutexLock) return;
         TextView defaultImageView = findViewById(R.id.defaultImageView);
         RecyclerView recyclerDefaultView = findViewById(R.id.recyclerViewDefault);
         TextView userImageView = findViewById(R.id.userImageView);
@@ -128,6 +123,7 @@ public class StorageActivity extends AppCompatActivity {
     }
 
     private void toggleUserImageView() {
+        if(mutexLock) return;
         TextView defaultImageView = findViewById(R.id.defaultImageView);
         RecyclerView recyclerDefaultView = findViewById(R.id.recyclerViewDefault);
         TextView userImageView = findViewById(R.id.userImageView);
@@ -166,12 +162,13 @@ public class StorageActivity extends AppCompatActivity {
         private Context context;
         public List<String> imageUrls;
         private boolean isAdmin;
+        private boolean removeEnable=false;
         private boolean lock =false;
 
-        public ImageAdapter(Context context,List<String> imageUrls, boolean isAdmin) {
+        public ImageAdapter(Context context,List<String> imageUrls, boolean removeEnable) {
             this.context = context;
             this.imageUrls = imageUrls;
-            this.isAdmin = isAdmin;
+            this.removeEnable = removeEnable;
         }
 
         @NonNull
@@ -212,35 +209,35 @@ public class StorageActivity extends AppCompatActivity {
             holder.materialSwitch.setChecked(myBackend.userData.getImages_pass().contains(keyURI));
 
             // Show/hide delete button based on admin status
-            if (isAdmin) {
-                holder.deleteButton.setVisibility(View.VISIBLE);
-                // Set toggle button alignment to start
-                holder.materialSwitch.setLayoutParams(new RelativeLayout.LayoutParams(
-                        RelativeLayout.LayoutParams.WRAP_CONTENT,
-                        RelativeLayout.LayoutParams.WRAP_CONTENT
-                ));
+            if (removeEnable) {
+                holder.deleteButton.setVisibility(myBackend.userData.getImages_pass().contains(keyURI)?View.GONE:View.VISIBLE);
+
             } else {
                 holder.deleteButton.setVisibility(View.GONE);
                 // Set toggle button alignment to end
-                RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                        RelativeLayout.LayoutParams.WRAP_CONTENT,
-                        RelativeLayout.LayoutParams.WRAP_CONTENT
-                );
-                params.addRule(RelativeLayout.ALIGN_PARENT_END, RelativeLayout.TRUE);
-                holder.materialSwitch.setLayoutParams(params);
             }
+
+            /*
+            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
+                    RelativeLayout.LayoutParams.WRAP_CONTENT,
+                    RelativeLayout.LayoutParams.WRAP_CONTENT
+            );
+            params.addRule(RelativeLayout.ALIGN_PARENT_END, RelativeLayout.TRUE);
+            holder.materialSwitch.setLayoutParams(params);
+            */
 
             // Delete button click listener
             holder.deleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if (holder.materialSwitch.isChecked()) {
-                        // If toggle is on, show a dialog
-                        //showToggleAlertDialog();
-                    } else {
-                        // If toggle is off, proceed with deletion
-                        //removeItem(holder.getAdapterPosition());
-                    }
+                    // prevent action
+                    if(lock) return;
+                    lock=true;
+                    myBackend.removeUploadImage(holder.uRI).thenAccept(results ->{
+                        Toast.makeText(StorageActivity.this,myBackend.getMessenge(results),Toast.LENGTH_SHORT).show();
+                        refreshViewOnly();
+                        lock=false;
+                    });
                 }
             });
             holder.materialSwitch.setOnClickListener(new View.OnClickListener() {
@@ -248,18 +245,20 @@ public class StorageActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     // prevent action
                     holder.materialSwitch.setChecked(!holder.materialSwitch.isChecked());
+                    if(lock) return;
+                    lock=true;
                     int numberPass = myBackend.userData.getImages_pass().size();
                     if (holder.materialSwitch.isChecked() && numberPass == 1) {
                         // Remove the last Image in password
                         // active Texual password
-                        // Show get new Password box
+                        // Show get new Password box'
+                        lock=false;
                     } if(!holder.materialSwitch.isChecked() && numberPass== 5){
                         // Pass list full to ADD
                         Toast.makeText(StorageActivity.this,"Reached 5 pass images",Toast.LENGTH_SHORT).show();
+                        lock=false;
                         //holder.materialSwitch.setChecked(false);
                     }else {
-                        if(lock) return;
-                        lock=true;
                         myBackend.changePassword(holder.uRI).thenAccept(results1 ->{
                             lock=false;
                             Toast.makeText(StorageActivity.this,myBackend.getMessenge(results1),Toast.LENGTH_SHORT).show();

@@ -278,19 +278,22 @@ public class MyBackend {
     // THIS IS CHANGE PASSWORD BASE ON IMAGE IN CURRENT USER DATA
     public CompletableFuture<String> changePassword(String uRI){
         String oldPassword = generation_Pass();
-        if(userData.getImages_pass().contains(uRI)){
+
+        List<String> newImagePass = new ArrayList<>();
+        newImagePass.addAll(userData.getImages_pass());
+        if(newImagePass.contains(uRI)){
             // remove it
-            userData.getImages_pass().remove(uRI);
+            newImagePass.remove(uRI);
         }else{
             //add it
-            userData.getImages_pass().add(uRI);
+            newImagePass.add(uRI);
         }
-        String newPassword =generation_Pass(userData.getImages_pass(),null);
-        return changePassword(oldPassword, newPassword);
+        String newPassword =generation_Pass(newImagePass,null);
+        return changePassword(oldPassword, newPassword,newImagePass);
 
     }
     // THIS IS CHANGE PASSWORD WITH TEXT INPUT, NO IMAGE
-    public CompletableFuture<String> changePassword(String oldPassword, String newPassword){
+    public CompletableFuture<String> changePassword(String oldPassword, String newPassword, List<String> newImagePass){
         CompletableFuture<String> future = new CompletableFuture<>();
         FirebaseUser user = auth.getCurrentUser();
         if (user != null && !isRoot()) {
@@ -299,6 +302,8 @@ public class MyBackend {
                 if(task1.isSuccessful()){
                     // Update DB
                     userData.setParameter(newPassword.split(";")[0]);
+                    userData.getImages_pass().clear();
+                    userData.getImages_pass().addAll(newImagePass);
                     pushDatabase().thenAccept(result ->{
                         if(result){
                             future.complete("true:Change Password Successful");
@@ -413,9 +418,7 @@ public class MyBackend {
                         }
                         //removing
                         defaultImages.clear();
-                        for(String t:listURL){
-                            defaultImages.add(t);
-                        }
+                        defaultImages.addAll(listURL);
                         future.complete("true:Default image = "+defaultImages.size());
                     }
                 }).addOnFailureListener(error ->{
@@ -464,10 +467,7 @@ public class MyBackend {
                             userUploadImages = new ArrayList<>();
                         }
                         userUploadImages.clear();
-                        for (String t:listURL
-                             ) {
-                            userUploadImages.add(t);
-                        }
+                        userUploadImages.addAll(listURL);
                         future.complete("true:User Upload image = "+userUploadImages.size());
                     }
                 }).addOnFailureListener(error ->{
@@ -508,6 +508,58 @@ public class MyBackend {
                 future.complete("false:Upload Fail");
             }
         });
+        return future;
+    }
+    // THIS FOR DELETE UPLOADED IMAGE
+    public CompletableFuture<String> removeUploadImage(String imageURL){
+        CompletableFuture<String> future = new CompletableFuture<>();
+        if (!isUserLogin()) {
+            future.complete("false:Did not login");
+            return future;
+        }
+        if(userData.getImages_pass().contains(imageURL)){
+            future.complete("false:Fail, Image using as password");
+            return future;
+        }
+        StorageReference folderRef = storage.getReference().child(auth.getUid());
+        folderRef.listAll().addOnSuccessListener(listResult -> {
+                    int totalItems = listResult.getItems().size();
+                    if (totalItems == 0) {
+                        future.complete("true:User Upload image is Empty");
+                    }
+                    else{
+                        AtomicInteger count = new AtomicInteger(0);
+                        for (StorageReference item : listResult.getItems()) {
+                            // Get the download URL for each file
+                            if(count.get()<totalItems) {
+                                item.getDownloadUrl().addOnSuccessListener(uRL -> {
+                                    // Handle the download URL
+                                    if (uRL.toString().equals(imageURL)){
+                                        //remove
+                                        item.delete().addOnCompleteListener(task -> {
+                                            if(task.isSuccessful()){
+                                                userUploadImages.remove(imageURL);
+                                                future.complete("true:Image removed");
+                                            }else{
+                                                future.complete("false:Image cannot remove");
+
+                                            }
+                                            count.set(totalItems+1);
+                                        });
+                                    }
+                                    else{
+                                        count.incrementAndGet();
+                                        if (count.get() == totalItems) {
+                                            future.complete("true:Image removed (not exist)");
+                                        }
+                                    }
+                                }).addOnFailureListener(error -> {
+                                    count.incrementAndGet();
+                                });
+                            }
+                        }
+                    }
+                });
         return future;
     }
     // THIS IS DELETE USER
