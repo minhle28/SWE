@@ -24,6 +24,7 @@ public class GraphLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graph_login);
         myBackend = new MyBackend();
+        myBackend.context = GraphLoginActivity.this;
         // Check if the user is already authenticated
         if (myBackend.isUserLogin()) {
             myBackend.require = "";

@@ -34,6 +34,13 @@ public class ProfileActivity extends AppCompatActivity implements EditNameDialog
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
         myBackend = new MyBackend();
+        myBackend.context = ProfileActivity.this;
+        if(!myBackend.isUserLogin()){
+            myBackend.require = "";
+            myBackend.input_email ="";
+            startActivity(new Intent(ProfileActivity.this, GraphLoginActivity.class));
+            finish();
+        }
 
         tvUserName = findViewById(R.id.tv_user_name);
         tvName = findViewById(R.id.tv_name);

@@ -34,12 +34,14 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // Check if the user is already authenticated
-        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
-        if (currentUser != null) {
+
+
+        myBackend = new MyBackend();
+        if (myBackend.isUserLogin()) {
+            Toast.makeText(LoginActivity.this,"User logined as "+myBackend.getCurrentEmail(),Toast.LENGTH_SHORT).show();
             startActivity(new Intent(LoginActivity.this, MainActivity.class));
             finish();
         }
-        myBackend = new MyBackend();
         loginEmail = findViewById(R.id.login_email);
         loginPassword = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);

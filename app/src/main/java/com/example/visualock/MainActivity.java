@@ -1,5 +1,6 @@
 package com.example.visualock;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -42,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         }
         myBackend = new MyBackend();
         myBackend.context = MainActivity.this;
+        if(!myBackend.isUserLogin()){
+            myBackend.require = "";
+            myBackend.input_email ="";
+            startActivity(new Intent(MainActivity.this, GraphLoginActivity.class));
+            finish();
+        }
     }
     private void navigateToMenuFragment() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);

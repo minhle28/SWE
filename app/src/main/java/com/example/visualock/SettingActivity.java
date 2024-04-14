@@ -31,7 +31,12 @@ public class SettingActivity extends AppCompatActivity {
 
         myBackend = new MyBackend();
         myBackend.context = SettingActivity.this;
-
+        if(!myBackend.isUserLogin()){
+            myBackend.require = "";
+            myBackend.input_email ="";
+            startActivity(new Intent(SettingActivity.this, GraphLoginActivity.class));
+            finish();
+        }
         ImageView backButton = findViewById(R.id.backButton);
         checkBoxAgree = findViewById(R.id.checkBoxAgree);
         buttonDeleteAccount = findViewById(R.id.buttonDeleteAccount);
@@ -61,11 +66,15 @@ public class SettingActivity extends AppCompatActivity {
         buttonDeleteAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                buttonDeleteAccount.setEnabled(false);
                 myBackend.deleteAccount().thenAccept(results ->{
                     Toast.makeText(SettingActivity.this,myBackend.getMessenge(results),Toast.LENGTH_SHORT).show();
-                   if(myBackend.isSucess(results)){
+                    if(myBackend.isSucess(results)){
                        startActivity(new Intent(SettingActivity.this, GraphLoginActivity.class));
                        finish();
+                   }
+                   else{
+                       buttonDeleteAccount.setEnabled(true);
                    }
                 });
             }

@@ -36,6 +36,12 @@ public class AddImageActivity extends AppCompatActivity {
         ImageView backButton = findViewById(R.id.backButton);
         myBackend = new MyBackend();
         myBackend.context = AddImageActivity.this;
+        if(!myBackend.isUserLogin()){
+            myBackend.require = "";
+            myBackend.input_email ="";
+            startActivity(new Intent(AddImageActivity.this, GraphLoginActivity.class));
+            finish();
+        }
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override

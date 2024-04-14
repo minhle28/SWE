@@ -120,6 +120,11 @@ public class GraphPasswordActivity extends AppCompatActivity {
         clickedImage = new ArrayList<>();
         myBackend = new MyBackend();
         myBackend.context= GraphPasswordActivity.this;
+        if (myBackend.isUserLogin()) {
+            Toast.makeText(GraphPasswordActivity.this,"User logined as "+myBackend.getCurrentEmail(),Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(GraphPasswordActivity.this, MainActivity.class));
+            finish();
+        }
         if(myBackend.input_email.equals("")){
             myBackend.require = "";
             myBackend.input_email ="";
