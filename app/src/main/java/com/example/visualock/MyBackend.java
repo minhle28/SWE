@@ -574,9 +574,10 @@ public class MyBackend {
         // Query 1
         auth.getCurrentUser().delete().addOnCompleteListener(task1 -> {
             if(task1.isSuccessful()){
-                logOut();
-                root_Login();
+                //logOut();
+                //root_Login();
                 // Query 2
+                Toast.makeText(context,"Account deleted, removing images...",Toast.LENGTH_SHORT).show();
                 firebaseFirestore.collection("users").document(email).delete().addOnCompleteListener(task2->{
                     if(task2.isSuccessful()) {
                         StorageReference folderRef = storage.getReference().child(uID);
@@ -594,9 +595,9 @@ public class MyBackend {
                                         }else {
                                             countF.incrementAndGet();
                                         }
-                                        if (countS.get() +countF.get() == totalItems) {
+                                        if (countS.get() +countF.get() >= totalItems) {
                                             if (countF.get()==0) {
-                                                future.complete("true:Account Deleted");
+                                                future.complete("true:All Things Deleted");
                                             } else {
                                                 future.complete("true:Data Storage can not Delete "+countF+" files");
                                             }
@@ -604,7 +605,7 @@ public class MyBackend {
                                     });
                                 }
                             }else {
-                                future.complete("true:Account Deleted");
+                                future.complete("true:All Things Deleted (Empty)");
                             }
                         }).addOnFailureListener(error->{
                             future.complete("true:Data did not Delete "+error.getMessage());

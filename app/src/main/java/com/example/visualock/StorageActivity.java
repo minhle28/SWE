@@ -41,13 +41,6 @@ public class StorageActivity extends AppCompatActivity {
         this.setTitle("Storage");
         myBackend = new MyBackend();
         myBackend.context = StorageActivity.this;
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                navigateToDashboardFragment();
-            }
-        });
-
         if(!myBackend.isUserLogin())
         {
             myBackend.require = "";
@@ -81,7 +74,14 @@ public class StorageActivity extends AppCompatActivity {
 
         findViewById(R.id.defaultButton).setOnClickListener(v -> toggleDefaultImageView());
         findViewById(R.id.userButton).setOnClickListener(v -> toggleUserImageView());
-        //refreshData();
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                navigateToDashboardFragment();
+            }
+        });
+
     }
 
     private void refreshData(){

@@ -36,6 +36,13 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         feedbackTextView = findViewById(R.id.text);
         ImageView backButton = findViewById(R.id.backButton);
         myBackend = new MyBackend();
+        if(myBackend.isUserLogin()){
+            myBackend.require = "";
+            myBackend.input_email = "";
+            Toast.makeText(ForgotPasswordActivity.this,"User logined as "+myBackend.getCurrentEmail(),Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(ForgotPasswordActivity.this, MainActivity.class));
+            finish();
+        }
         if(!myBackend.require.equals("")){
             resetEmailEditText.setText(myBackend.input_email);
         }
@@ -49,10 +56,12 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         sendResetButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sendResetButton.setEnabled(false);
                 String email = resetEmailEditText.getText().toString().trim();
 
                 if (TextUtils.isEmpty(email)) {
                     resetEmailEditText.setError("Email is required");
+                    sendResetButton.setEnabled(true);
                     return;
                 }
                 myBackend.resetPassword(email).thenAccept(results ->{
@@ -74,6 +83,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
                     }
                     else{
                         Toast.makeText(ForgotPasswordActivity.this, "Failed to send reset email. ", Toast.LENGTH_SHORT).show();
+                        sendResetButton.setEnabled(true);
                     }
                 });
 
