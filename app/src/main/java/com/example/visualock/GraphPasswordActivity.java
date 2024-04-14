@@ -20,6 +20,8 @@ import android.graphics.Color;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 public class GraphPasswordActivity extends AppCompatActivity {
@@ -182,8 +184,11 @@ public class GraphPasswordActivity extends AppCompatActivity {
                                             }
                                         }
                                     if (myBackend.isSucess(results2)) {
-                                        if (myBackend.userUploadImages != null)
-                                            for (String image : myBackend.userUploadImages
+                                        if (myBackend.userUploadImages != null) {
+                                            List<String> tmp = new ArrayList<>();
+                                            tmp.addAll(myBackend.userUploadImages);
+                                            Collections.shuffle(tmp);
+                                            for (String image : tmp
                                             ) {
                                                 if (!selectedImages.contains(image)) {
                                                     selectedImages.add(image);
@@ -191,11 +196,15 @@ public class GraphPasswordActivity extends AppCompatActivity {
                                                     if (n2 <= 0) break;
                                                 }
                                             }
+                                        }
                                     }
                                     if (myBackend.isSucess(results3)) {
                                         if (n2 > 0) {
-                                            if(myBackend.defaultImages!=null)
-                                                for (String image : myBackend.defaultImages
+                                            if(myBackend.defaultImages!=null) {
+                                                List<String> tmp = new ArrayList<>();
+                                                tmp.addAll(myBackend.defaultImages);
+                                                Collections.shuffle(tmp);
+                                                for (String image : tmp
                                                 ) {
                                                     if (!selectedImages.contains(image)) {
                                                         selectedImages.add(image);
@@ -203,10 +212,10 @@ public class GraphPasswordActivity extends AppCompatActivity {
                                                         if (n2 <= 0) break;
                                                     }
                                                 }
+                                            }
                                         }
                                     }
-                                    System.out.println(selectedImages.get(5));
-                                    //Collections.shuffle(selectedImages);
+                                    Collections.shuffle(selectedImages);
                                     for(int i=0; i<6; i++){
                                         rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(6*i,6*(i+1))));
                                     }
