@@ -60,26 +60,22 @@ public class GraphPasswordActivity extends AppCompatActivity {
         public View getView(final int position, View convertView, ViewGroup parent) {
             ImageView imageView;
             String chosenURL = myListImages.get(position);
-            if (convertView == null) {
-                imageView = new ImageView(mContext);
-                imageView.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 200));
-                imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-                if(myBackend.mapBitmap.containsKey(chosenURL)){
+            // build content view
+            imageView = new ImageView(mContext);
+            imageView.setLayoutParams(new GridView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 200));
+            imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
+            if(myBackend.mapBitmap.containsKey(chosenURL)){
+                imageView.setImageBitmap(myBackend.mapBitmap.get(chosenURL));
+            }
+            else{
+                try{
+                    myBackend.mapBitmap.put(chosenURL,Picasso.get().load(chosenURL).get());
                     imageView.setImageBitmap(myBackend.mapBitmap.get(chosenURL));
                 }
-                else{
-                    try{
-                        myBackend.mapBitmap.put(chosenURL,Picasso.get().load(chosenURL).get());
-                        imageView.setImageBitmap(myBackend.mapBitmap.get(chosenURL));
-                    }
-                    catch (Exception exception){
-                        Picasso.get().load(chosenURL).into(imageView);
-                    }
+                catch (Exception exception){
+                    Picasso.get().load(chosenURL).into(imageView);
                 }
-            } else {
-                imageView = (ImageView) convertView;
             }
-
 
             // Apply transparent grey overlay if the image is clicked
             if (clickedImage.contains(chosenURL)) {
@@ -217,8 +213,9 @@ public class GraphPasswordActivity extends AppCompatActivity {
                                     }
                                     Collections.shuffle(selectedImages);
                                     for(int i=0; i<6; i++){
-                                        rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(6*i,6*(i+1))));
+                                        rowListView[i].setAdapter(new PasswordImageAdapter(this, selectedImages.subList(6*i,6*(i+1)) ));
                                     }
+
                                 }
                                 catch (Exception ex){
                                     Toast.makeText(GraphPasswordActivity.this, "Error:"+ex.getMessage(), Toast.LENGTH_SHORT).show();

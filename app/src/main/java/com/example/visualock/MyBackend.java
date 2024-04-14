@@ -582,7 +582,6 @@ public class MyBackend {
                         StorageReference folderRef = storage.getReference().child(uID);
                         // Query 3
                         folderRef.listAll().addOnSuccessListener(listResult -> {
-                            List<String> listURL = new ArrayList<>();
                             int totalItems = listResult.getItems().size();
                             if (totalItems > 0) {
                                 AtomicInteger countS = new AtomicInteger(0);
@@ -599,18 +598,20 @@ public class MyBackend {
                                             if (countF.get()==0) {
                                                 future.complete("true:Account Deleted");
                                             } else {
-                                                future.complete("false:Data Storage can not Delete "+countF+" files");
+                                                future.complete("true:Data Storage can not Delete "+countF+" files");
                                             }
                                         }
                                     });
                                 }
+                            }else {
+                                future.complete("true:Account Deleted");
                             }
                         }).addOnFailureListener(error->{
-                            future.complete("false:Data did not Delete "+error.getMessage());
+                            future.complete("true:Data did not Delete "+error.getMessage());
                         });
                     }
                     else{
-                        future.complete("false:Data did not Delete (Fail)");
+                        future.complete("true:Data did not Delete (Fail)");
                     }
                 });
 
